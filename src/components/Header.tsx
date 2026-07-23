@@ -72,10 +72,15 @@ export const Header: React.FC<HeaderProps> = ({
 
               if (link.hasDropdown) {
                 return (
-                  <div key={link.name} className="relative">
+                  <div
+                    key={link.name}
+                    className="relative"
+                    onMouseEnter={() => setIsAboutOpen(true)}
+                    onMouseLeave={() => setIsAboutOpen(false)}
+                  >
                     <button
                       onClick={() => handleNavClick(link.name, true)}
-                      className={`flex items-center gap-1.5 px-4.5 py-2 rounded-full text-base font-bold transition-all duration-200 ${
+                      className={`flex items-center gap-1.5 px-4.5 py-2 rounded-full text-base font-bold transition-all duration-200 cursor-pointer ${
                         isActive
                           ? 'bg-blue-600 text-white shadow-md'
                           : 'text-white/90 hover:text-white hover:bg-white/10'
@@ -85,18 +90,20 @@ export const Header: React.FC<HeaderProps> = ({
                       <ChevronDown className={`w-4.5 h-4.5 transition-transform duration-200 ${isAboutOpen ? 'rotate-180' : ''}`} />
                     </button>
 
-                    {/* About Dropdown Menu matching User Requirements */}
+                    {/* About Dropdown Menu opening on hover or click */}
                     {isAboutOpen && (
-                      <div className="absolute top-full left-0 mt-3 w-64 bg-slate-900/95 backdrop-blur-xl border border-white/20 rounded-2xl shadow-2xl py-2.5 z-50 animate-in fade-in slide-in-from-top-2 duration-200">
-                        {link.dropdownItems?.map((item, idx) => (
-                          <button
-                            key={idx}
-                            onClick={() => handleSubTabClick(item)}
-                            className="w-full text-left px-5 py-3 text-sm font-bold text-slate-200 hover:text-white hover:bg-blue-600/40 transition-colors border-b border-white/5 last:border-0"
-                          >
-                            {item}
-                          </button>
-                        ))}
+                      <div className="absolute top-full left-0 pt-2 w-64 z-50">
+                        <div className="bg-slate-900/95 backdrop-blur-xl border border-white/20 rounded-2xl shadow-2xl py-2.5 animate-in fade-in slide-in-from-top-2 duration-200">
+                          {link.dropdownItems?.map((item, idx) => (
+                            <button
+                              key={idx}
+                              onClick={() => handleSubTabClick(item)}
+                              className="w-full text-left px-5 py-3 text-sm font-bold text-slate-200 hover:text-white hover:bg-blue-600/50 transition-colors border-b border-white/5 last:border-0 cursor-pointer"
+                            >
+                              {item}
+                            </button>
+                          ))}
+                        </div>
                       </div>
                     )}
                   </div>
