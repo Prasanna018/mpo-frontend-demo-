@@ -8,12 +8,13 @@ import { PlansView } from './components/PlansView';
 import { DataView } from './components/DataView';
 import { FundingView } from './components/FundingView';
 import { ContactView } from './components/ContactView';
+import { BlogView } from './components/BlogView';
 import { Footer } from './components/Footer';
 import { Modals } from './components/Modals';
 import type { NewsItem, EventItem } from './data/mockData';
 
 export function App() {
-  const [currentView, setCurrentView] = useState<'home' | 'about' | 'programs' | 'plans' | 'data' | 'funding' | 'contact'>('home');
+  const [currentView, setCurrentView] = useState<'home' | 'about' | 'programs' | 'plans' | 'data' | 'funding' | 'contact' | 'blog'>('home');
   const [activeAboutSubTab, setActiveAboutSubTab] = useState<string>('MPO Overview');
 
   const [selectedNews, setSelectedNews] = useState<NewsItem | null>(null);
@@ -47,6 +48,11 @@ export function App() {
 
   const handleNavigateContact = () => {
     setCurrentView('contact');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const handleNavigateBlog = () => {
+    setCurrentView('blog');
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
@@ -84,6 +90,10 @@ export function App() {
     }
     if (actionId.includes('contact') || actionId.includes('touch')) {
       handleNavigateContact();
+      return;
+    }
+    if (actionId.includes('blog') || actionId.includes('news')) {
+      handleNavigateBlog();
       return;
     }
     if (actionId.includes('agenda')) {
@@ -137,7 +147,7 @@ export function App() {
             <NewsAndEvents
               onSelectNews={handleSelectNews}
               onSelectEvent={handleSelectEvent}
-              onOpenNewsList={() => handleOpenActionModal('news')}
+              onOpenNewsList={() => handleNavigateBlog()}
               onOpenEventsList={() => handleOpenActionModal('events')}
             />
           </main>
@@ -188,13 +198,23 @@ export function App() {
             onOpenActionModal={handleOpenActionModal}
           />
         </main>
-      ) : (
-        /* Dedicated Contact View matching User Screenshots */
+      ) : currentView === 'contact' ? (
+        /* Dedicated Contact View */
         <main className="flex-1">
           <ContactView
             onNavigateHome={handleNavigateHome}
             onSelectAboutSubTab={handleSelectAboutSubTab}
             onOpenActionModal={handleOpenActionModal}
+          />
+        </main>
+      ) : (
+        /* Dedicated Blog View matching User Screenshots */
+        <main className="flex-1">
+          <BlogView
+            onNavigateHome={handleNavigateHome}
+            onSelectAboutSubTab={handleSelectAboutSubTab}
+            onOpenActionModal={handleOpenActionModal}
+            onSelectNews={handleSelectNews}
           />
         </main>
       )}
