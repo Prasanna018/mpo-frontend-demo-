@@ -31,25 +31,47 @@ export const AboutView: React.FC<AboutViewProps> = ({
   const isTAC = activeSubTab === 'Technical Advisory Committee (TAC)';
   const isAgendas = activeSubTab === 'Agendas';
 
+  const subTabImages: Record<string, { url: string; alt: string }> = {
+    'MPO Overview': {
+      url: 'https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=2400&q=90',
+      alt: 'Tri-Cities Regional Freight & Transportation Overview'
+    },
+    'Policy Committee (PC)': {
+      url: 'https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=2400&q=90',
+      alt: 'Policy Committee Executive Board Session'
+    },
+    'Technical Advisory Committee (TAC)': {
+      url: 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=2400&q=90',
+      alt: 'Technical Advisory Committee Engineers & Planners'
+    },
+    'Agendas': {
+      url: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=2400&q=90',
+      alt: 'Public Committee Agendas & Planning Schedules'
+    }
+  };
+
+  const currentBg = subTabImages[activeSubTab] || subTabImages['MPO Overview'];
+
   return (
     <div className="w-full min-h-screen flex flex-col bg-white">
       
       {/* About Page Hero Banner */}
       <section className="relative h-[380px] sm:h-[440px] w-full flex flex-col justify-between overflow-hidden bg-slate-950">
         
-        {/* Background Image: Semi-Trucks driving on highway under bright sky */}
+        {/* Background Image: Dynamic Unsplash photo matching active dropdown option */}
         <div className="absolute inset-0 z-0">
           <img
-            src="/about-banner.png"
-            alt="Freight semi trucks driving on highway"
-            className="w-full h-full object-cover object-center scale-105"
+            key={activeSubTab}
+            src={currentBg.url}
+            alt={currentBg.alt}
+            className="w-full h-full object-cover object-center scale-105 transition-all duration-500 animate-in fade-in"
           />
           
           {/* Top Overlay */}
-          <div className="absolute inset-x-0 top-0 h-36 bg-gradient-to-b from-black/75 via-black/35 to-transparent pointer-events-none" />
+          <div className="absolute inset-x-0 top-0 h-36 bg-gradient-to-b from-black/85 via-black/45 to-transparent pointer-events-none" />
 
           {/* Bottom Overlay */}
-          <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-black/60 to-transparent pointer-events-none" />
+          <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-black/70 to-transparent pointer-events-none" />
         </div>
 
         {/* Top Navbar */}
