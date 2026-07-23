@@ -9,12 +9,13 @@ import { DataView } from './components/DataView';
 import { FundingView } from './components/FundingView';
 import { ContactView } from './components/ContactView';
 import { BlogView } from './components/BlogView';
+import { EventsView } from './components/EventsView';
 import { Footer } from './components/Footer';
 import { Modals } from './components/Modals';
 import type { NewsItem, EventItem } from './data/mockData';
 
 export function App() {
-  const [currentView, setCurrentView] = useState<'home' | 'about' | 'programs' | 'plans' | 'data' | 'funding' | 'contact' | 'blog'>('home');
+  const [currentView, setCurrentView] = useState<'home' | 'about' | 'programs' | 'plans' | 'data' | 'funding' | 'contact' | 'blog' | 'events'>('home');
   const [activeAboutSubTab, setActiveAboutSubTab] = useState<string>('MPO Overview');
 
   const [selectedNews, setSelectedNews] = useState<NewsItem | null>(null);
@@ -56,6 +57,11 @@ export function App() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  const handleNavigateEvents = () => {
+    setCurrentView('events');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   const handleSelectAboutSubTab = (subTab: string) => {
     if (subTab === 'about' || subTab === 'About TCAMPO' || !subTab) {
       setActiveAboutSubTab('MPO Overview');
@@ -94,6 +100,10 @@ export function App() {
     }
     if (actionId.includes('blog') || actionId.includes('news')) {
       handleNavigateBlog();
+      return;
+    }
+    if (actionId.includes('event')) {
+      handleNavigateEvents();
       return;
     }
     if (actionId.includes('agenda')) {
@@ -148,7 +158,7 @@ export function App() {
               onSelectNews={handleSelectNews}
               onSelectEvent={handleSelectEvent}
               onOpenNewsList={() => handleNavigateBlog()}
-              onOpenEventsList={() => handleOpenActionModal('events')}
+              onOpenEventsList={() => handleNavigateEvents()}
             />
           </main>
         </>
@@ -207,14 +217,24 @@ export function App() {
             onOpenActionModal={handleOpenActionModal}
           />
         </main>
-      ) : (
-        /* Dedicated Blog View matching User Screenshots */
+      ) : currentView === 'blog' ? (
+        /* Dedicated Blog View */
         <main className="flex-1">
           <BlogView
             onNavigateHome={handleNavigateHome}
             onSelectAboutSubTab={handleSelectAboutSubTab}
             onOpenActionModal={handleOpenActionModal}
             onSelectNews={handleSelectNews}
+          />
+        </main>
+      ) : (
+        /* Dedicated Events View matching User Screenshots */
+        <main className="flex-1">
+          <EventsView
+            onNavigateHome={handleNavigateHome}
+            onSelectAboutSubTab={handleSelectAboutSubTab}
+            onOpenActionModal={handleOpenActionModal}
+            onSelectEvent={handleSelectEvent}
           />
         </main>
       )}
