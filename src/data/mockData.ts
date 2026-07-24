@@ -145,6 +145,17 @@ export const POLICY_COMMITTEE_DATA = {
 export const TAC_COMMITTEE_DATA = {
   votingMembers: [
     {
+      name: 'Mr. Jared Crews',
+      organization: 'City of Petersburg',
+      avatarType: 'male' as const
+    },
+    {
+      name: 'Mr. Tim Graves',
+      organization: 'Prince George County',
+      image: '/tac-members/tim-graves.png',
+      avatarType: 'male' as const
+    },
+    {
       name: 'Mr. Hongmyung (Hong) Lim (Chair)',
       organization: 'Chesterfield County',
       image: '/tac-members/hongmyung-lim.png',
@@ -154,17 +165,6 @@ export const TAC_COMMITTEE_DATA = {
       name: 'Mr. Matthew Ryan (Vice Chair)',
       organization: 'City of Colonial Heights',
       image: '/tac-members/matt-ryan.png',
-      avatarType: 'male' as const
-    },
-    {
-      name: 'Mr. Jared Crews',
-      organization: 'City of Petersburg',
-      avatarType: 'male' as const
-    },
-    {
-      name: 'Mr. Tim Graves',
-      organization: 'Prince George County',
-      image: '/tac-members/tim-graves.png',
       avatarType: 'male' as const
     },
     {
@@ -185,12 +185,12 @@ export const TAC_COMMITTEE_DATA = {
     },
     {
       name: 'Mr. Wood Hudson',
-      organization: 'Department of Rail & Public Transportation (DRPT)',
+      organization: 'DRPT',
       avatarType: 'male' as const
     },
     {
       name: 'Ms. Naomi Siodmok',
-      organization: 'Virginia Department of Transportation (VDOT)',
+      organization: 'VDOT',
       avatarType: 'female' as const
     },
     {
