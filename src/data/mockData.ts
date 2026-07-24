@@ -145,16 +145,6 @@ export const POLICY_COMMITTEE_DATA = {
 export const TAC_COMMITTEE_DATA = {
   votingMembers: [
     {
-      name: 'Mr. Jared Crews',
-      organization: 'City of Petersburg',
-      avatarType: 'male' as const
-    },
-    {
-      name: 'Mr. Tim Graves',
-      organization: 'Prince George County',
-      avatarType: 'male' as const
-    },
-    {
       name: 'Mr. Hongmyung (Hong) Lim (Chair)',
       organization: 'Chesterfield County',
       image: '/tac-members/hongmyung-lim.png',
@@ -164,6 +154,16 @@ export const TAC_COMMITTEE_DATA = {
       name: 'Mr. Matthew Ryan (Vice Chair)',
       organization: 'City of Colonial Heights',
       image: '/tac-members/matt-ryan.png',
+      avatarType: 'male' as const
+    },
+    {
+      name: 'Mr. Jared Crews',
+      organization: 'City of Petersburg',
+      avatarType: 'male' as const
+    },
+    {
+      name: 'Mr. Tim Graves',
+      organization: 'Prince George County',
       avatarType: 'male' as const
     },
     {
@@ -185,7 +185,6 @@ export const TAC_COMMITTEE_DATA = {
     {
       name: 'Mr. Wood Hudson',
       organization: 'Department of Rail & Public Transportation (DRPT)',
-      image: '/pc-members/pc-member-9.png',
       avatarType: 'male' as const
     },
     {
@@ -196,6 +195,7 @@ export const TAC_COMMITTEE_DATA = {
     {
       name: 'Mr. Zakari Mumuni',
       organization: 'Crater Planning District Commission',
+      image: '/tac-members/zakari-mumuni.png',
       avatarType: 'male' as const
     }
   ],
@@ -657,11 +657,11 @@ export const ABOUT_SECTIONS = {
     ],
     bullets: [
       'an executive decision-making body (Policy Committee),',
-      'an advisory body (Advisory Committee), and',
+      'an advisory body (Technical Advisory Committee), and',
       'a full-time professional staff responsible for supporting the MPO\'s planning activities and serving the member jurisdictions.'
     ],
-    historyTitle: 'History of tri-cities area mpo',
-    historyContent: 'The Tri-Cities region was designated an urbanized area by the US Census Bureau to manage regional transportation growth. The TCAMPO was created to unify multi-jurisdictional transportation planning for member cities and counties. TCAMPO serves as the Lead Planning Agency (LPA) managing federal highway and transit fund allocations across the regional network.'
+    historyTitle: 'Tri-Cities Area MPO',
+    historyContent: 'The Tri-Cities region was designated an urbanized area by the US Census Bureau to manage regional transportation growth. The TCAMPO was created to unify multi-jurisdictional transportation planning for member cities and counties. TCAMPO serves as the agency managing federal highway and transit fund allocations across the regional network.'
   },
   'Policy Committee': {
     title: 'Policy Committee',
