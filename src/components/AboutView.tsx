@@ -15,6 +15,7 @@ export const AboutView: React.FC<AboutViewProps> = ({
   onNavigateHome,
   onOpenActionModal
 }) => {
+  const [pcFilter, setPcFilter] = useState<'voting' | 'non-voting'>('voting');
   const [tacFilter, setTacFilter] = useState<'voting' | 'non-voting'>('voting');
   const [agendaFilter, setAgendaFilter] = useState<'PC' | 'TAC'>('PC');
 
@@ -302,96 +303,125 @@ export const AboutView: React.FC<AboutViewProps> = ({
               </div>
             ) : isPolicyCommittee ? (
               /* POLICY COMMITTEE VIEW */
-              <div className="space-y-12 pt-2">
+              <div className="space-y-8 pt-2">
                 
-                <div className="space-y-6">
-                  <h2 className="text-2xl sm:text-3xl font-extrabold text-navy-900 tracking-tight">
-                    Voting
-                  </h2>
+                {/* Pill Switcher for Policy Committee matching user reference image */}
+                <div className="flex items-center gap-4">
+                  <button
+                    onClick={() => setPcFilter('voting')}
+                    className={`px-6 py-2.5 rounded-full text-base font-bold transition-all duration-200 cursor-pointer ${
+                      pcFilter === 'voting'
+                        ? 'bg-blue-500 text-white shadow-md'
+                        : 'bg-sky-100/90 text-blue-600 hover:bg-sky-200 border border-sky-300'
+                    }`}
+                  >
+                    Voting Members
+                  </button>
 
-                  <div className="flex flex-col items-start gap-3">
-                    <div className="w-48 h-56 rounded-xl overflow-hidden bg-slate-100 border border-slate-200 shadow-md">
-                      <img
-                        src={POLICY_COMMITTEE_DATA.chair.image}
-                        alt={POLICY_COMMITTEE_DATA.chair.name}
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                    <div className="text-left">
-                      <h3 className="text-lg font-bold text-navy-950">
-                        {POLICY_COMMITTEE_DATA.chair.name}
-                      </h3>
-                      <p className="text-sm font-medium text-slate-600">
-                        {POLICY_COMMITTEE_DATA.chair.organization}
-                      </p>
-                    </div>
-                  </div>
+                  <button
+                    onClick={() => setPcFilter('non-voting')}
+                    className={`px-6 py-2.5 rounded-full text-base font-bold transition-all duration-200 cursor-pointer ${
+                      pcFilter === 'non-voting'
+                        ? 'bg-blue-500 text-white shadow-md'
+                        : 'bg-sky-100/90 text-blue-600 hover:bg-sky-200 border border-sky-300'
+                    }`}
+                  >
+                    Non Voting Members
+                  </button>
                 </div>
 
-                <div className="space-y-6 pt-4">
-                  <h2 className="text-2xl sm:text-3xl font-extrabold text-navy-900 tracking-tight">
-                    Vice Chair
-                  </h2>
+                {pcFilter === 'voting' ? (
+                  <div className="space-y-12 pt-2">
+                    <div className="space-y-6">
+                      <h2 className="text-2xl sm:text-3xl font-extrabold text-navy-900 tracking-tight">
+                        Voting
+                      </h2>
 
-                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {POLICY_COMMITTEE_DATA.votingMembers.map((member, idx) => (
-                      <div key={idx} className="flex flex-col items-center sm:items-start text-center sm:text-left gap-3">
-                        <div className="w-44 h-52 rounded-xl overflow-hidden bg-slate-100 border border-slate-200 shadow-md flex items-center justify-center">
-                          {member.isVacant ? (
-                            <div className="w-full h-full p-4 flex flex-col items-center justify-center bg-slate-50 text-slate-400">
-                              <svg className="w-24 h-24 text-slate-300" viewBox="0 0 100 100" fill="none" stroke="currentColor">
-                                <circle cx="50" cy="50" r="45" strokeWidth="3" />
-                                <path d="M30 65 C30 50, 70 50, 70 65" strokeWidth="3" />
-                                <circle cx="50" cy="38" r="14" strokeWidth="3" />
-                              </svg>
+                      <div className="flex flex-col items-start gap-3">
+                        <div className="w-48 h-56 rounded-xl overflow-hidden bg-slate-100 border border-slate-200 shadow-md">
+                          <img
+                            src={POLICY_COMMITTEE_DATA.chair.image}
+                            alt={POLICY_COMMITTEE_DATA.chair.name}
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
+                        <div className="text-left">
+                          <h3 className="text-lg font-bold text-navy-950">
+                            {POLICY_COMMITTEE_DATA.chair.name}
+                          </h3>
+                          <p className="text-sm font-medium text-slate-600">
+                            {POLICY_COMMITTEE_DATA.chair.organization}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="space-y-6 pt-4">
+                      <h2 className="text-2xl sm:text-3xl font-extrabold text-navy-900 tracking-tight">
+                        Vice Chair
+                      </h2>
+
+                      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {POLICY_COMMITTEE_DATA.votingMembers.map((member, idx) => (
+                          <div key={idx} className="flex flex-col items-center sm:items-start text-center sm:text-left gap-3">
+                            <div className="w-44 h-52 rounded-xl overflow-hidden bg-slate-100 border border-slate-200 shadow-md flex items-center justify-center">
+                              {member.isVacant ? (
+                                <div className="w-full h-full p-4 flex flex-col items-center justify-center bg-slate-50 text-slate-400">
+                                  <svg className="w-24 h-24 text-slate-300" viewBox="0 0 100 100" fill="none" stroke="currentColor">
+                                    <circle cx="50" cy="50" r="45" strokeWidth="3" />
+                                    <path d="M30 65 C30 50, 70 50, 70 65" strokeWidth="3" />
+                                    <circle cx="50" cy="38" r="14" strokeWidth="3" />
+                                  </svg>
+                                </div>
+                              ) : (
+                                <img
+                                  src={member.image}
+                                  alt={member.name}
+                                  className="w-full h-full object-cover"
+                                />
+                              )}
                             </div>
-                          ) : (
-                            <img
-                              src={member.image}
-                              alt={member.name}
-                              className="w-full h-full object-cover"
-                            />
-                          )}
-                        </div>
-                        <div>
-                          <h3 className="text-base font-bold text-navy-950">
-                            {member.name}
-                          </h3>
-                          <p className="text-xs font-semibold text-slate-600">
-                            {member.organization}
-                          </p>
-                        </div>
+                            <div>
+                              <h3 className="text-base font-bold text-navy-950">
+                                {member.name}
+                              </h3>
+                              <p className="text-xs font-semibold text-slate-600">
+                                {member.organization}
+                              </p>
+                            </div>
+                          </div>
+                        ))}
                       </div>
-                    ))}
+                    </div>
                   </div>
-                </div>
+                ) : (
+                  <div className="space-y-6 pt-2">
+                    <h2 className="text-2xl sm:text-3xl font-extrabold text-navy-900 tracking-tight">
+                      Non Voting
+                    </h2>
 
-                <div className="space-y-6 pt-4 border-t border-slate-200">
-                  <h2 className="text-2xl sm:text-3xl font-extrabold text-navy-900 tracking-tight">
-                    Non Voting
-                  </h2>
-
-                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {POLICY_COMMITTEE_DATA.nonVotingMembers.map((member, idx) => (
-                      <div key={idx} className="flex flex-col items-center sm:items-start text-center sm:text-left gap-3">
-                        <div className="w-44 h-52 rounded-xl overflow-hidden bg-slate-100 border border-slate-200 shadow-md flex items-center justify-center p-3">
-                          <svg className="w-32 h-40 text-slate-400" viewBox="0 0 100 120" fill="currentColor">
-                            <circle cx="50" cy="38" r="22" />
-                            <path d="M15 110 C15 75, 85 75, 85 110 Z" />
-                          </svg>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                      {POLICY_COMMITTEE_DATA.nonVotingMembers.map((member, idx) => (
+                        <div key={idx} className="flex flex-col items-center sm:items-start text-center sm:text-left gap-3">
+                          <div className="w-44 h-52 rounded-xl overflow-hidden bg-slate-100 border border-slate-200 shadow-md flex items-center justify-center p-3">
+                            <svg className="w-32 h-40 text-slate-400" viewBox="0 0 100 120" fill="currentColor">
+                              <circle cx="50" cy="38" r="22" />
+                              <path d="M15 110 C15 75, 85 75, 85 110 Z" />
+                            </svg>
+                          </div>
+                          <div>
+                            <h3 className="text-base font-bold text-navy-950">
+                              {member.name}
+                            </h3>
+                            <p className="text-xs font-semibold text-slate-600 max-w-[180px]">
+                              {member.organization}
+                            </p>
+                          </div>
                         </div>
-                        <div>
-                          <h3 className="text-base font-bold text-navy-950">
-                            {member.name}
-                          </h3>
-                          <p className="text-xs font-semibold text-slate-600 max-w-[180px]">
-                            {member.organization}
-                          </p>
-                        </div>
-                      </div>
-                    ))}
+                      ))}
+                    </div>
                   </div>
-                </div>
+                )}
 
               </div>
             ) : (

@@ -29,7 +29,7 @@ export const EventsView: React.FC<EventsViewProps> = ({
       time: 'May 7 @ 4:30 am',
       title: 'May 7, 2026',
       subTitle: 'Policy Committee Board Session',
-      location: 'USA1 Crater PDC, 1964 Wakefield Street, Petersburg, VA 23805',
+      location: 'Crater PDC, 1964 Wakefield Street, Petersburg, VA 23805',
       note: 'Updated 05.07.2026'
     },
     {
@@ -40,7 +40,7 @@ export const EventsView: React.FC<EventsViewProps> = ({
       time: 'May 1 @ 10:00 am',
       title: 'May 1, 2026',
       subTitle: 'Technical Advisory Committee (TAC) Technical Review',
-      location: 'USA Crater PDC, 1964 Wakefield Street, Petersburg, VA 23805',
+      location: 'Crater PDC, 1964 Wakefield Street, Petersburg, VA 23805',
       note: ''
     },
     {
@@ -51,7 +51,7 @@ export const EventsView: React.FC<EventsViewProps> = ({
       time: 'April 9 @ 4:30 am - 10:12 am',
       title: 'April 9, 2026',
       subTitle: 'Regional Freight & Intermodal Workgroup',
-      location: 'USA Crater PDC, 1964 Wakefield Street, Petersburg, VA 23805',
+      location: 'Crater PDC, 1964 Wakefield Street, Petersburg, VA 23805',
       note: 'VIRTUAL Meeting - Updated 04.07.2026'
     }
   ];
