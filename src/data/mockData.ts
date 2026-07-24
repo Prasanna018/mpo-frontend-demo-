@@ -122,6 +122,12 @@ export const POLICY_COMMITTEE_DATA = {
       isVacant: false
     },
     {
+      name: 'Ms. Brigitte Carter',
+      organization: 'RideFinders, Inc.',
+      image: '/pc-members/pc-member-8.png',
+      isVacant: false
+    },
+    {
       name: 'Mr. Ivan Rucker',
       organization: 'Federal Highway Administration (FHWA)',
       image: 'silhouette-male',
@@ -132,12 +138,6 @@ export const POLICY_COMMITTEE_DATA = {
       organization: 'Federal Transit Administration (FTA)',
       image: 'silhouette-male',
       isVacant: true
-    },
-    {
-      name: 'Ms. Brigitte Carter',
-      organization: 'RideFinders, Inc.',
-      image: '/pc-members/pc-member-8.png',
-      isVacant: false
     }
   ]
 };
@@ -661,8 +661,8 @@ export const ABOUT_SECTIONS = {
       'an advisory body (Technical Advisory Committee), and',
       'a full-time professional staff responsible for supporting the MPO\'s planning activities and serving the member jurisdictions.'
     ],
-    historyTitle: 'Tri-Cities Area MPO',
-    historyContent: 'The Tri-Cities region was designated an urbanized area by the US Census Bureau to manage regional transportation growth. The TCAMPO was created to unify multi-jurisdictional transportation planning for member cities and counties. TCAMPO serves as the agency managing federal highway and transit fund allocations across the regional network.'
+    historyTitle: '',
+    historyContent: ''
   },
   'Policy Committee': {
     title: 'Policy Committee',
@@ -745,7 +745,7 @@ export const EVENTS_ITEMS: EventItem[] = [
     dayMonth: 'APRIL 9',
     year: '2026',
     fullDate: 'April 9, 2026',
-    time: '2:00 PM - 4:00 PM EST',
+    time: '10:00 AM',
     title: 'Technical Advisory Committee Meeting',
     location: '',
     description: ''
