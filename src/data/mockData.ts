@@ -118,13 +118,13 @@ export const POLICY_COMMITTEE_DATA = {
     {
       name: 'Mr. Wood Hudson',
       organization: 'Department of Rail & Public Transportation',
-      image: '/pc-members/pc-member-9.png',
+      image: '/pc-members/wood-hudson.png',
       isVacant: false
     },
     {
       name: 'Ms. Brigitte Carter',
       organization: 'RideFinders, Inc.',
-      image: '/pc-members/pc-member-8.png',
+      image: '/pc-members/brigitte-carter.png',
       isVacant: false
     },
     {
