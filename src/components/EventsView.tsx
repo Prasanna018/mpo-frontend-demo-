@@ -39,7 +39,7 @@ export const EventsView: React.FC<EventsViewProps> = ({
       fullDate: 'May 1, 2026',
       time: '10:00 AM',
       title: 'May 1, 2026',
-      subTitle: 'Technical Advisory Committee (TAC) Technical Review',
+      subTitle: 'Technical Advisory Committee Meeting',
       location: '',
       note: ''
     },

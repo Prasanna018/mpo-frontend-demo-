@@ -746,9 +746,9 @@ export const EVENTS_ITEMS: EventItem[] = [
     year: '2026',
     fullDate: 'April 9, 2026',
     time: '2:00 PM - 4:00 PM EST',
-    title: 'Technical Advisory Committee (TAC) Workshop',
-    location: 'City Planning Conference Room B',
-    description: 'Engineering and technical review session evaluating travel demand modeling data and congestion management performance metrics.'
+    title: 'Technical Advisory Committee Meeting',
+    location: '',
+    description: ''
   },
   {
     id: 'event-3',

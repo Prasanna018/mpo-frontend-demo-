@@ -9,11 +9,11 @@ export const Footer: React.FC<FooterProps> = ({ onOpenActionModal }) => {
     <footer className="w-full bg-navy-950 text-white pt-16 pb-10 border-t border-navy-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Top 5 Column Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12">
+        {/* Top 3 Column Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 pb-12">
           
           {/* Column 1: Brand Info */}
-          <div className="lg:col-span-1 space-y-4">
+          <div className="space-y-4">
             <div className="flex items-center gap-3">
               <div className="flex items-center bg-white px-3 py-2 rounded-lg shadow-sm">
                 <div className="text-left font-serif">
@@ -55,7 +55,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenActionModal }) => {
               </li>
               <li>
                 <button onClick={() => onOpenActionModal('plans')} className="hover:text-blue-400 transition-colors">
-                  Research Reports
+                  Plans
                 </button>
               </li>
               <li>
@@ -66,66 +66,12 @@ export const Footer: React.FC<FooterProps> = ({ onOpenActionModal }) => {
             </ul>
           </div>
 
-          {/* Column 3: Client Support */}
-          <div className="space-y-4">
-            <h4 className="text-lg font-extrabold text-white tracking-tight">Client Support</h4>
-            <ul className="space-y-2.5 text-sm font-semibold text-slate-300">
-              <li>
-                <button onClick={() => onOpenActionModal('contact')} className="hover:text-blue-400 transition-colors">
-                  Help Center
-                </button>
-              </li>
-              <li>
-                <button onClick={() => onOpenActionModal('plans')} className="hover:text-blue-400 transition-colors">
-                  Public Resources
-                </button>
-              </li>
-              <li>
-                <button onClick={() => onOpenActionModal('committee')} className="hover:text-blue-400 transition-colors">
-                  Community Support
-                </button>
-              </li>
-              <li>
-                <button onClick={() => onOpenActionModal('schedule')} className="hover:text-blue-400 transition-colors">
-                  Schedule Meeting
-                </button>
-              </li>
-            </ul>
-          </div>
-
-          {/* Column 4: Policies */}
-          <div className="space-y-4">
-            <h4 className="text-lg font-extrabold text-white tracking-tight">Policies</h4>
-            <ul className="space-y-2.5 text-sm font-semibold text-slate-300">
-              <li>
-                <button onClick={() => onOpenActionModal('privacy')} className="hover:text-blue-400 transition-colors">
-                  Privacy Policy
-                </button>
-              </li>
-              <li>
-                <button onClick={() => onOpenActionModal('terms')} className="hover:text-blue-400 transition-colors">
-                  Terms Conditions
-                </button>
-              </li>
-              <li>
-                <button onClick={() => onOpenActionModal('accessibility')} className="hover:text-blue-400 transition-colors">
-                  Accessibility Policy
-                </button>
-              </li>
-              <li>
-                <button onClick={() => onOpenActionModal('cookies')} className="hover:text-blue-400 transition-colors">
-                  Cookie Policy
-                </button>
-              </li>
-            </ul>
-          </div>
-
-          {/* Column 5: Follow Us */}
+          {/* Column 3: Follow Us */}
           <div className="space-y-4">
             <h4 className="text-lg font-extrabold text-white tracking-tight">Follow Us</h4>
             <ul className="space-y-3 text-sm font-semibold text-slate-300">
               <li>
-                <a href="https://instagram.com" target="_blank" rel="noreferrer" className="flex items-center gap-3 hover:text-blue-400 transition-colors">
+                <a href="https://www.instagram.com/tri_cities_area_mpo/" target="_blank" rel="noreferrer" className="flex items-center gap-3 hover:text-blue-400 transition-colors">
                   <svg className="w-5 h-5 text-slate-300 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
                     <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
@@ -135,7 +81,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenActionModal }) => {
                 </a>
               </li>
               <li>
-                <a href="https://facebook.com" target="_blank" rel="noreferrer" className="flex items-center gap-3 hover:text-blue-400 transition-colors">
+                <a href="https://www.facebook.com/profile.php?id=61585830959699" target="_blank" rel="noreferrer" className="flex items-center gap-3 hover:text-blue-400 transition-colors">
                   <svg className="w-5 h-5 text-slate-300 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
                   </svg>
