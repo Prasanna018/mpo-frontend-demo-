@@ -9,11 +9,11 @@ export const Footer: React.FC<FooterProps> = ({ onOpenActionModal }) => {
     <footer className="w-full bg-navy-950 text-white pt-16 pb-10 border-t border-navy-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Top 3 Column Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 pb-12">
+        {/* Top 3 Column Evenly Spaced Container */}
+        <div className="flex flex-col md:flex-row justify-between items-start gap-10 md:gap-12 lg:gap-16 pb-12">
           
           {/* Column 1: Brand Info */}
-          <div className="space-y-4">
+          <div className="space-y-4 max-w-sm w-full">
             <div className="flex items-center gap-3">
               <div className="flex items-center bg-white px-3 py-2 rounded-lg shadow-sm">
                 <div className="text-left font-serif">
@@ -30,12 +30,12 @@ export const Footer: React.FC<FooterProps> = ({ onOpenActionModal }) => {
             </div>
 
             <p className="text-sm text-slate-300 font-medium leading-relaxed">
-              Supporting sustainable regional growth through planning, transportation, funding, and community development initiatives.
+              Supporting sustainable regional growth through planning, transportation, and funding.
             </p>
           </div>
 
           {/* Column 2: Quick Links */}
-          <div className="space-y-4">
+          <div className="space-y-4 min-w-[200px]">
             <h4 className="text-lg font-extrabold text-white tracking-tight">Quick Links</h4>
             <ul className="space-y-2.5 text-sm font-semibold text-slate-300">
               <li>
@@ -67,7 +67,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenActionModal }) => {
           </div>
 
           {/* Column 3: Follow Us */}
-          <div className="space-y-4">
+          <div className="space-y-4 min-w-[180px]">
             <h4 className="text-lg font-extrabold text-white tracking-tight">Follow Us</h4>
             <ul className="space-y-3 text-sm font-semibold text-slate-300">
               <li>
@@ -104,7 +104,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenActionModal }) => {
         {/* Separator Rule */}
         <div className="border-t border-slate-800/80 pt-8 flex flex-col items-center justify-center">
           <p className="text-sm font-bold text-slate-300 tracking-wide text-center">
-            © 2026 Regional Council, All rights reserved.
+            © 2026 TCAMPO, All rights reserved.
           </p>
         </div>
 

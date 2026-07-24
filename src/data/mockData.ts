@@ -73,6 +73,11 @@ export const POLICY_COMMITTEE_DATA = {
   },
   votingMembers: [
     {
+      name: 'Mr. Casey Dooley (Vice Chair)',
+      organization: 'Dinwiddie County',
+      image: '/pc-members/casey-dooley.png'
+    },
+    {
       name: 'Mayor Samuel Parham',
       organization: 'City of Petersburg',
       image: '/pc-members/samuel-parham.png'
@@ -94,11 +99,6 @@ export const POLICY_COMMITTEE_DATA = {
       isVacant: true
     },
     {
-      name: 'Mr. Casey Dooley',
-      organization: 'Dinwiddie County',
-      image: '/pc-members/casey-dooley.png'
-    },
-    {
       name: 'Mr. Dale Totten',
       organization: 'For the Secretary of Transportation',
       image: '/pc-members/dale-totten.png'
@@ -116,9 +116,9 @@ export const POLICY_COMMITTEE_DATA = {
   ],
   nonVotingMembers: [
     {
-      name: 'Ms. Brigitte Carter',
-      organization: 'RideFinders, Inc.',
-      image: '/pc-members/pc-member-8.png',
+      name: 'Mr. Wood Hudson',
+      organization: 'Department of Rail & Public Transportation',
+      image: '/pc-members/pc-member-9.png',
       isVacant: false
     },
     {
@@ -134,9 +134,9 @@ export const POLICY_COMMITTEE_DATA = {
       isVacant: true
     },
     {
-      name: 'Mr. Wood Hudson',
-      organization: 'Department of Rail & Public Transportation',
-      image: '/pc-members/pc-member-9.png',
+      name: 'Ms. Brigitte Carter',
+      organization: 'RideFinders, Inc.',
+      image: '/pc-members/pc-member-8.png',
       isVacant: false
     }
   ]
