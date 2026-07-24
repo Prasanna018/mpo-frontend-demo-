@@ -16,7 +16,7 @@ export const DataView: React.FC<DataViewProps> = ({
 
   const dataSubTabs = [
     'Regional Travel Model',
-    'VDOT Roadway Functional Classification',
+    'Roadway Functional Classification',
     'Transportation Dashboard'
   ];
 
@@ -108,7 +108,7 @@ export const DataView: React.FC<DataViewProps> = ({
               <div className="space-y-8">
                 
                 <h2 className="text-3xl sm:text-4xl font-extrabold text-navy-950 tracking-tight">
-                  Modeling
+                  Regional Travel Model
                 </h2>
 
                 <p className="text-slate-700 text-base sm:text-lg font-normal leading-relaxed">
@@ -171,11 +171,11 @@ export const DataView: React.FC<DataViewProps> = ({
               </div>
             )}
 
-            {/* 2. VDOT ROADWAY FUNCTIONAL CLASSIFICATION */}
-            {activeDataTab === 'VDOT Roadway Functional Classification' && (
+            {/* 2. ROADWAY FUNCTIONAL CLASSIFICATION */}
+            {activeDataTab === 'Roadway Functional Classification' && (
               <div className="space-y-8">
                 <h2 className="text-3xl sm:text-4xl font-extrabold text-navy-950 tracking-tight">
-                  Functional Classification
+                  Roadway Functional Classification
                 </h2>
 
                 <p className="text-slate-700 text-base sm:text-lg font-normal leading-relaxed">

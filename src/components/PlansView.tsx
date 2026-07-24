@@ -109,12 +109,16 @@ export const PlansView: React.FC<PlansViewProps> = ({
           {/* Right Main Content Area matching User Text & Screenshot 2 */}
           <div className="md:col-span-7 lg:col-span-7 space-y-8 pl-0 md:pl-2">
             
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-navy-950 tracking-tight">
+              {activePlanTab}
+            </h2>
+
             {/* 1. METROPOLITAN TRANSPORTATION PLAN */}
             {activePlanTab === 'Metropolitan Transportation Plan' && (
               <div className="space-y-8 text-slate-800 text-base sm:text-lg font-normal leading-relaxed">
                 
                 <p>
-                  The Metropolitan Transportation Plan is a long-term strategic document that serves as a comprehensive guide for transportation investments in the region over the next 25 years. It outlines transportation needs, policies, strategies, and projects designed to enhance the quality of life for all residents as part of TCAMPO’s ongoing, comprehensive, and collaborative planning efforts. Updated every five years, the plan adapts to evolving priorities, population shifts, and economic growth trends that influence travel demand. Its development involves coordination between TCAMPO, local communities, state and federal agencies, and the public to create regional solutions for maintaining, managing, and improving the transportation network.
+                  The Metropolitan Transportation Plan is a long-term strategic document that serves as a comprehensive guide for transportation investments in the region over the next 25 years. It outlines transportation needs, policies, strategies, and projects designed to enhance the quality of life for all residents as part of Updated every five years, the plan adapts to evolving priorities, population shifts, and economic growth trends that influence travel demand. Its development involves coordination between TCAMPO, local communities, state and federal agencies, and the public to create regional solutions for maintaining, managing, and improving the transportation network.
                 </p>
 
                 {/* Horizontal Line with Diamond Icon matching Screenshot 2 */}
@@ -304,7 +308,7 @@ export const PlansView: React.FC<PlansViewProps> = ({
             {activePlanTab === 'Public Participation Plan' && (
               <div className="space-y-8 text-slate-800 text-base sm:text-lg font-normal leading-relaxed">
                 <p>
-                  The TCAMPO Public Participation Plan describes the strategies that will be used to encourage public participation in the development of the MPO’s various transportation planning documents. The Public Participation Plan outlines the MPO’s commitment to an open and transparent involvement process with the public, local communities, and local, state, and federal agencies to support the regional transportation planning process. The Public Participation Plan ensures everyone is given ample opportunity to access, review, and comment on plans, studies, and other transportation documents as they are being developed. Procedures outlined in the Public Participation Plan are reviewed periodically and updated as necessary to ensure a full and open participation process. Public involvement opportunities are established early in the process and remain a continuous effort throughout the development of a planning document or project by the MPO. The latest participation plan can be{' '}
+                  The TCAMPO Public Participation Plan describes the strategies that will be used to encourage public participation in the development of the MPO’s various transportation planning documents. The Public Participation Plan outlines the MPO’s commitment to an open and transparent involvement process with the public, local communities, and local, state, and federal agencies to support the regional transportation planning process. The Public Participation Plan ensures everyone is given ample opportunity to access, review, and comment on plans Procedures outlined in the Public Participation Plan are reviewed periodically and updated as necessary to ensure a full and open participation process. Public involvement opportunities are established early in the process and remain a continuous effort throughout the development of a planning document or project by the MPO. The latest participation plan can be{' '}
                   <a
                     href={defaultPdfUrl}
                     target="_blank"

@@ -736,7 +736,7 @@ export const EVENTS_ITEMS: EventItem[] = [
     year: '2026',
     fullDate: 'May 7, 2026',
     time: '4:30 PM',
-    title: 'TCAMPO Policy Committee Meeting',
+    title: 'Policy Committee Meeting',
     location: '',
     description: ''
   },
