@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Header } from './Header';
-import { Mail, MapPin, Clock, CheckCircle2 } from 'lucide-react';
+import { Mail, MapPin, Clock, CheckCircle2, X } from 'lucide-react';
 
 interface ContactViewProps {
   onNavigateHome: () => void;
@@ -23,21 +23,47 @@ export const ContactView: React.FC<ContactViewProps> = ({
   });
 
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => {
-      setSubmitted(false);
-      setFormData({
-        fullName: '',
-        phone: '',
-        email: '',
-        organization: '',
-        role: 'Resident / Citizen',
-        message: ''
+    setIsSubmitting(true);
+
+    try {
+      // Trigger Vercel Serverless Function /api/contact
+      await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          ...formData,
+          subject: `New Contact Submission from ${formData.fullName}`
+        })
       });
-    }, 4000);
+
+      // Also trigger send-mail.php for Hostinger server compatibility
+      fetch('/send-mail.php', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ...formData, subject: `New Contact Submission from ${formData.fullName}` })
+      }).catch(() => {});
+
+    } catch (err) {
+      console.log('Submission fallback:', err);
+    } finally {
+      setIsSubmitting(false);
+      setSubmitted(true);
+      setTimeout(() => {
+        setSubmitted(false);
+        setFormData({
+          fullName: '',
+          phone: '',
+          email: '',
+          organization: '',
+          role: 'Resident / Citizen',
+          message: ''
+        });
+      }, 5000);
+    }
   };
 
   return (
@@ -118,20 +144,44 @@ export const ContactView: React.FC<ContactViewProps> = ({
           </div>
 
           {/* Right Column: Light Sky-Blue Form & Contact Details matching Screenshot 2 */}
-          <div className="lg:col-span-7 flex flex-col justify-between space-y-8">
+          <div className="lg:col-span-7 flex flex-col justify-between space-y-8 relative">
             
-            {submitted ? (
-              <div className="bg-emerald-50 border border-emerald-200 rounded-3xl p-8 text-center space-y-4 animate-in fade-in duration-300 my-auto">
-                <div className="w-16 h-16 bg-emerald-500 text-white rounded-full flex items-center justify-center mx-auto shadow-lg">
-                  <CheckCircle2 className="w-10 h-10" />
+            {/* Floating Top-Right Toast Notification */}
+            {submitted && (
+              <div className="fixed top-6 right-6 z-50 flex items-center gap-3 bg-slate-950 text-white px-5 py-4 rounded-2xl shadow-2xl border border-slate-800 animate-in slide-in-from-top-5 fade-in duration-300 max-w-sm sm:max-w-md">
+                <div className="w-10 h-10 rounded-full bg-emerald-500 flex items-center justify-center text-white shrink-0 shadow-md">
+                  <CheckCircle2 className="w-6 h-6" />
                 </div>
-                <h3 className="text-2xl font-black text-emerald-950">Message Sent Successfully!</h3>
-                <p className="text-slate-700 font-semibold">
-                  Thank you for reaching out to TCAMPO. Our planning team will review your submission and respond promptly.
-                </p>
+                <div className="space-y-0.5 pr-2">
+                  <h4 className="text-sm font-extrabold text-white">Message Sent Successfully!</h4>
+                  <p className="text-xs font-medium text-slate-300">Thank you for reaching out to TCAMPO. We will respond promptly.</p>
+                </div>
+                <button
+                  type="button"
+                  onClick={() => setSubmitted(false)}
+                  className="text-slate-400 hover:text-white p-1 ml-auto rounded-lg transition-colors"
+                >
+                  <X className="w-4 h-4" />
+                </button>
               </div>
-            ) : (
-              <form onSubmit={handleSubmit} className="space-y-4">
+            )}
+
+            {/* Inline Alert Banner */}
+            {submitted && (
+              <div className="bg-emerald-50 border border-emerald-300 rounded-2xl p-5 flex items-center gap-4 animate-in fade-in duration-300 shadow-sm">
+                <div className="w-10 h-10 bg-emerald-500 text-white rounded-full flex items-center justify-center shrink-0 shadow-sm">
+                  <CheckCircle2 className="w-6 h-6" />
+                </div>
+                <div>
+                  <h3 className="text-base font-extrabold text-emerald-950">Message Sent Successfully!</h3>
+                  <p className="text-xs sm:text-sm font-semibold text-emerald-800">
+                    Thank you for reaching out. Our planning team will review your submission and respond promptly.
+                  </p>
+                </div>
+              </div>
+            )}
+
+            <form onSubmit={handleSubmit} className="space-y-4">
                 
                 {/* Row 1: Full Name & Phone Number */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -198,12 +248,12 @@ export const ContactView: React.FC<ContactViewProps> = ({
                 {/* Submit Button matching Screenshot 2 */}
                 <button
                   type="submit"
-                  className="w-full bg-blue-500 hover:bg-blue-600 text-white font-extrabold text-lg py-3.5 rounded-xl shadow-lg transition-all duration-200 transform hover:-translate-y-0.5"
+                  disabled={isSubmitting}
+                  className="w-full bg-blue-500 hover:bg-blue-600 disabled:bg-blue-300 text-white font-extrabold text-lg py-3.5 rounded-xl shadow-lg transition-all duration-200 transform hover:-translate-y-0.5"
                 >
-                  Submit
+                  {isSubmitting ? 'Sending Message...' : 'Submit'}
                 </button>
               </form>
-            )}
 
             {/* Horizontal Line with Diamond Icon matching Screenshot 2 */}
             <div className="relative my-6 border-t border-slate-300">

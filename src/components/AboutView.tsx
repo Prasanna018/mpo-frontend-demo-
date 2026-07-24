@@ -23,13 +23,13 @@ export const AboutView: React.FC<AboutViewProps> = ({
 
   const subTabsList = [
     'MPO Overview',
-    'Policy Committee (PC)',
-    'Technical Advisory Committee (TAC)',
+    'Policy Committee',
+    'Technical Advisory Committee',
     'Agendas'
   ];
 
-  const isPolicyCommittee = activeSubTab === 'Policy Committee (PC)';
-  const isTAC = activeSubTab === 'Technical Advisory Committee (TAC)';
+  const isPolicyCommittee = activeSubTab === 'Policy Committee' || activeSubTab === 'Policy Committee (PC)';
+  const isTAC = activeSubTab === 'Technical Advisory Committee' || activeSubTab === 'Technical Advisory Committee (TAC)';
   const isAgendas = activeSubTab === 'Agendas';
 
   return (
@@ -127,7 +127,7 @@ export const AboutView: React.FC<AboutViewProps> = ({
                         : 'bg-sky-100/90 text-blue-600 hover:bg-sky-200 border border-sky-300'
                     }`}
                   >
-                    PC (Policy Committee)
+                    Policy Committee
                   </button>
 
                   <button
@@ -138,7 +138,7 @@ export const AboutView: React.FC<AboutViewProps> = ({
                         : 'bg-sky-100/90 text-blue-600 hover:bg-sky-200 border border-sky-300'
                     }`}
                   >
-                    TAC (Technical Advisory Committee)
+                    Technical Advisory Committee
                   </button>
                 </div>
 
@@ -269,23 +269,33 @@ export const AboutView: React.FC<AboutViewProps> = ({
                         : 'bg-sky-100/90 text-blue-600 hover:bg-sky-200 border border-sky-300'
                     }`}
                   >
-                    Non Voting Members
+                    Non-Voting Members
                   </button>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 pt-4">
                   {(tacFilter === 'voting' ? TAC_COMMITTEE_DATA.votingMembers : TAC_COMMITTEE_DATA.nonVotingMembers).map((member, idx) => (
                     <div key={idx} className="flex flex-col items-center text-center gap-3">
-                      <div className="w-44 h-52 rounded-xl overflow-hidden bg-slate-100 border border-slate-200 shadow-md flex items-center justify-center p-3">
-                        {member.avatarType === 'female' ? (
-                          <svg className="w-32 h-40 text-slate-400" viewBox="0 0 100 120" fill="currentColor">
-                            <path d="M50 15 C38 15 30 25 30 38 C30 50 38 58 42 60 C30 66 20 80 18 105 L82 105 C80 80 70 66 58 60 C62 58 70 50 70 38 C70 25 62 15 50 15 Z" />
-                          </svg>
+                      <div className="w-44 h-52 rounded-xl overflow-hidden bg-slate-100 border border-slate-200 shadow-md flex items-center justify-center">
+                        {'image' in member && (member as { image?: string }).image ? (
+                          <img
+                            src={(member as { image: string }).image}
+                            alt={member.name}
+                            className="w-full h-full object-cover"
+                          />
+                        ) : member.avatarType === 'female' ? (
+                          <div className="p-3">
+                            <svg className="w-32 h-40 text-slate-400" viewBox="0 0 100 120" fill="currentColor">
+                              <path d="M50 15 C38 15 30 25 30 38 C30 50 38 58 42 60 C30 66 20 80 18 105 L82 105 C80 80 70 66 58 60 C62 58 70 50 70 38 C70 25 62 15 50 15 Z" />
+                            </svg>
+                          </div>
                         ) : (
-                          <svg className="w-32 h-40 text-slate-400" viewBox="0 0 100 120" fill="currentColor">
-                            <circle cx="50" cy="38" r="22" />
-                            <path d="M15 110 C15 75, 85 75, 85 110 Z" />
-                          </svg>
+                          <div className="p-3">
+                            <svg className="w-32 h-40 text-slate-400" viewBox="0 0 100 120" fill="currentColor">
+                              <circle cx="50" cy="38" r="22" />
+                              <path d="M15 110 C15 75, 85 75, 85 110 Z" />
+                            </svg>
+                          </div>
                         )}
                       </div>
                       <div>
@@ -326,7 +336,7 @@ export const AboutView: React.FC<AboutViewProps> = ({
                         : 'bg-sky-100/90 text-blue-600 hover:bg-sky-200 border border-sky-300'
                     }`}
                   >
-                    Non Voting Members
+                    Non-Voting Members
                   </button>
                 </div>
 
@@ -334,7 +344,7 @@ export const AboutView: React.FC<AboutViewProps> = ({
                   <div className="space-y-12 pt-2">
                     <div className="space-y-6">
                       <h2 className="text-2xl sm:text-3xl font-extrabold text-navy-900 tracking-tight">
-                        Voting
+                        Chair
                       </h2>
 
                       <div className="flex flex-col items-start gap-3">
@@ -358,14 +368,20 @@ export const AboutView: React.FC<AboutViewProps> = ({
 
                     <div className="space-y-6 pt-4">
                       <h2 className="text-2xl sm:text-3xl font-extrabold text-navy-900 tracking-tight">
-                        Vice Chair
+                        Voting Members
                       </h2>
 
                       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                         {POLICY_COMMITTEE_DATA.votingMembers.map((member, idx) => (
                           <div key={idx} className="flex flex-col items-center sm:items-start text-center sm:text-left gap-3">
                             <div className="w-44 h-52 rounded-xl overflow-hidden bg-slate-100 border border-slate-200 shadow-md flex items-center justify-center">
-                              {member.isVacant ? (
+                              {member.image && (member.image.startsWith('/') || member.image.startsWith('http')) ? (
+                                <img
+                                  src={member.image}
+                                  alt={member.name}
+                                  className={`w-full h-full ${member.image.includes('seal') ? 'object-contain p-3 bg-white' : 'object-cover'}`}
+                                />
+                              ) : (
                                 <div className="w-full h-full p-4 flex flex-col items-center justify-center bg-slate-50 text-slate-400">
                                   <svg className="w-24 h-24 text-slate-300" viewBox="0 0 100 100" fill="none" stroke="currentColor">
                                     <circle cx="50" cy="50" r="45" strokeWidth="3" />
@@ -373,12 +389,6 @@ export const AboutView: React.FC<AboutViewProps> = ({
                                     <circle cx="50" cy="38" r="14" strokeWidth="3" />
                                   </svg>
                                 </div>
-                              ) : (
-                                <img
-                                  src={member.image}
-                                  alt={member.name}
-                                  className="w-full h-full object-cover"
-                                />
                               )}
                             </div>
                             <div>
@@ -397,17 +407,28 @@ export const AboutView: React.FC<AboutViewProps> = ({
                 ) : (
                   <div className="space-y-6 pt-2">
                     <h2 className="text-2xl sm:text-3xl font-extrabold text-navy-900 tracking-tight">
-                      Non Voting
+                      Non-Voting Members
                     </h2>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                       {POLICY_COMMITTEE_DATA.nonVotingMembers.map((member, idx) => (
                         <div key={idx} className="flex flex-col items-center sm:items-start text-center sm:text-left gap-3">
-                          <div className="w-44 h-52 rounded-xl overflow-hidden bg-slate-100 border border-slate-200 shadow-md flex items-center justify-center p-3">
-                            <svg className="w-32 h-40 text-slate-400" viewBox="0 0 100 120" fill="currentColor">
-                              <circle cx="50" cy="38" r="22" />
-                              <path d="M15 110 C15 75, 85 75, 85 110 Z" />
-                            </svg>
+                          <div className="w-44 h-52 rounded-xl overflow-hidden bg-slate-100 border border-slate-200 shadow-md flex items-center justify-center">
+                            {member.isVacant || !member.image || member.image.startsWith('silhouette') ? (
+                              <div className="w-full h-full p-4 flex flex-col items-center justify-center bg-slate-50 text-slate-400">
+                                <svg className="w-24 h-24 text-slate-300" viewBox="0 0 100 100" fill="none" stroke="currentColor">
+                                  <circle cx="50" cy="50" r="45" strokeWidth="3" />
+                                  <path d="M30 65 C30 50, 70 50, 70 65" strokeWidth="3" />
+                                  <circle cx="50" cy="38" r="14" strokeWidth="3" />
+                                </svg>
+                              </div>
+                            ) : (
+                              <img
+                                src={member.image}
+                                alt={member.name}
+                                className="w-full h-full object-cover"
+                              />
+                            )}
                           </div>
                           <div>
                             <h3 className="text-base font-bold text-navy-950">

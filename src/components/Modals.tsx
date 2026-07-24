@@ -89,17 +89,20 @@ export const Modals: React.FC<ModalsProps> = ({
                   <Clock className="w-4 h-4 text-blue-400" />
                   <span>{selectedEvent.time}</span>
                 </div>
-                <div className="flex items-center gap-2 sm:col-span-2">
-                  <MapPin className="w-4 h-4 text-blue-400 shrink-0" />
-                  <span>{selectedEvent.location}</span>
-                </div>
+                {selectedEvent.location && (
+                  <div className="flex items-center gap-2 sm:col-span-2">
+                    <MapPin className="w-4 h-4 text-blue-400 shrink-0" />
+                    <span>{selectedEvent.location}</span>
+                  </div>
+                )}
               </div>
             </div>
 
-            <h4 className="text-base font-bold text-navy-900 mb-2">Event Agenda & Overview</h4>
-            <p className="text-sm text-slate-600 leading-relaxed mb-6">
-              {selectedEvent.description}
-            </p>
+            {selectedEvent.description && (
+              <p className="text-sm text-slate-600 leading-relaxed mb-6">
+                {selectedEvent.description}
+              </p>
+            )}
 
             <div className="flex flex-wrap items-center gap-3">
               <button

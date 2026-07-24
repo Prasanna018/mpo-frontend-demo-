@@ -12,10 +12,10 @@ export const FundingView: React.FC<FundingViewProps> = ({
   onSelectAboutSubTab,
   onOpenActionModal
 }) => {
-  const [activeFundingTab, setActiveFundingTab] = useState<string>('Regional Surface Transportation Block Grant (RSTBG)');
+  const [activeFundingTab, setActiveFundingTab] = useState<string>('Surface Transportation Block Grant (STBG)');
 
   const fundingSubTabs = [
-    'Regional Surface Transportation Block Grant (RSTBG)',
+    'Surface Transportation Block Grant (STBG)',
     'CMAQ Program',
     'TA Set-Aside',
     'SMART SCALE'
@@ -102,15 +102,15 @@ export const FundingView: React.FC<FundingViewProps> = ({
           {/* Right Main Content Area matching User Screenshot 2 */}
           <div className="md:col-span-7 lg:col-span-7 space-y-8 pl-0 md:pl-2">
             
-            {/* 1. REGIONAL SURFACE TRANSPORTATION BLOCK GRANT (RSTBG) */}
-            {activeFundingTab === 'Regional Surface Transportation Block Grant (RSTBG)' && (
+            {/* 1. SURFACE TRANSPORTATION BLOCK GRANT (STBG) */}
+            {activeFundingTab === 'Surface Transportation Block Grant (STBG)' && (
               <div className="space-y-6">
                 <h2 className="text-3xl sm:text-4xl font-extrabold text-navy-950 tracking-tight">
-                  Regional Surface Transportation Block Grant (RSTBG)
+                  Surface Transportation Block Grant (STBG)
                 </h2>
 
                 <p className="text-slate-700 text-base sm:text-lg font-normal leading-relaxed">
-                  The <span className="font-bold underline text-slate-900">Surface Transportation Block Grant Program</span> (STBG) provides states and regions with flexible federal funding that may be used for a wide variety of highway and transit projects. Regional STBG funds are automatically sub allocated to regional planning organizations within the State. The wide variety of RSTGB investments in the Richmond Region support passenger and freight movement along the region's surface transportation systems. The funds can be used to preserve and improve the conditions and performance on highways, bridges, tunnels, pedestrian facilities, bicycle infrastructure, and transit capital projects.
+                  The <span className="font-bold underline text-slate-900">Surface Transportation Block Grant Program</span> (STBG) provides states and regions with flexible federal funding that may be used for a wide variety of highway and transit projects. Regional STBG funds are automatically sub allocated to regional planning organizations within the State. The wide variety of RSTGB investments in the Region support passenger and freight movement along the region's surface transportation systems. The funds can be used to preserve and improve the conditions and performance on highways, bridges, tunnels, pedestrian facilities, bicycle infrastructure, and transit capital projects.
                 </p>
               </div>
             )}

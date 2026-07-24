@@ -26,21 +26,21 @@ export const EventsView: React.FC<EventsViewProps> = ({
       dayMonth: 'MAY 7',
       year: '2026',
       fullDate: 'May 7, 2026',
-      time: 'May 7 @ 4:30 am',
+      time: '4:30 PM',
       title: 'May 7, 2026',
       subTitle: 'Policy Committee Board Session',
-      location: 'Crater PDC, 1964 Wakefield Street, Petersburg, VA 23805',
-      note: 'Updated 05.07.2026'
+      location: '',
+      note: ''
     },
     {
       id: 'pe-2',
       dayMonth: 'MAY 1',
       year: '2026',
       fullDate: 'May 1, 2026',
-      time: 'May 1 @ 10:00 am',
+      time: '10:00 AM',
       title: 'May 1, 2026',
       subTitle: 'Technical Advisory Committee (TAC) Technical Review',
-      location: 'Crater PDC, 1964 Wakefield Street, Petersburg, VA 23805',
+      location: '',
       note: ''
     },
     {
@@ -48,11 +48,11 @@ export const EventsView: React.FC<EventsViewProps> = ({
       dayMonth: 'APR 9',
       year: '2026',
       fullDate: 'April 9, 2026',
-      time: 'April 9 @ 4:30 am - 10:12 am',
+      time: '4:30 PM',
       title: 'April 9, 2026',
       subTitle: 'Regional Freight & Intermodal Workgroup',
-      location: 'Crater PDC, 1964 Wakefield Street, Petersburg, VA 23805',
-      note: 'VIRTUAL Meeting - Updated 04.07.2026'
+      location: '',
+      note: ''
     }
   ];
 
@@ -162,7 +162,7 @@ export const EventsView: React.FC<EventsViewProps> = ({
                   time: event.time,
                   title: `${event.title} - ${event.subTitle}`,
                   location: event.location,
-                  description: event.note || 'Official TCAMPO committee session.'
+                  description: event.note || ''
                 })}
                 className="flex flex-col sm:flex-row items-start gap-6 group cursor-pointer p-2 rounded-2xl hover:bg-slate-50 transition-colors"
               >
@@ -189,9 +189,11 @@ export const EventsView: React.FC<EventsViewProps> = ({
                     {event.title}
                   </h3>
 
-                  <p className="text-sm font-semibold text-slate-700">
-                    {event.location}
-                  </p>
+                  {event.location && (
+                    <p className="text-sm font-semibold text-slate-700">
+                      {event.location}
+                    </p>
+                  )}
 
                   {event.note && (
                     <p className="text-xs font-semibold text-slate-500 pt-1">

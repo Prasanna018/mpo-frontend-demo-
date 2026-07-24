@@ -12,14 +12,14 @@ export const PlansView: React.FC<PlansViewProps> = ({
   onSelectAboutSubTab,
   onOpenActionModal
 }) => {
-  const [activePlanTab, setActivePlanTab] = useState<string>('Metropolitan Transportation Plan (MTP)');
+  const [activePlanTab, setActivePlanTab] = useState<string>('Metropolitan Transportation Plan');
 
   const planSubTabs = [
-    'Metropolitan Transportation Plan (MTP)',
-    'Metropolitan Transportation Improvement Program (MTIP)',
-    'Congestion Management Process (CMP)',
-    'Unified Planning Work Program (UPWP)',
-    'Public Participation Plan (PPP)',
+    'Metropolitan Transportation Plan',
+    'Metropolitan Transportation Improvement Program',
+    'Congestion Management Process',
+    'Unified Planning Work Program',
+    'Public Participation Plan',
     'Transportation Performance Management',
     'Listing of Obligated Projects',
     'Title VI'
@@ -38,7 +38,7 @@ export const PlansView: React.FC<PlansViewProps> = ({
         <div className="absolute inset-0 z-0">
           <img
             src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=2400&q=90"
-            alt="Long-Range Plans Shaping the Tri-Cities Region"
+            alt="Plans Shaping the Tri-Cities Region"
             className="w-full h-full object-cover object-center scale-105"
           />
           
@@ -67,7 +67,7 @@ export const PlansView: React.FC<PlansViewProps> = ({
           </div>
 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-tight max-w-3xl drop-shadow-xl">
-            Long-Range Plans Shaping the Tri-Cities Region
+            Plans Shaping the Tri-Cities Region
           </h1>
         </div>
       </section>
@@ -109,8 +109,8 @@ export const PlansView: React.FC<PlansViewProps> = ({
           {/* Right Main Content Area matching User Text & Screenshot 2 */}
           <div className="md:col-span-7 lg:col-span-7 space-y-8 pl-0 md:pl-2">
             
-            {/* 1. METROPOLITAN TRANSPORTATION PLAN (MTP) */}
-            {activePlanTab === 'Metropolitan Transportation Plan (MTP)' && (
+            {/* 1. METROPOLITAN TRANSPORTATION PLAN */}
+            {activePlanTab === 'Metropolitan Transportation Plan' && (
               <div className="space-y-8 text-slate-800 text-base sm:text-lg font-normal leading-relaxed">
                 
                 <p>
@@ -131,7 +131,7 @@ export const PlansView: React.FC<PlansViewProps> = ({
                     2050 Metropolitan Transportation Plan (PLAN2050)
                   </h2>
                   <p>
-                    The development of the 2050 Metropolitan Transportation Plan for TCAMPO is currently in progress. This collaborative effort aims to maintain consistency in long-range planning across the region, and your participation is encouraged.
+                    The development of the 2050 Metropolitan Transportation Plan for TCAMPO is currently in progress. This collaborative effort aims to maintain consistency in regional planning across the region, and your participation is encouraged.
                   </p>
                 </div>
 
@@ -140,7 +140,7 @@ export const PlansView: React.FC<PlansViewProps> = ({
                     Get Involved:
                   </h3>
                   <p>
-                    Feedback from local transportation network users is essential in shaping a comprehensive long-range transportation plan. Your input will help the study team identify and address key priorities throughout the planning process.{' '}
+                    Feedback from local transportation network users is essential in shaping a comprehensive regional transportation plan. Your input will help the study team identify and address key priorities throughout the planning process.{' '}
                     <button
                       onClick={() => onOpenActionModal('survey')}
                       className="text-blue-600 hover:text-blue-800 font-bold underline inline-flex items-center gap-1"
@@ -179,11 +179,11 @@ export const PlansView: React.FC<PlansViewProps> = ({
               </div>
             )}
 
-            {/* 2. METROPOLITAN TRANSPORTATION IMPROVEMENT PROGRAM (MTIP) */}
-            {activePlanTab === 'Metropolitan Transportation Improvement Program (MTIP)' && (
+            {/* 2. METROPOLITAN TRANSPORTATION IMPROVEMENT PROGRAM */}
+            {activePlanTab === 'Metropolitan Transportation Improvement Program' && (
               <div className="space-y-8 text-slate-800 text-base sm:text-lg font-normal leading-relaxed">
                 <p>
-                  The Metropolitan Transportation Improvement Program (MTIP) is a financially constrained, four-year program of federally, state, and locally funded transportation projects. It includes investments in highways, transit, bridges, rail, bicycle and pedestrian facilities, and other transportation improvements. Projects included in the MTIP are consistent with the region’s Metropolitan Transportation Plan (MTP) and typically progress from long-range concepts identified in the MTP into the four-year implementation program as funding becomes available and priorities are established.
+                  The Metropolitan Transportation Improvement Program is a financially constrained, four-year program of federally, state, and locally funded transportation projects. It includes investments in highways, transit, bridges, rail, bicycle and pedestrian facilities, and other transportation improvements. Projects included in the MTIP are consistent with the region’s Metropolitan Transportation Plan and typically progress from planning concepts identified in the MTP into the four-year implementation program as funding becomes available and priorities are established.
                 </p>
 
                 <div className="space-y-6 pt-4 border-t border-slate-200">
@@ -214,11 +214,11 @@ export const PlansView: React.FC<PlansViewProps> = ({
               </div>
             )}
 
-            {/* 3. CONGESTION MANAGEMENT PROCESS (CMP) */}
-            {activePlanTab === 'Congestion Management Process (CMP)' && (
+            {/* 3. CONGESTION MANAGEMENT PROCESS */}
+            {activePlanTab === 'Congestion Management Process' && (
               <div className="space-y-8 text-slate-800 text-base sm:text-lg font-normal leading-relaxed">
                 <p>
-                  Traffic congestion impacts the mobility of people and goods in Southern Virginia, which affects quality of life and economic growth in the region. The TCAMPO maintains the federally-required Congestion Management Process (CMP) to improve transportation system reliability, safety, and performance.
+                  Traffic congestion impacts the mobility of people and goods in Southern Virginia, which affects quality of life and economic growth in the region. The TCAMPO maintains the federally-required Congestion Management Process to improve transportation system reliability, safety, and performance.
                 </p>
 
                 <div className="space-y-3 pt-2">
@@ -254,11 +254,11 @@ export const PlansView: React.FC<PlansViewProps> = ({
               </div>
             )}
 
-            {/* 4. UNIFIED PLANNING WORK PROGRAM (UPWP) */}
-            {activePlanTab === 'Unified Planning Work Program (UPWP)' && (
+            {/* 4. UNIFIED PLANNING WORK PROGRAM */}
+            {activePlanTab === 'Unified Planning Work Program' && (
               <div className="space-y-8 text-slate-800 text-base sm:text-lg font-normal leading-relaxed">
                 <p>
-                  Unified Planning Work Program (UPWP) is a federally-required document that outlines the TCAMPO’s annual budget, planning priorities, and proposed work for each fiscal year. For all budgeted projects, the UPWP describes the following:
+                  Unified Planning Work Program is a federally-required document that outlines the TCAMPO’s annual budget, planning priorities, and proposed work for each fiscal year. For all budgeted projects, the UPWP describes the following:
                 </p>
 
                 <ul className="list-disc pl-6 space-y-2 font-semibold text-slate-900">
@@ -300,11 +300,11 @@ export const PlansView: React.FC<PlansViewProps> = ({
               </div>
             )}
 
-            {/* 5. PUBLIC PARTICIPATION PLAN (PPP) */}
-            {activePlanTab === 'Public Participation Plan (PPP)' && (
+            {/* 5. PUBLIC PARTICIPATION PLAN */}
+            {activePlanTab === 'Public Participation Plan' && (
               <div className="space-y-8 text-slate-800 text-base sm:text-lg font-normal leading-relaxed">
                 <p>
-                  The TCAMPO Public Participation Plan (PPP) describes the strategies that will be used to encourage public participation in the development of the MPO’s various transportation planning documents. The Public Participation Plan outlines the MPO’s commitment to an open and transparent involvement process with the public, local communities, and local, state, and federal agencies to support the regional transportation planning process. The Public Participation Plan ensures everyone is given ample opportunity to access, review, and comment on plans, studies, and other transportation documents as they are being developed. Procedures outlined in the Public Participation Plan are reviewed periodically and updated as necessary to ensure a full and open participation process. Public involvement opportunities are established early in the process and remain a continuous effort throughout the development of a planning document or project by the MPO. The latest participation plan can be{' '}
+                  The TCAMPO Public Participation Plan describes the strategies that will be used to encourage public participation in the development of the MPO’s various transportation planning documents. The Public Participation Plan outlines the MPO’s commitment to an open and transparent involvement process with the public, local communities, and local, state, and federal agencies to support the regional transportation planning process. The Public Participation Plan ensures everyone is given ample opportunity to access, review, and comment on plans, studies, and other transportation documents as they are being developed. Procedures outlined in the Public Participation Plan are reviewed periodically and updated as necessary to ensure a full and open participation process. Public involvement opportunities are established early in the process and remain a continuous effort throughout the development of a planning document or project by the MPO. The latest participation plan can be{' '}
                   <a
                     href={defaultPdfUrl}
                     target="_blank"

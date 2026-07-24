@@ -53,8 +53,8 @@ export const MPO_NAV_LINKS = [
     hasDropdown: true,
     dropdownItems: [
       'MPO Overview',
-      'Policy Committee (PC)',
-      'Technical Advisory Committee (TAC)',
+      'Policy Committee',
+      'Technical Advisory Committee',
       'Agendas'
     ] 
   },
@@ -69,91 +69,81 @@ export const POLICY_COMMITTEE_DATA = {
   chair: {
     name: 'Mr. John Wood (Chair)',
     organization: 'City of Colonial Heights',
-    image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=500&q=80'
+    image: '/pc-members/john-wood.png'
   },
   votingMembers: [
     {
-      name: 'Mr. Casey Dooley',
-      organization: 'Dinwiddie County',
-      image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=500&q=80'
-    },
-    {
-      name: 'Mr. Kevin Carroll',
-      organization: 'Chesterfield County',
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=500&q=80'
-    },
-    {
-      name: 'Vacant',
-      organization: 'City of Hopewell',
-      image: 'city-seal',
-      isVacant: true
-    },
-    {
       name: 'Mayor Samuel Parham',
       organization: 'City of Petersburg',
-      image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=500&q=80'
+      image: '/pc-members/samuel-parham.png'
     },
     {
       name: 'Mr. T.J. Webb',
       organization: 'Prince George County',
-      image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=500&q=80'
+      image: '/pc-members/tj-webb.png'
+    },
+    {
+      name: 'Mr. Kevin Carroll',
+      organization: 'Chesterfield County',
+      image: '/pc-members/kevin-carroll.png'
+    },
+    {
+      name: 'Vacant',
+      organization: 'City of Hopewell',
+      image: '/pc-members/hopewell-seal.png',
+      isVacant: true
+    },
+    {
+      name: 'Mr. Casey Dooley',
+      organization: 'Dinwiddie County',
+      image: '/pc-members/casey-dooley.png'
     },
     {
       name: 'Mr. Dale Totten',
       organization: 'For the Secretary of Transportation',
-      image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=500&q=80'
+      image: '/pc-members/dale-totten.png'
+    },
+    {
+      name: 'Mr. Darius Mason',
+      organization: 'Petersburg Area Transit',
+      image: '/pc-members/darius-mason.png'
+    },
+    {
+      name: 'Mr. Jay Ellington',
+      organization: 'Crater Planning District Commission',
+      image: '/pc-members/jay-ellington.png'
     }
   ],
   nonVotingMembers: [
     {
-      name: 'Vacant',
-      organization: 'Federal Highway Administration',
-      image: 'silhouette-male',
-      isVacant: true
-    },
-    {
-      name: 'Vacant',
-      organization: 'Federal Transit Administration',
-      image: 'silhouette-male',
-      isVacant: true
-    },
-    {
       name: 'Ms. Brigitte Carter',
       organization: 'RideFinders, Inc.',
-      image: 'silhouette-female',
+      image: '/pc-members/pc-member-8.png',
+      isVacant: false
+    },
+    {
+      name: 'Mr. Ivan Rucker',
+      organization: 'Federal Highway Administration (FHWA)',
+      image: 'silhouette-male',
       isVacant: false
     },
     {
       name: 'Vacant',
-      organization: 'Virginia Dept. of Rail and Public Transportation',
+      organization: 'Federal Transit Administration (FTA)',
       image: 'silhouette-male',
       isVacant: true
+    },
+    {
+      name: 'Mr. Wood Hudson',
+      organization: 'Department of Rail & Public Transportation',
+      image: '/pc-members/pc-member-9.png',
+      isVacant: false
     }
   ]
 };
 
 export const TAC_COMMITTEE_DATA = {
   votingMembers: [
-    {
-      name: 'Mr. Hongmyung Lim (Chair)',
-      organization: 'Chesterfield County',
-      avatarType: 'male' as const
-    },
-    {
-      name: 'Mr. Matt Ryan (Vice Chair)',
-      organization: 'City of Colonial Heights',
-      avatarType: 'male' as const
-    },
-    {
-      name: 'Mr. Mark Bassett',
-      organization: 'Dinwiddie County',
-      avatarType: 'male' as const
-    },
-    {
-      name: 'Mr. Josh Sementelli',
-      organization: 'City of Hopewell',
-      avatarType: 'male' as const
-    },
     {
       name: 'Mr. Jared Crews',
       organization: 'City of Petersburg',
@@ -165,19 +155,43 @@ export const TAC_COMMITTEE_DATA = {
       avatarType: 'male' as const
     },
     {
-      name: 'Representative',
+      name: 'Mr. Hongmyung (Hong) Lim (Chair)',
+      organization: 'Chesterfield County',
+      image: '/tac-members/hongmyung-lim.png',
+      avatarType: 'male' as const
+    },
+    {
+      name: 'Mr. Matthew Ryan (Vice Chair)',
+      organization: 'City of Colonial Heights',
+      image: '/tac-members/matt-ryan.png',
+      avatarType: 'male' as const
+    },
+    {
+      name: 'Mr. Josh Sementelli',
+      organization: 'City of Hopewell',
+      avatarType: 'male' as const
+    },
+    {
+      name: 'Mr. Frank Haltom',
+      organization: 'Dinwiddie County',
+      avatarType: 'male' as const
+    },
+    {
+      name: 'Mr. Darius Mason',
       organization: 'Petersburg Area Transit',
+      image: '/tac-members/darius-mason.png',
       avatarType: 'male' as const
     },
     {
-      name: 'Representative',
-      organization: 'Virginia Department of Transportation',
+      name: 'Mr. Wood Hudson',
+      organization: 'Department of Rail & Public Transportation (DRPT)',
+      image: '/pc-members/pc-member-9.png',
+      avatarType: 'male' as const
+    },
+    {
+      name: 'Ms. Naomi Siodmok',
+      organization: 'Virginia Department of Transportation (VDOT)',
       avatarType: 'female' as const
-    },
-    {
-      name: 'Representative',
-      organization: 'Virginia Department of Rail and Public Transportation',
-      avatarType: 'male' as const
     },
     {
       name: 'Mr. Zakari Mumuni',
@@ -189,21 +203,19 @@ export const TAC_COMMITTEE_DATA = {
     {
       name: 'Ms. Brigitte Carter',
       organization: 'RideFinders, Inc.',
+      image: '/tac-members/brigitte-carter.png',
+      avatarType: 'female' as const
+    },
+    {
+      name: 'Ms. Alexis Morris',
+      organization: 'Petersburg National Battlefield Park',
+      image: '/tac-members/alexis-morris.png',
       avatarType: 'female' as const
     },
     {
       name: 'Mr. Fritz Brandt',
       organization: 'Fort Lee',
-      avatarType: 'male' as const
-    },
-    {
-      name: 'Ms. Alexis Morris',
-      organization: 'Petersburg National Battlefield Park',
-      avatarType: 'female' as const
-    },
-    {
-      name: 'Mr. Myles Busching',
-      organization: 'PlanRVA / PLAN2050',
+      image: '/tac-members/fritz-brandt.png',
       avatarType: 'male' as const
     }
   ]
@@ -235,19 +247,19 @@ export const PROGRAMS_STUDIES_DATA = {
     },
     {
       id: 'rp-2',
-      title: '2045 Metropolitan Transportation Long-Range Blueprint Plan',
+      title: '2045 Metropolitan Transportation Blueprint Plan',
       pdfUrl: 'https://lightblue-dogfish-243005.hostingersite.com/wp-content/uploads/2026/05/11.13.2025-Policy-Committee-agenda-Updated-11.13.2025-Final-V3_compressed.pdf'
     },
     {
       id: 'rp-3',
-      title: 'Tri-Cities Regional Congestion Management Process (CMP)',
+      title: 'Tri-Cities Regional Congestion Management Process',
       pdfUrl: 'https://lightblue-dogfish-243005.hostingersite.com/wp-content/uploads/2026/05/Draft-5.07.2026-Policy-Committee-Agenda-V6-05.07.2026.pdf'
     }
   ],
   'Reports': [
     {
       id: 'rep-1',
-      title: 'Annual Unified Planning Work Program (UPWP) Report',
+      title: 'Annual Unified Planning Work Program Report',
       pdfUrl: 'https://lightblue-dogfish-243005.hostingersite.com/wp-content/uploads/2026/05/Draft-4.09.2026-Policy-Committee-Agenda-Updated-04.07.2026_compressed.pdf'
     },
     {
@@ -645,22 +657,22 @@ export const ABOUT_SECTIONS = {
     ],
     bullets: [
       'an executive decision-making body (Policy Committee),',
-      'an advisory body (Transportation Advisory Committee), and',
+      'an advisory body (Advisory Committee), and',
       'a full-time professional staff responsible for supporting the MPO\'s planning activities and serving the member jurisdictions.'
     ],
     historyTitle: 'History of tri-cities area mpo',
-    historyContent: 'The Tri-Cities region was designated an urbanized area by the US Bureau of Census to manage regional transportation growth. The TCAMPO was created to unify multi-jurisdictional transportation planning for member cities and counties. TCAMPO serves as the Lead Planning Agency (LPA) managing federal highway and transit fund allocations across the regional network.'
+    historyContent: 'The Tri-Cities region was designated an urbanized area by the US Census Bureau to manage regional transportation growth. The TCAMPO was created to unify multi-jurisdictional transportation planning for member cities and counties. TCAMPO serves as the Lead Planning Agency (LPA) managing federal highway and transit fund allocations across the regional network.'
   },
-  'Policy Committee (PC)': {
-    title: 'Policy Committee (PC)',
+  'Policy Committee': {
+    title: 'Policy Committee',
     subtitle: 'Voting',
     paragraphs: [],
     bullets: [],
     historyTitle: '',
     historyContent: ''
   },
-  'Technical Advisory Committee (TAC)': {
-    title: 'Technical Advisory Committee (TAC)',
+  'Technical Advisory Committee': {
+    title: 'Technical Advisory Committee',
     subtitle: 'Voting Members',
     paragraphs: [],
     bullets: [],
@@ -722,10 +734,10 @@ export const EVENTS_ITEMS: EventItem[] = [
     dayMonth: 'MAY 7',
     year: '2026',
     fullDate: 'May 7, 2026',
-    time: '10:00 AM - 12:30 PM EST',
-    title: 'TCAMPO Policy Committee Monthly Board Session',
-    location: 'TCAMPO Central Headquarters & Virtual Livestream',
-    description: 'Monthly voting meeting of elected officials and transportation directors regarding TIP modifications and regional grant allocations.'
+    time: '4:30 PM',
+    title: 'TCAMPO Policy Committee Meeting',
+    location: '',
+    description: ''
   },
   {
     id: 'event-2',
@@ -803,7 +815,7 @@ export const PROGRAMS_LIST: ProgramItem[] = [
   },
   {
     id: 'prog-2',
-    title: 'Metropolitan Transportation Plan (MTP) Vision 2045',
+    title: 'Metropolitan Transportation Plan Vision 2045',
     category: 'Long-Range Strategy',
     description: '20-year blueprint guiding regional transportation investments, multi-modal mobility, and environmental preservation.',
     status: 'Active',
@@ -811,7 +823,7 @@ export const PROGRAMS_LIST: ProgramItem[] = [
   },
   {
     id: 'prog-3',
-    title: 'Congestion Management Process (CMP) Optimization',
+    title: 'Congestion Management Process Optimization',
     category: 'Operations & Safety',
     description: 'Systematic program to monitor congestion, deploy intelligent transportation systems (ITS), and optimize traffic signal timing.',
     status: 'Active',
