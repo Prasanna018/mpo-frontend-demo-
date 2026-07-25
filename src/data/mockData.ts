@@ -165,16 +165,19 @@ export const TAC_COMMITTEE_DATA = {
     {
       name: 'Mr. Tim Graves',
       organization: 'Prince George County',
+      image: '/tac-members/prince-george-seal.png',
       avatarType: 'male' as const
     },
     {
       name: 'Mr. Josh Sementelli',
       organization: 'City of Hopewell',
+      image: '/tac-members/hopewell-seal.png',
       avatarType: 'male' as const
     },
     {
       name: 'Mr. Frank Haltom',
       organization: 'Dinwiddie County',
+      image: '/tac-members/dinwiddie-seal.png',
       avatarType: 'male' as const
     },
     {
