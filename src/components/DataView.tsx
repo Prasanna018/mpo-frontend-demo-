@@ -31,7 +31,7 @@ export const DataView: React.FC<DataViewProps> = ({
         {/* Background Image: Data Analysts reviewing research screen */}
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=2400&q=90"
+            src="/data-bg.png"
             alt="Data & Research Powering Regional Decisions"
             className="w-full h-full object-cover object-center scale-105"
           />

@@ -37,7 +37,7 @@ export const PlansView: React.FC<PlansViewProps> = ({
         {/* Background Image: Data analysts / planners looking at charts */}
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=2400&q=90"
+            src="/plans-bg.png"
             alt="Plans Shaping the Tri-Cities Region"
             className="w-full h-full object-cover object-center scale-105"
           />
