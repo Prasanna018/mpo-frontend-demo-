@@ -275,82 +275,41 @@ export const AboutView: React.FC<AboutViewProps> = ({
 
                 <div className="pt-4">
                   {tacFilter === 'voting' ? (
-                    <div className="space-y-8">
-                      {/* First Row: Chair & Vice Chair */}
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-2xl">
-                        {TAC_COMMITTEE_DATA.votingMembers.slice(0, 2).map((member, idx) => (
-                          <div key={idx} className="flex flex-col items-center sm:items-start text-center sm:text-left gap-3">
-                            <div className="w-44 h-52 rounded-xl overflow-hidden bg-slate-100 border border-slate-200 shadow-md flex items-center justify-center">
-                              {'image' in member && (member as { image?: string }).image ? (
-                                <img
-                                  src={(member as { image: string }).image}
-                                  alt={member.name}
-                                  className={`w-full h-full ${(member as { image?: string }).image?.includes('seal') ? 'object-contain p-3 bg-white' : 'object-cover'}`}
-                                />
-                              ) : member.avatarType === 'female' ? (
-                                <div className="p-3">
-                                  <svg className="w-32 h-40 text-slate-400" viewBox="0 0 100 120" fill="currentColor">
-                                    <path d="M50 15 C38 15 30 25 30 38 C30 50 38 58 42 60 C30 66 20 80 18 105 L82 105 C80 80 70 66 58 60 C62 58 70 50 70 38 C70 25 62 15 50 15 Z" />
-                                  </svg>
-                                </div>
-                              ) : (
-                                <div className="p-3">
-                                  <svg className="w-32 h-40 text-slate-400" viewBox="0 0 100 120" fill="currentColor">
-                                    <circle cx="50" cy="38" r="22" />
-                                    <path d="M15 110 C15 75, 85 75, 85 110 Z" />
-                                  </svg>
-                                </div>
-                              )}
-                            </div>
-                            <div>
-                              <h3 className="text-base font-bold text-navy-950 leading-snug">
-                                {member.name}
-                              </h3>
-                              <p className="text-xs font-semibold text-slate-600 mt-1 max-w-[200px]">
-                                {member.organization}
-                              </p>
-                            </div>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                      {TAC_COMMITTEE_DATA.votingMembers.map((member, idx) => (
+                        <div key={idx} className="flex flex-col items-center sm:items-start text-center sm:text-left gap-3">
+                          <div className="w-44 h-52 rounded-xl overflow-hidden bg-slate-100 border border-slate-200 shadow-md flex items-center justify-center">
+                            {'image' in member && (member as { image?: string }).image ? (
+                              <img
+                                src={(member as { image: string }).image}
+                                alt={member.name}
+                                className={`w-full h-full ${(member as { image?: string }).image?.includes('seal') ? 'object-contain p-3 bg-white' : 'object-cover'}`}
+                              />
+                            ) : member.avatarType === 'female' ? (
+                              <div className="p-3">
+                                <svg className="w-32 h-40 text-slate-400" viewBox="0 0 100 120" fill="currentColor">
+                                  <path d="M50 15 C38 15 30 25 30 38 C30 50 38 58 42 60 C30 66 20 80 18 105 L82 105 C80 80 70 66 58 60 C62 58 70 50 70 38 C70 25 62 15 50 15 Z" />
+                                </svg>
+                              </div>
+                            ) : (
+                              <div className="p-3">
+                                <svg className="w-32 h-40 text-slate-400" viewBox="0 0 100 120" fill="currentColor">
+                                  <circle cx="50" cy="38" r="22" />
+                                  <path d="M15 110 C15 75, 85 75, 85 110 Z" />
+                                </svg>
+                              </div>
+                            )}
                           </div>
-                        ))}
-                      </div>
-
-                      {/* Remaining Voting Members */}
-                      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 border-t border-slate-200/80 pt-6">
-                        {TAC_COMMITTEE_DATA.votingMembers.slice(2).map((member, idx) => (
-                          <div key={idx} className="flex flex-col items-center sm:items-start text-center sm:text-left gap-3">
-                            <div className="w-44 h-52 rounded-xl overflow-hidden bg-slate-100 border border-slate-200 shadow-md flex items-center justify-center">
-                              {'image' in member && (member as { image?: string }).image ? (
-                                <img
-                                  src={(member as { image: string }).image}
-                                  alt={member.name}
-                                  className={`w-full h-full ${(member as { image?: string }).image?.includes('seal') ? 'object-contain p-3 bg-white' : 'object-cover'}`}
-                                />
-                              ) : member.avatarType === 'female' ? (
-                                <div className="p-3">
-                                  <svg className="w-32 h-40 text-slate-400" viewBox="0 0 100 120" fill="currentColor">
-                                    <path d="M50 15 C38 15 30 25 30 38 C30 50 38 58 42 60 C30 66 20 80 18 105 L82 105 C80 80 70 66 58 60 C62 58 70 50 70 38 C70 25 62 15 50 15 Z" />
-                                  </svg>
-                                </div>
-                              ) : (
-                                <div className="p-3">
-                                  <svg className="w-32 h-40 text-slate-400" viewBox="0 0 100 120" fill="currentColor">
-                                    <circle cx="50" cy="38" r="22" />
-                                    <path d="M15 110 C15 75, 85 75, 85 110 Z" />
-                                  </svg>
-                                </div>
-                              )}
-                            </div>
-                            <div>
-                              <h3 className="text-base font-bold text-navy-950 leading-snug">
-                                {member.name}
-                              </h3>
-                              <p className="text-xs font-semibold text-slate-600 mt-1 max-w-[200px]">
-                                {member.organization}
-                              </p>
-                            </div>
+                          <div>
+                            <h3 className="text-base font-bold text-navy-950 leading-snug">
+                              {member.name}
+                            </h3>
+                            <p className="text-xs font-semibold text-slate-600 mt-1 max-w-[200px]">
+                              {member.organization}
+                            </p>
                           </div>
-                        ))}
-                      </div>
+                        </div>
+                      ))}
                     </div>
                   ) : (
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -466,8 +425,8 @@ export const AboutView: React.FC<AboutViewProps> = ({
                       Non-Voting Members
                     </h2>
 
-                    {/* 2x2 Grid Structure for Non-Voting Members */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-3xl">
+                    {/* 2x2 Grid Structure with tight gap-8 spacing matching Voting members */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-xl">
                       {POLICY_COMMITTEE_DATA.nonVotingMembers.map((member, idx) => (
                         <div key={idx} className="flex flex-col items-center sm:items-start text-center sm:text-left gap-3">
                           <div className="w-44 h-52 rounded-xl overflow-hidden bg-slate-100 border border-slate-200 shadow-md flex items-center justify-center">
