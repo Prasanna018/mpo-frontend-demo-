@@ -30,7 +30,7 @@ export const FundingView: React.FC<FundingViewProps> = ({
         {/* Background Image: Municipal transit buses */}
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.unsplash.com/photo-1570125909232-eb263c188f7e?auto=format&fit=crop&w=2400&q=90"
+            src="/funding-bg.png"
             alt="Funding Support For Regional Development"
             className="w-full h-full object-cover object-center scale-105"
           />

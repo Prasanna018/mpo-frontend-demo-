@@ -41,8 +41,8 @@ export const AboutView: React.FC<AboutViewProps> = ({
         {/* Background Image: Single consistent image for all About sub-tabs */}
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=2400&q=90"
-            alt="Regional freight semi trucks transportation"
+            src="/about-bg.png"
+            alt="About TCAMPO Regional Leadership"
             className="w-full h-full object-cover object-center scale-105"
           />
           

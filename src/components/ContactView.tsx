@@ -75,7 +75,7 @@ export const ContactView: React.FC<ContactViewProps> = ({
         {/* Background Image: Planning contract signing / consulting */}
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=2400&q=90"
+            src="/contact-bg.png"
             alt="Contact TCAMPO"
             className="w-full h-full object-cover object-center scale-105"
           />

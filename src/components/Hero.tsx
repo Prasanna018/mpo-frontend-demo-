@@ -17,7 +17,7 @@ export const Hero: React.FC<HeroProps> = ({
       {/* Background Image with Aerial Highway View */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/hero-banner.jpg"
+          src="/hero-bg.png"
           alt="Tri-Cities Area MPO Aerial Sunset Cityscape & Highway Interchange"
           className="w-full h-full object-cover object-center scale-105 transition-transform duration-1000 ease-out"
         />

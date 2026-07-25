@@ -32,7 +32,7 @@ export const ProgramsView: React.FC<ProgramsViewProps> = ({
         {/* Background Image: Local Public Asset for 100% Instant Loading */}
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=2400&q=80"
+            src="/programs-bg.png"
             alt="Regional Programs Driving Community Growth"
             className="w-full h-full object-cover object-center scale-105"
           />
