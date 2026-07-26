@@ -653,7 +653,7 @@ export const AGENDAS_DATA: { current: AgendaItem[]; archive: AgendaItem[] } = {
 export const ABOUT_SECTIONS = {
   'MPO Overview': {
     title: 'MPO Overview',
-    subtitle: 'What is an MPO?',
+    subtitle: 'What is an MPO',
     paragraphs: [
       'A Metropolitan Planning Organization (MPO) is a federally designated transportation planning agency responsible for coordinating transportation planning and decision-making in urbanized areas with populations greater than 50,000. Established by Congress through the Federal-Aid Highway Act of 1962, MPOs were created to promote regional coordination through a continuing, cooperative, and comprehensive ("3-C") transportation planning process.',
       'MPOs bring together local governments, transportation agencies, and other stakeholders to develop long-range transportation plans, prioritize transportation investments, and ensure that federal transportation funds are allocated in accordance with regional goals and priorities.',
