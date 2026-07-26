@@ -696,39 +696,39 @@ export const ABOUT_SECTIONS = {
 export const NEWS_ITEMS: NewsItem[] = [
   {
     id: 'news-1',
-    title: 'Hosting Public Meeting For Regional Transportation Plan Update',
-    date: 'June 18, 2026',
+    title: 'PUBLIC NOTICE — TCAMPO TECHNICAL ADVISORY COMMITTEE',
+    date: 'JUN 25, 2026',
     category: 'Public Notice',
     image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80',
-    summary: 'Public meeting scheduled discussing transportation sustainability goals, regional priorities, and community feedback.',
-    content: 'The Tri-Cities Area Metropolitan Planning Organization (TCAMPO) invites residents, local business owners, and civic leaders to participate in our upcoming Regional Transportation Visioning Session. The meeting will focus on long-term transit expansion, highway safety enhancements, non-motorized trail networks, and environmental impact strategies. Public feedback will directly inform our 2026-2045 Regional Transportation Plan.'
+    summary: 'This is a reminder that there are no TCAMPO meetings in July 2026. The next TCAMPO TAC meeting is scheduled for Friday, August 7, 2026,...',
+    content: 'This is a reminder that there are no TCAMPO meetings in July 2026. The next TCAMPO TAC meeting is scheduled for Friday, August 7, 2026.'
   },
   {
     id: 'news-2',
-    title: 'Community Development Funding Program Updates',
-    date: 'May 24, 2026',
-    category: 'Grants & Funding',
+    title: 'PUBLIC NOTICE — TCAMPO POLICY COMMITTEE',
+    date: 'JUN 25, 2026',
+    category: 'Public Notice',
     image: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80',
-    summary: 'New funding opportunities announced supporting infrastructure, sustainability, and regional community development initiatives.',
-    content: 'TCAMPO has announced the release of $14.5 Million in community development sub-allocation grants for eligible local municipalities and transit partners. Applications are officially open for projects targeting corridor modernization, ADA sidewalk upgrades, smart traffic signals, and electric vehicle fleet transitions.'
+    summary: 'This is a reminder that there are no TCAMPO meetings in July 2026. The next TCAMPO Policy Committee meeting is scheduled for Thursday, August 13,...',
+    content: 'This is a reminder that there are no TCAMPO meetings in July 2026. The next TCAMPO Policy Committee meeting is scheduled for Thursday, August 13, 2026.'
   },
   {
     id: 'news-3',
-    title: 'New Transit & Freight Infrastructure Announcements',
-    date: 'May 10, 2026',
-    category: 'Infrastructure',
+    title: 'PUBLIC NOTICE — TCAMPO FY27 UPWP',
+    date: 'MAY 29, 2026',
+    category: 'Public Notice',
     image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80',
-    summary: 'Regional freight movement corridor study released supporting industrial expansion, intermodal hubs, and clean freight routing.',
-    content: 'A comprehensive study evaluating freight movement efficiency across the Tri-Cities logistics hub was published today. Key highlights include proposed dedicated truck bypass routes, real-time freight bottleneck monitoring, and zero-emission drayage infrastructure recommendations.'
+    summary: 'The FY27 Unified Planning Work Program (UPWP) was approved for public review at the Policy Committee meeting held on May 7, 2026. The document is...',
+    content: 'The FY27 Unified Planning Work Program (UPWP) was approved for public review at the Policy Committee meeting held on May 7, 2026. The document is available for public review.'
   },
   {
     id: 'news-4',
-    title: 'Tri-Cities Regional Active Transportation System Expansion',
-    date: 'April 29, 2026',
-    category: 'Bicycle & Pedestrian',
+    title: 'TRI-CITIES MPO PUBLIC MEETING APRIL 6, 2026',
+    date: 'APR 6, 2026',
+    category: 'Public Notice',
     image: 'https://images.unsplash.com/photo-1571068316344-75bc76f77890?auto=format&fit=crop&w=800&q=80',
-    summary: 'Phase 3 of the interconnected regional trail system receives environmental clearance and federal matching grant.',
-    content: 'The regional bicycle and pedestrian network is set to expand by 32 miles of connected multi-use trails connecting suburban corridors to downtown transit hubs. Construction is slated to commence early Q4 2026.'
+    summary: 'Tri-Cities MPO Public Meeting held on April 6, 2026 to discuss regional transportation planning initiatives and gather community input.',
+    content: 'Tri-Cities MPO Public Meeting held on April 6, 2026 to discuss regional transportation planning initiatives and gather community input.'
   }
 ];
 

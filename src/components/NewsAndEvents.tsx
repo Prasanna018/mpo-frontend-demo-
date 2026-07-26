@@ -73,36 +73,40 @@ export const NewsAndEvents: React.FC<NewsAndEventsProps> = ({
                   <div
                     key={news.id}
                     onClick={() => onSelectNews(news)}
-                    className="bg-[#dbeafe]/80 hover:bg-[#dbeafe] border border-blue-100 rounded-3xl p-4 flex flex-col justify-between cursor-pointer transition-all duration-300 transform hover:-translate-y-1 shadow-sm hover:shadow-md"
+                    className="bg-white border-2 border-amber-300/90 rounded-3xl p-5 flex flex-col justify-between cursor-pointer transition-all duration-300 transform hover:-translate-y-1 shadow-md hover:shadow-xl relative overflow-hidden group min-h-[350px]"
                   >
-                    <div>
-                      {/* Image Thumbnail */}
-                      <div className="w-full h-44 rounded-2xl overflow-hidden mb-4 bg-slate-200 shadow-inner">
-                        <img
-                          src={news.image}
-                          alt={news.title}
-                          className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-                        />
+                    {/* Top Content Section */}
+                    <div className="flex flex-col items-center text-center">
+                      
+                      {/* Circular Gold Badge Icon */}
+                      <div className="w-12 h-12 rounded-full bg-white border-2 border-amber-300 flex items-center justify-center mb-4 shadow-sm group-hover:scale-110 transition-transform">
+                        <svg className="w-6 h-6 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75">
+                          <circle cx="12" cy="12" r="9" />
+                          <circle cx="12" cy="12" r="3" />
+                          <path d="M12 3v3M12 18v3M3 12h3M18 12h3" />
+                          <path d="m5.6 5.6 2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1" />
+                        </svg>
                       </div>
 
-                      {/* Card Title */}
-                      <h3 className="text-base font-bold text-navy-900 line-clamp-2 leading-snug mb-2">
+                      {/* Card Title (Uppercase Bold Centered) */}
+                      <h3 className="text-sm font-black text-slate-900 uppercase tracking-tight leading-snug mb-3 px-1 min-h-[44px] flex items-center justify-center">
                         {news.title}
                       </h3>
 
-                      {/* Summary */}
-                      <p className="text-xs text-slate-600 font-medium line-clamp-3 leading-relaxed">
-                        {news.summary}
-                      </p>
+                      {/* Horizontal Separator Line */}
+                      <div className="w-12 h-[2px] bg-slate-700 mb-3" />
+
+                      {/* Date */}
+                      <span className="text-xs font-bold text-slate-700 uppercase tracking-wider mb-4">
+                        {news.date}
+                      </span>
                     </div>
 
-                    <div className="mt-4 pt-2 flex items-center justify-between">
-                      <span className="text-[11px] font-semibold text-blue-700 bg-blue-100 px-2.5 py-1 rounded-full">
-                        {news.category}
-                      </span>
-                      <span className="text-xs font-bold text-blue-600 hover:underline">
-                        Read Story →
-                      </span>
+                    {/* Bottom Soft Yellow/Cream Container */}
+                    <div className="bg-[#fffdf0] border-t border-amber-200/60 rounded-2xl p-4 mt-2 flex-1 flex flex-col justify-between">
+                      <p className="text-xs text-slate-700 font-medium leading-relaxed line-clamp-4">
+                        {news.summary}
+                      </p>
                     </div>
                   </div>
                 ))}

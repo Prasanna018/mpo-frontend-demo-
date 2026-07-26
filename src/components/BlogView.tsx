@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Header } from './Header';
 import { MessageSquare } from 'lucide-react';
+import { NEWS_ITEMS } from '../data/mockData';
 import type { NewsItem } from '../data/mockData';
 
 interface BlogViewProps {
@@ -19,38 +20,10 @@ export const BlogView: React.FC<BlogViewProps> = ({
   const [emailInput, setEmailInput] = useState('');
   const [joined, setJoined] = useState(false);
 
-  const blogPosts: Array<NewsItem & { commentsCount: string }> = [
-    {
-      id: 'blog-1',
-      title: 'New Transportation Planning Initiative Announced',
-      date: 'May 13, 2026',
-      category: 'Infrastructure',
-      image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1200&q=85',
-      summary: 'Regional transportation improvements introduced supporting sustainable mobility and future infrastructure development plans.',
-      content: 'The Tri-Cities Area Metropolitan Planning Organization (TCAMPO) is announcing a comprehensive multi-corridor transportation improvement plan. The initiative focuses on enhancing regional highway capacity, upgrading transit signal priority, and expanding multi-modal connections throughout Petersburg, Colonial Heights, Hopewell, and surrounding counties.',
-      commentsCount: 'No Comments'
-    },
-    {
-      id: 'blog-2',
-      title: 'Community Development Funding Program Updates',
-      date: 'May 13, 2026',
-      category: 'Grants & Funding',
-      image: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1200&q=85',
-      summary: 'New funding opportunities announced supporting infrastructure, sustainability, and regional community development initiatives.',
-      content: 'TCAMPO has released updated grant allocation guidelines for regional transportation sub-grants. Eligible municipalities can now apply for federal matching funds supporting active transportation trails, ADA compliance upgrades, and transit hub modernization.',
-      commentsCount: 'No Comments'
-    },
-    {
-      id: 'blog-3',
-      title: 'Upcoming Public Meeting For Regional Growth',
-      date: 'May 13, 2026',
-      category: 'Public Notice',
-      image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=85',
-      summary: 'Public meeting scheduled discussing transportation strategies, sustainability goals, and regional development priorities.',
-      content: 'Citizens, business owners, and civic leaders are invited to attend the TCAMPO Public Visioning Workshop. The session will showcase long-term traffic modeling projections and solicit public input for the 2050 Metropolitan Transportation Plan.',
-      commentsCount: 'No Comments'
-    }
-  ];
+  const blogPosts = NEWS_ITEMS.map((item) => ({
+    ...item,
+    commentsCount: 'No Comments'
+  }));
 
   const handleJoinCommunity = (e: React.FormEvent) => {
     e.preventDefault();
