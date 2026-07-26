@@ -19,11 +19,11 @@ export const NewsAndEvents: React.FC<NewsAndEventsProps> = ({
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
 
   const prevSlide = () => {
-    setCurrentSlideIndex((prev) => (prev === 0 ? NEWS_ITEMS.length - 2 : prev - 1));
+    setCurrentSlideIndex((prev) => (prev === 0 ? 2 : 0));
   };
 
   const nextSlide = () => {
-    setCurrentSlideIndex((prev) => (prev >= NEWS_ITEMS.length - 2 ? 0 : prev + 1));
+    setCurrentSlideIndex((prev) => (prev === 0 ? 2 : 0));
   };
 
   return (
@@ -40,7 +40,7 @@ export const NewsAndEvents: React.FC<NewsAndEventsProps> = ({
           </h2>
         </div>
 
-        {/* Grid Container */}
+        {/* Grid Container: News Left, Events Right */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           
           {/* LEFT COLUMN: News Cards Slider (7 Columns on LG) */}
@@ -67,7 +67,7 @@ export const NewsAndEvents: React.FC<NewsAndEventsProps> = ({
                 <ChevronRight className="w-6 h-6 stroke-[2.5]" />
               </button>
 
-              {/* Cards Grid */}
+              {/* Cards Grid: Slices 2 cards per slide (Cards 1&2, then Cards 3&4) */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 px-6">
                 {NEWS_ITEMS.slice(currentSlideIndex, currentSlideIndex + 2).map((news) => (
                   <div
@@ -88,7 +88,7 @@ export const NewsAndEvents: React.FC<NewsAndEventsProps> = ({
                         </svg>
                       </div>
 
-                      {/* Card Title (Uppercase Bold Centered) */}
+                      {/* Card Title */}
                       <h3 className="text-sm font-black text-slate-900 uppercase tracking-tight leading-snug mb-3 px-1 min-h-[44px] flex items-center justify-center">
                         {news.title}
                       </h3>
