@@ -464,7 +464,7 @@ export const AboutView: React.FC<AboutViewProps> = ({
             ) : (
               /* MPO OVERVIEW VIEW */
               <div className="space-y-8">
-                <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight capitalize">
+                <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
                   {currentSection.subtitle}
                 </h2>
 
@@ -484,7 +484,7 @@ export const AboutView: React.FC<AboutViewProps> = ({
 
                 {currentSection.historyTitle && (
                   <div className="pt-8 border-t border-slate-200 space-y-4">
-                    <h3 className="text-2xl sm:text-3xl font-extrabold text-navy-950 tracking-tight capitalize">
+                    <h3 className="text-2xl sm:text-3xl font-extrabold text-navy-950 tracking-tight">
                       {currentSection.historyTitle}
                     </h3>
                     <p className="text-base sm:text-lg text-slate-700 font-normal leading-relaxed">
