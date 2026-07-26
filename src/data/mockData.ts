@@ -727,8 +727,8 @@ export const NEWS_ITEMS: NewsItem[] = [
     date: 'APR 6, 2026',
     category: 'Public Notice',
     image: 'https://images.unsplash.com/photo-1571068316344-75bc76f77890?auto=format&fit=crop&w=800&q=80',
-    summary: 'Tri-Cities MPO Public Meeting held on April 6, 2026 to discuss regional transportation planning initiatives and gather community input.',
-    content: 'Tri-Cities MPO Public Meeting held on April 6, 2026 to discuss regional transportation planning initiatives and gather community input.'
+    summary: '',
+    content: ''
   }
 ];
 
