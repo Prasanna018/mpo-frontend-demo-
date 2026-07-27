@@ -187,16 +187,16 @@ export const TAC_COMMITTEE_DATA = {
       avatarType: 'male' as const
     },
     {
-      name: 'Mr. Wood Hudson',
-      organization: 'DRPT',
-      image: '/tac-members/wood-hudson.png',
-      avatarType: 'male' as const
-    },
-    {
       name: 'Ms. Naomi Siodmok',
-      organization: 'VDOT',
+      organization: 'Virginia Department of Transportation',
       image: '/tac-members/naomi-siodmok.png',
       avatarType: 'female' as const
+    },
+    {
+      name: 'Mr. Wood Hudson',
+      organization: 'Department of Rail & Public Transportation',
+      image: '/tac-members/wood-hudson.png',
+      avatarType: 'male' as const
     },
     {
       name: 'Mr. Zakari Mumuni',
