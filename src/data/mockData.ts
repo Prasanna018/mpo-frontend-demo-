@@ -187,16 +187,16 @@ export const TAC_COMMITTEE_DATA = {
       avatarType: 'male' as const
     },
     {
-      name: 'Mr. Darius Mason',
-      organization: 'Petersburg Area Transit',
-      image: '/tac-members/darius-mason.png',
-      avatarType: 'male' as const
-    },
-    {
       name: 'Ms. Naomi Siodmok',
       organization: 'Virginia Department of Transportation',
       image: '/tac-members/naomi-siodmok.png',
       avatarType: 'female' as const
+    },
+    {
+      name: 'Mr. Darius Mason',
+      organization: 'Petersburg Area Transit',
+      image: '/tac-members/darius-mason.png',
+      avatarType: 'male' as const
     },
     {
       name: 'Mr. Wood Hudson',
