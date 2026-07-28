@@ -181,6 +181,12 @@ export const TAC_COMMITTEE_DATA = {
       avatarType: 'male' as const
     },
     {
+      name: 'Mr. Mark Bassett',
+      organization: 'Dinwiddie County',
+      image: '/tac-members/mark-bassett.png',
+      avatarType: 'male' as const
+    },
+    {
       name: 'Mr. Darius Mason',
       organization: 'Petersburg Area Transit',
       image: '/tac-members/darius-mason.png',
