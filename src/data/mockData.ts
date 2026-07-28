@@ -696,39 +696,39 @@ export const ABOUT_SECTIONS = {
 export const NEWS_ITEMS: NewsItem[] = [
   {
     id: 'news-1',
-    title: 'PUBLIC NOTICE — TCAMPO TECHNICAL ADVISORY COMMITTEE',
+    title: 'PLAN2050 CLRP & FFY27–30 MTIP – Conformity',
     date: 'JUN 25, 2026',
     category: 'Public Notice',
     image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80',
-    summary: 'This is a reminder that there are no TCAMPO meetings in July 2026. The next TCAMPO TAC meeting is scheduled for Friday, August 7, 2026,...',
-    content: 'This is a reminder that there are no TCAMPO meetings in July 2026. The next TCAMPO TAC meeting is scheduled for Friday, August 7, 2026.'
+    summary: 'Policy Committee approved the draft conformity project lists (PLAN2050 and FFY27–30 MTIP) and authorized TAC to review and release for public review.',
+    content: 'Policy Committee approved the draft conformity project lists (PLAN2050 and FFY27–30 MTIP) and authorized TAC to review and release for public review.'
   },
   {
     id: 'news-2',
-    title: 'PUBLIC NOTICE — TCAMPO POLICY COMMITTEE',
-    date: 'JUN 25, 2026',
+    title: 'FY27 UPWP',
+    date: 'MAY 29, 2026',
     category: 'Public Notice',
     image: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80',
-    summary: 'This is a reminder that there are no TCAMPO meetings in July 2026. The next TCAMPO Policy Committee meeting is scheduled for Thursday, August 13,...',
-    content: 'This is a reminder that there are no TCAMPO meetings in July 2026. The next TCAMPO Policy Committee meeting is scheduled for Thursday, August 13, 2026.'
+    summary: "Policy Committee approved the FY27 Unified Planning Work Program (UPWP), which outlines TCAMPO's planning activities, budget, and priorities for the upcoming fiscal year.",
+    content: "Policy Committee approved the FY27 Unified Planning Work Program (UPWP), which outlines TCAMPO's planning activities, budget, and priorities for the upcoming fiscal year."
   },
   {
     id: 'news-3',
-    title: 'PUBLIC NOTICE — TCAMPO FY27 UPWP',
-    date: 'MAY 29, 2026',
+    title: 'Election of Officers',
+    date: 'MAY 7, 2026',
     category: 'Public Notice',
     image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80',
-    summary: 'The FY27 Unified Planning Work Program (UPWP) was approved for public review at the Policy Committee meeting held on May 7, 2026. The document is...',
-    content: 'The FY27 Unified Planning Work Program (UPWP) was approved for public review at the Policy Committee meeting held on May 7, 2026. The document is available for public review.'
+    summary: 'Policy Committee elected Mr. John Wood (Colonial Heights) as Chair and Mr. Casey Dooley (Dinwiddie) as Vice Chair for the July 1, 2026–June 30, 2027 term.',
+    content: 'Policy Committee elected Mr. John Wood (Colonial Heights) as Chair and Mr. Casey Dooley (Dinwiddie) as Vice Chair for the July 1, 2026–June 30, 2027 term.'
   },
   {
     id: 'news-4',
-    title: 'TRI-CITIES MPO PUBLIC MEETING APRIL 6, 2026',
+    title: 'SMART SCALE Round 7 Preliminary Applications',
     date: 'APR 6, 2026',
     category: 'Public Notice',
     image: 'https://images.unsplash.com/photo-1571068316344-75bc76f77890?auto=format&fit=crop&w=800&q=80',
-    summary: '',
-    content: ''
+    summary: 'The Policy Committee supported four SMART SCALE Round 7 preliminary applications submitted by TCAMPO: (1) #13899 – S. Crater Road at Crater Circle and Wagner Road (with sidewalks), (2) #13913 – Wagner Road at Normandy Drive (US-301 Corridor), (3) #13914 – US-460: Wagner Road to I-295, and (4) #13915 – Washington/Wythe Conversion to Two-Way and SPUI at I-95.',
+    content: 'The Policy Committee supported four SMART SCALE Round 7 preliminary applications submitted by TCAMPO: (1) #13899 – S. Crater Road at Crater Circle and Wagner Road (with sidewalks), (2) #13913 – Wagner Road at Normandy Drive (US-301 Corridor), (3) #13914 – US-460: Wagner Road to I-295, and (4) #13915 – Washington/Wythe Conversion to Two-Way and SPUI at I-95.'
   }
 ];
 

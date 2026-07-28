@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Header } from './Header';
-import { MessageSquare } from 'lucide-react';
 import { NEWS_ITEMS } from '../data/mockData';
 import type { NewsItem } from '../data/mockData';
 
@@ -20,10 +19,7 @@ export const BlogView: React.FC<BlogViewProps> = ({
   const [emailInput, setEmailInput] = useState('');
   const [joined, setJoined] = useState(false);
 
-  const blogPosts = NEWS_ITEMS.map((item) => ({
-    ...item,
-    commentsCount: 'No Comments'
-  }));
+  const blogPosts = NEWS_ITEMS;
 
   const handleJoinCommunity = (e: React.FormEvent) => {
     e.preventDefault();
@@ -97,13 +93,9 @@ export const BlogView: React.FC<BlogViewProps> = ({
                   />
                 </div>
 
-                {/* Date & Comments Meta Row matching Screenshot 2 */}
+                {/* Date Meta Row */}
                 <div className="flex items-center gap-3 text-xs font-semibold text-slate-600 mb-2">
                   <span>{post.date}</span>
-                  <div className="flex items-center gap-1 text-blue-600 font-bold">
-                    <MessageSquare className="w-4 h-4 fill-blue-500/20 stroke-blue-600" />
-                    <span>{post.commentsCount}</span>
-                  </div>
                 </div>
 
                 {/* Divider Line matching Screenshot 2 */}
