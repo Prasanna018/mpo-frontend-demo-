@@ -71,75 +71,75 @@ export const POLICY_COMMITTEE_DATA = {
   chair: {
     name: 'Mr. John Wood (Chair)',
     organization: 'City of Colonial Heights',
-    image: '/pc-members/john-wood.png'
+    image: '/pc-members/john-wood.jpg'
   },
   votingMembers: [
     {
       name: 'Mr. Casey Dooley (Vice Chair)',
       organization: 'Dinwiddie County',
-      image: '/pc-members/casey-dooley.png'
+      image: '/pc-members/casey-dooley.jpg'
     },
     {
       name: 'Mayor Samuel Parham',
       organization: 'City of Petersburg',
-      image: '/pc-members/samuel-parham.png'
+      image: '/pc-members/samuel-parham.jpg'
     },
     {
       name: 'Mr. T.J. Webb',
       organization: 'Prince George County',
-      image: '/pc-members/tj-webb.png'
+      image: '/pc-members/tj-webb.jpg'
     },
     {
       name: 'Mr. Kevin Carroll',
       organization: 'Chesterfield County',
-      image: '/pc-members/kevin-carroll.png'
+      image: '/pc-members/kevin-carroll.jpg'
     },
     {
       name: 'Vacant',
       organization: 'City of Hopewell',
-      image: '/pc-members/hopewell-seal.png',
+      image: '/pc-members/hopewell-vacant.jpg',
       isVacant: true
     },
     {
       name: 'Mr. Dale Totten',
       organization: 'For the Secretary of Transportation',
-      image: '/pc-members/dale-totten.png'
+      image: '/pc-members/dale-totten.jpg'
     },
     {
       name: 'Mr. Darius Mason',
       organization: 'Petersburg Area Transit',
-      image: '/pc-members/darius-mason.png'
+      image: '/pc-members/darius-mason.jpg'
     },
     {
       name: 'Mr. Jay Ellington',
       organization: 'Crater Planning District Commission',
-      image: '/pc-members/jay-ellington.png'
+      image: '/pc-members/jay-ellington.jpg'
     }
   ],
   nonVotingMembers: [
     {
       name: 'Mr. Wood Hudson',
       organization: 'Department of Rail & Public Transportation',
-      image: '/pc-members/wood-hudson.png',
+      image: '/pc-members/wood-hudson.jpg',
       isVacant: false
     },
     {
       name: 'Ms. Brigitte Carter',
       organization: 'RideFinders, Inc.',
-      image: '/pc-members/brigitte-carter.png',
+      image: '/pc-members/brigitte-carter.jpg',
       isVacant: false
     },
     {
       name: 'Mr. Ivan Rucker',
       organization: 'Federal Highway Administration (FHWA)',
-      image: 'silhouette-male',
+      image: '/pc-members/ivan-rucker.jpg',
       isVacant: false
     },
     {
       name: 'Vacant',
       organization: 'Federal Transit Administration (FTA)',
-      image: 'silhouette-male',
-      isVacant: true
+      image: '/pc-members/fta-vacant.jpg',
+      isVacant: false
     }
   ]
 };
@@ -149,19 +149,19 @@ export const TAC_COMMITTEE_DATA = {
     {
       name: 'Mr. Hongmyung (Hong) Lim (Chair)',
       organization: 'Chesterfield County',
-      image: '/tac-members/hongmyung-lim.png',
+      image: '/tac-members/hongmyung-lim.jpg',
       avatarType: 'male' as const
     },
     {
       name: 'Mr. Matthew Ryan (Vice Chair)',
       organization: 'City of Colonial Heights',
-      image: '/tac-members/matt-ryan.png',
+      image: '/tac-members/matt-ryan.jpg',
       avatarType: 'male' as const
     },
     {
       name: 'Mr. Jared Crews',
       organization: 'City of Petersburg',
-      image: '/tac-members/jared-crews.png',
+      image: '/tac-members/jared-crews.jpg',
       avatarType: 'male' as const
     },
     {
@@ -173,7 +173,7 @@ export const TAC_COMMITTEE_DATA = {
     {
       name: 'Mr. Josh Sementelli',
       organization: 'City of Hopewell',
-      image: '/tac-members/hopewell-seal.png',
+      image: '/tac-members/josh-sementelli.jpg',
       avatarType: 'male' as const
     },
     {
@@ -185,31 +185,31 @@ export const TAC_COMMITTEE_DATA = {
     {
       name: 'Mr. Mark Bassett',
       organization: 'Dinwiddie County',
-      image: '/tac-members/mark-bassett.png',
+      image: '/tac-members/mark-bassett.jpg',
       avatarType: 'male' as const
     },
     {
       name: 'Ms. Naomi Siodmok',
       organization: 'Virginia Department of Transportation',
-      image: '/tac-members/naomi-siodmok.png',
+      image: '/tac-members/naomi-siodmok.jpg',
       avatarType: 'female' as const
     },
     {
       name: 'Mr. Darius Mason',
       organization: 'Petersburg Area Transit',
-      image: '/tac-members/darius-mason.png',
+      image: '/tac-members/darius-mason.jpg',
       avatarType: 'male' as const
     },
     {
       name: 'Mr. Wood Hudson',
       organization: 'Department of Rail & Public Transportation',
-      image: '/tac-members/wood-hudson.png',
+      image: '/tac-members/wood-hudson.jpg',
       avatarType: 'male' as const
     },
     {
       name: 'Mr. Zakari Mumuni',
       organization: 'Crater Planning District Commission',
-      image: '/tac-members/zakari-mumuni.png',
+      image: '/tac-members/zakari-mumuni.jpg',
       avatarType: 'male' as const
     }
   ],
@@ -217,18 +217,25 @@ export const TAC_COMMITTEE_DATA = {
     {
       name: 'Ms. Brigitte Carter',
       organization: 'RideFinders, Inc.',
-      image: '/tac-members/brigitte-carter.png',
+      image: '/tac-members/brigitte-carter.jpg',
       avatarType: 'female' as const
     },
     {
       name: 'Ms. Alexis Morris',
       organization: 'Petersburg National Battlefield Park',
+      image: '/tac-members/alexis-morris.jpg',
       avatarType: 'female' as const
     },
     {
       name: 'Mr. Fritz Brandt',
       organization: 'Fort Lee',
+      image: '/tac-members/fritz-brandt.jpg',
       avatarType: 'male' as const
+    },
+    {
+      name: 'Vacant',
+      organization: 'Federal Transit Administration (FTA)',
+      image: '/tac-members/fta-vacant.jpg'
     }
   ]
 };
@@ -704,7 +711,7 @@ export const ABOUT_SECTIONS = {
 export const NEWS_ITEMS: NewsItem[] = [
   {
     id: 'news-1',
-    title: 'August Technical Advisory Committee (TAC) Meeting',
+    title: 'August\nTechnical Advisory Committee\nMeeting',
     date: 'AUG 7, 2026',
     category: 'Public Notice',
     image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80',
@@ -714,7 +721,7 @@ export const NEWS_ITEMS: NewsItem[] = [
   },
   {
     id: 'news-2',
-    title: 'August Policy Committee (PC) Meeting',
+    title: 'August\nPolicy Committee\nMeeting',
     date: 'AUG 13, 2026',
     category: 'Public Notice',
     image: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80',

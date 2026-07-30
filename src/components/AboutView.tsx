@@ -278,12 +278,12 @@ export const AboutView: React.FC<AboutViewProps> = ({
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                       {TAC_COMMITTEE_DATA.votingMembers.map((member, idx) => (
                         <div key={idx} className="flex flex-col items-center sm:items-start text-center sm:text-left gap-3">
-                          <div className="w-44 h-52 rounded-xl overflow-hidden bg-slate-100 border border-slate-200 shadow-md flex items-center justify-center">
+                          <div className="w-56 sm:w-64 h-72 sm:h-80 rounded-xl overflow-hidden bg-slate-100 border border-slate-200 shadow-md flex items-center justify-center">
                             {'image' in member && (member as { image?: string }).image ? (
                               <img
                                 src={(member as { image: string }).image}
                                 alt={member.name}
-                                className={`w-full h-full ${(member as { image?: string }).image?.includes('seal') ? 'object-contain p-3 bg-white' : 'object-cover'}`}
+                                className="w-full h-full object-contain p-1 bg-white"
                               />
                             ) : member.avatarType === 'female' ? (
                               <div className="p-3">
@@ -300,14 +300,16 @@ export const AboutView: React.FC<AboutViewProps> = ({
                               </div>
                             )}
                           </div>
-                          <div>
-                            <h3 className="text-base font-bold text-navy-950 leading-snug">
-                              {member.name}
-                            </h3>
-                            <p className="text-xs font-semibold text-slate-600 mt-1 max-w-[200px]">
-                              {member.organization}
-                            </p>
-                          </div>
+                          {!('image' in member && (member as { image?: string }).image) && (
+                            <div>
+                              <h3 className="text-base font-bold text-navy-950 leading-snug">
+                                {member.name}
+                              </h3>
+                              <p className="text-xs font-semibold text-slate-600 mt-1 max-w-[200px]">
+                                {member.organization}
+                              </p>
+                            </div>
+                          )}
                         </div>
                       ))}
                     </div>
@@ -315,12 +317,12 @@ export const AboutView: React.FC<AboutViewProps> = ({
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                       {TAC_COMMITTEE_DATA.nonVotingMembers.map((member, idx) => (
                         <div key={idx} className="flex flex-col items-center sm:items-start text-center sm:text-left gap-3">
-                          <div className="w-44 h-52 rounded-xl overflow-hidden bg-slate-100 border border-slate-200 shadow-md flex items-center justify-center">
+                          <div className="w-56 sm:w-64 h-72 sm:h-80 rounded-xl overflow-hidden bg-slate-100 border border-slate-200 shadow-md flex items-center justify-center">
                             {'image' in member && (member as { image?: string }).image ? (
                               <img
                                 src={(member as { image: string }).image}
                                 alt={member.name}
-                                className="w-full h-full object-cover"
+                                className="w-full h-full object-contain p-1 bg-white"
                               />
                             ) : member.avatarType === 'female' ? (
                               <div className="p-3">
@@ -337,14 +339,16 @@ export const AboutView: React.FC<AboutViewProps> = ({
                               </div>
                             )}
                           </div>
-                          <div>
-                            <h3 className="text-base font-bold text-navy-950 leading-snug">
-                              {member.name}
-                            </h3>
-                            <p className="text-xs font-semibold text-slate-600 mt-1 max-w-[200px]">
-                              {member.organization}
-                            </p>
-                          </div>
+                          {!('image' in member && (member as { image?: string }).image) && (
+                            <div>
+                              <h3 className="text-base font-bold text-navy-950 leading-snug">
+                                {member.name}
+                              </h3>
+                              <p className="text-xs font-semibold text-slate-600 mt-1 max-w-[200px]">
+                                {member.organization}
+                              </p>
+                            </div>
+                          )}
                         </div>
                       ))}
                     </div>
@@ -390,12 +394,12 @@ export const AboutView: React.FC<AboutViewProps> = ({
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                       {[POLICY_COMMITTEE_DATA.chair, ...POLICY_COMMITTEE_DATA.votingMembers].map((member, idx) => (
                         <div key={idx} className="flex flex-col items-center sm:items-start text-center sm:text-left gap-3">
-                          <div className="w-44 h-52 rounded-xl overflow-hidden bg-slate-100 border border-slate-200 shadow-md flex items-center justify-center">
+                          <div className="w-56 sm:w-64 h-72 sm:h-80 rounded-xl overflow-hidden bg-slate-100 border border-slate-200 shadow-md flex items-center justify-center">
                             {member.image && (member.image.startsWith('/') || member.image.startsWith('http')) ? (
                               <img
                                 src={member.image}
                                 alt={member.name}
-                                className={`w-full h-full ${member.image.includes('seal') ? 'object-contain p-3 bg-white' : 'object-cover'}`}
+                                className="w-full h-full object-contain p-1 bg-white"
                               />
                             ) : (
                               <div className="w-full h-full p-4 flex flex-col items-center justify-center bg-slate-50 text-slate-400">
@@ -407,14 +411,16 @@ export const AboutView: React.FC<AboutViewProps> = ({
                               </div>
                             )}
                           </div>
-                          <div>
-                            <h3 className="text-base font-bold text-navy-950">
-                              {member.name}
-                            </h3>
-                            <p className="text-xs font-semibold text-slate-600">
-                              {member.organization}
-                            </p>
-                          </div>
+                          {!(member.image && (member.image.startsWith('/') || member.image.startsWith('http'))) && (
+                            <div>
+                              <h3 className="text-base font-bold text-navy-950">
+                                {member.name}
+                              </h3>
+                              <p className="text-xs font-semibold text-slate-600">
+                                {member.organization}
+                              </p>
+                            </div>
+                          )}
                         </div>
                       ))}
                     </div>
@@ -426,11 +432,17 @@ export const AboutView: React.FC<AboutViewProps> = ({
                     </h2>
 
                     {/* 2x2 Grid Structure with tight gap-8 spacing matching Voting members */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-xl">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-2xl">
                       {POLICY_COMMITTEE_DATA.nonVotingMembers.map((member, idx) => (
                         <div key={idx} className="flex flex-col items-center sm:items-start text-center sm:text-left gap-3">
-                          <div className="w-44 h-52 rounded-xl overflow-hidden bg-slate-100 border border-slate-200 shadow-md flex items-center justify-center">
-                            {member.isVacant || !member.image || member.image.startsWith('silhouette') ? (
+                          <div className="w-56 sm:w-64 h-72 sm:h-80 rounded-xl overflow-hidden bg-slate-100 border border-slate-200 shadow-md flex items-center justify-center">
+                            {member.image && (member.image.startsWith('/') || member.image.startsWith('http')) ? (
+                              <img
+                                src={member.image}
+                                alt={member.name}
+                                className="w-full h-full object-contain p-1 bg-white"
+                              />
+                            ) : (
                               <div className="w-full h-full p-4 flex flex-col items-center justify-center bg-slate-50 text-slate-400">
                                 <svg className="w-24 h-24 text-slate-300" viewBox="0 0 100 100" fill="none" stroke="currentColor">
                                   <circle cx="50" cy="50" r="45" strokeWidth="3" />
@@ -438,22 +450,18 @@ export const AboutView: React.FC<AboutViewProps> = ({
                                   <circle cx="50" cy="38" r="14" strokeWidth="3" />
                                 </svg>
                               </div>
-                            ) : (
-                              <img
-                                src={member.image}
-                                alt={member.name}
-                                className="w-full h-full object-cover"
-                              />
                             )}
                           </div>
-                          <div>
-                            <h3 className="text-base font-bold text-navy-950">
-                              {member.name}
-                            </h3>
-                            <p className="text-xs font-semibold text-slate-600 max-w-[180px]">
-                              {member.organization}
-                            </p>
-                          </div>
+                          {!(member.image && (member.image.startsWith('/') || member.image.startsWith('http'))) && (
+                            <div>
+                              <h3 className="text-base font-bold text-navy-950">
+                                {member.name}
+                              </h3>
+                              <p className="text-xs font-semibold text-slate-600 max-w-[180px]">
+                                {member.organization}
+                              </p>
+                            </div>
+                          )}
                         </div>
                       ))}
                     </div>

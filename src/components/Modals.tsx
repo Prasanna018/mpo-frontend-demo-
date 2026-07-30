@@ -59,29 +59,29 @@ export const Modals: React.FC<ModalsProps> = ({
                 Published: {selectedNews.date}
               </span>
             </div>
-            <h3 className="text-2xl font-extrabold text-navy-900 mb-4 leading-tight">
+            <h3 className="text-2xl font-extrabold text-navy-900 mb-4 leading-tight whitespace-pre-line text-center">
               {selectedNews.title}
             </h3>
-            <p className="text-sm font-semibold text-slate-700 mb-4 leading-relaxed bg-blue-50/60 p-4 rounded-xl border border-blue-100">
-              {selectedNews.summary}
-            </p>
-            <div className="text-sm text-slate-600 space-y-4 leading-relaxed">
-              <p>{selectedNews.content}</p>
-              <p>For more information or to submit public comment regarding this item, please contact the TCAMPO Public Involvement Office at publicinvolvement@tcampo.org.</p>
-              {selectedNews.pdfUrl && (
-                <div className="pt-2">
-                  <a
-                    href={selectedNews.pdfUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm px-6 py-2.5 rounded-full shadow-md inline-flex items-center gap-2"
-                  >
-                    <FileText className="w-4 h-4" />
-                    <span>View Agenda PDF</span>
-                  </a>
-                </div>
-              )}
-            </div>
+
+            {selectedNews.content && (
+              <div className="text-sm text-slate-700 leading-relaxed mb-6 bg-blue-50/60 p-4 rounded-xl border border-blue-100">
+                <p>{selectedNews.content}</p>
+              </div>
+            )}
+
+            {selectedNews.pdfUrl && (
+              <div className="pt-2 flex justify-center">
+                <a
+                  href={selectedNews.pdfUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm px-6 py-2.5 rounded-full shadow-md inline-flex items-center gap-2"
+                >
+                  <FileText className="w-4 h-4" />
+                  <span>View Agenda PDF</span>
+                </a>
+              </div>
+            )}
           </div>
         )}
 

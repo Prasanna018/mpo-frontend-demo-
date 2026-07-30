@@ -179,7 +179,7 @@ export const NewsAndEvents: React.FC<NewsAndEventsProps> = ({
                         </div>
 
                         {/* Card Title */}
-                        <h3 className="text-xs sm:text-sm font-black text-slate-900 uppercase tracking-tight leading-snug mb-3 px-1 min-h-[46px] flex items-center justify-center group-hover:text-blue-900 transition-colors">
+                        <h3 className="text-xs sm:text-sm font-black text-slate-900 uppercase tracking-tight leading-snug mb-3 px-1 min-h-[46px] flex items-center justify-center text-center whitespace-pre-line group-hover:text-blue-900 transition-colors">
                           {news.title}
                         </h3>
 
