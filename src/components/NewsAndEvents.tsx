@@ -64,6 +64,28 @@ const CARD_THEMES: Record<string, {
     lineGradient: 'from-purple-500 via-slate-800 to-purple-500',
     dateBadge: 'bg-purple-100/90 text-purple-950 border-purple-200/90',
     bottomBg: 'from-[#faf5ff] via-[#f3e8ff] to-[#ebe0ff] border-purple-200/80'
+  },
+  'news-5': {
+    border: 'border-rose-300/90',
+    hoverBorder: 'hover:border-rose-400',
+    shadowHover: 'hover:shadow-rose-500/25',
+    topBar: 'bg-gradient-to-r from-rose-400 via-pink-400 to-rose-500',
+    badgeGradient: 'from-rose-500 via-pink-400 to-amber-300',
+    iconColor: 'text-rose-600',
+    lineGradient: 'from-rose-400 via-slate-800 to-rose-400',
+    dateBadge: 'bg-rose-100/90 text-rose-950 border-rose-200/90',
+    bottomBg: 'from-[#fff5f7] via-[#ffeef2] to-[#ffe5ec] border-rose-200/80'
+  },
+  'news-6': {
+    border: 'border-indigo-300/90',
+    hoverBorder: 'hover:border-indigo-400',
+    shadowHover: 'hover:shadow-indigo-500/25',
+    topBar: 'bg-gradient-to-r from-indigo-400 via-sky-400 to-indigo-500',
+    badgeGradient: 'from-indigo-500 via-sky-400 to-cyan-300',
+    iconColor: 'text-indigo-600',
+    lineGradient: 'from-indigo-400 via-slate-800 to-indigo-400',
+    dateBadge: 'bg-indigo-100/90 text-indigo-950 border-indigo-200/90',
+    bottomBg: 'from-[#f5f7ff] via-[#eef2ff] to-[#e5ecff] border-indigo-200/80'
   }
 };
 
@@ -76,11 +98,11 @@ export const NewsAndEvents: React.FC<NewsAndEventsProps> = ({
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
 
   const prevSlide = () => {
-    setCurrentSlideIndex((prev) => (prev === 0 ? 2 : 0));
+    setCurrentSlideIndex((prev) => (prev <= 0 ? 4 : prev - 2));
   };
 
   const nextSlide = () => {
-    setCurrentSlideIndex((prev) => (prev === 0 ? 2 : 0));
+    setCurrentSlideIndex((prev) => (prev >= 4 ? 0 : prev + 2));
   };
 
   return (
@@ -201,8 +223,14 @@ export const NewsAndEvents: React.FC<NewsAndEventsProps> = ({
               {EVENTS_ITEMS.map((event) => (
                 <div
                   key={event.id}
-                  onClick={() => onSelectEvent(event)}
-                  className="bg-gradient-to-r from-blue-50/90 via-sky-50/70 to-blue-50/90 hover:from-blue-100 hover:to-sky-100 border border-blue-200/90 rounded-2xl p-3 flex items-center gap-4 cursor-pointer transition-all duration-300 transform hover:-translate-y-1 shadow-sm hover:shadow-md group"
+                  onClick={() => {
+                    if (event.pdfUrl) {
+                      window.open(event.pdfUrl, '_blank');
+                    } else {
+                      onSelectEvent(event);
+                    }
+                  }}
+                  className="bg-gradient-to-r from-blue-50/90 via-sky-50/70 to-blue-50/90 hover:from-blue-100 hover:to-sky-100 border border-blue-200/90 rounded-2xl p-3.5 flex items-center gap-4 cursor-pointer transition-all duration-300 transform hover:-translate-y-1 shadow-sm hover:shadow-md group"
                 >
                   {/* Left Navy Date Box */}
                   <div className="w-28 h-20 bg-gradient-to-br from-navy-950 via-slate-900 to-blue-950 text-white rounded-xl flex flex-col items-center justify-center shrink-0 p-2 shadow-md group-hover:scale-105 transition-transform border border-amber-400/30">
@@ -216,8 +244,8 @@ export const NewsAndEvents: React.FC<NewsAndEventsProps> = ({
 
                   {/* Right Event Info Box */}
                   <div className="flex-1 pr-2">
-                    <h4 className="text-sm font-extrabold text-navy-950 leading-snug group-hover:text-blue-700 transition-colors">
-                      {event.fullDate}
+                    <h4 className="text-sm font-extrabold text-navy-950 leading-snug group-hover:text-blue-700 transition-colors line-clamp-2">
+                      {event.title}
                     </h4>
                     <p className="text-xs font-bold text-blue-600 mt-1.5 flex items-center gap-1 group-hover:underline">
                       <span>Read More</span>

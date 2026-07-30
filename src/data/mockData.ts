@@ -6,17 +6,19 @@ export interface NewsItem {
   category: string;
   summary: string;
   content: string;
+  pdfUrl?: string;
 }
 
 export interface EventItem {
   id: string;
-  dayMonth: string; // e.g. "MAY 7"
+  dayMonth: string; // e.g. "AUG 7"
   year: string;    // e.g. "2026"
-  fullDate: string; // e.g. "May 7, 2026"
+  fullDate: string; // e.g. "August 7, 2026"
   time: string;
   title: string;
   location: string;
   description: string;
+  pdfUrl?: string;
 }
 
 export interface ProgramItem {
@@ -702,37 +704,57 @@ export const ABOUT_SECTIONS = {
 export const NEWS_ITEMS: NewsItem[] = [
   {
     id: 'news-1',
+    title: 'August Technical Advisory Committee (TAC) Meeting',
+    date: 'AUG 7, 2026',
+    category: 'Public Notice',
+    image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80',
+    summary: 'The August Technical Advisory Committee (TAC) meeting is scheduled for August 7, 2026, at 10:00 a.m. at the Crater Planning District Commission (Crater PDC), located at 1964 Wakefield Street, Petersburg, VA 23805.',
+    content: 'The August Technical Advisory Committee (TAC) meeting is scheduled for August 7, 2026, at 10:00 a.m. at the Crater Planning District Commission (Crater PDC), located at 1964 Wakefield Street, Petersburg, VA 23805.',
+    pdfUrl: 'https://craterpdc.org/wp-content/uploads/2026/07/TCAMPO_Draft_TAC_Agenda_Aug07-26-v6.pdf'
+  },
+  {
+    id: 'news-2',
+    title: 'August Policy Committee (PC) Meeting',
+    date: 'AUG 13, 2026',
+    category: 'Public Notice',
+    image: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80',
+    summary: 'The August Policy Committee (PC) meeting is scheduled for August 13, 2026, at 4:30 p.m. at the Crater Planning District Commission (Crater PDC), located at 1964 Wakefield Street, Petersburg, VA 23805.',
+    content: 'The August Policy Committee (PC) meeting is scheduled for August 13, 2026, at 4:30 p.m. at the Crater Planning District Commission (Crater PDC), located at 1964 Wakefield Street, Petersburg, VA 23805.',
+    pdfUrl: 'https://craterpdc.org/wp-content/uploads/2026/07/TCAMPO_Draft_TAC_Agenda_Aug07-26-v6.pdf'
+  },
+  {
+    id: 'news-3',
     title: 'PLAN2050 CLRP & FFY27–30 MTIP – Conformity',
     date: 'JUN 25, 2026',
     category: 'Public Notice',
-    image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80',
     summary: 'Policy Committee approved the draft conformity project lists (PLAN2050 and FFY27–30 MTIP) and authorized TAC to review and release for public review.',
     content: 'Policy Committee approved the draft conformity project lists (PLAN2050 and FFY27–30 MTIP) and authorized TAC to review and release for public review.'
   },
   {
-    id: 'news-2',
+    id: 'news-4',
     title: 'FY27 UPWP',
     date: 'MAY 29, 2026',
     category: 'Public Notice',
-    image: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1571068316344-75bc76f77890?auto=format&fit=crop&w=800&q=80',
     summary: "Policy Committee approved the FY27 Unified Planning Work Program (UPWP), which outlines TCAMPO's planning activities, budget, and priorities for the upcoming fiscal year.",
     content: "Policy Committee approved the FY27 Unified Planning Work Program (UPWP), which outlines TCAMPO's planning activities, budget, and priorities for the upcoming fiscal year."
   },
   {
-    id: 'news-3',
+    id: 'news-5',
     title: 'Election of Officers',
     date: 'MAY 7, 2026',
     category: 'Public Notice',
-    image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=800&q=80',
     summary: 'Policy Committee elected Mr. John Wood (Colonial Heights) as Chair and Mr. Casey Dooley (Dinwiddie) as Vice Chair for the July 1, 2026–June 30, 2027 term.',
     content: 'Policy Committee elected Mr. John Wood (Colonial Heights) as Chair and Mr. Casey Dooley (Dinwiddie) as Vice Chair for the July 1, 2026–June 30, 2027 term.'
   },
   {
-    id: 'news-4',
+    id: 'news-6',
     title: 'SMART SCALE Round 7 Preliminary Applications',
     date: 'APR 6, 2026',
     category: 'Public Notice',
-    image: 'https://images.unsplash.com/photo-1571068316344-75bc76f77890?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80',
     summary: 'The Policy Committee supported four SMART SCALE Round 7 preliminary applications submitted by TCAMPO: (1) #13899 – S. Crater Road at Crater Circle and Wagner Road (with sidewalks), (2) #13913 – Wagner Road at Normandy Drive (US-301 Corridor), (3) #13914 – US-460: Wagner Road to I-295, and (4) #13915 – Washington/Wythe Conversion to Two-Way and SPUI at I-95.',
     content: 'The Policy Committee supported four SMART SCALE Round 7 preliminary applications submitted by TCAMPO: (1) #13899 – S. Crater Road at Crater Circle and Wagner Road (with sidewalks), (2) #13913 – Wagner Road at Normandy Drive (US-301 Corridor), (3) #13914 – US-460: Wagner Road to I-295, and (4) #13915 – Washington/Wythe Conversion to Two-Way and SPUI at I-95.'
   }
@@ -741,43 +763,25 @@ export const NEWS_ITEMS: NewsItem[] = [
 export const EVENTS_ITEMS: EventItem[] = [
   {
     id: 'event-1',
-    dayMonth: 'MAY 7',
+    dayMonth: 'AUG 7',
     year: '2026',
-    fullDate: 'May 7, 2026',
-    time: '4:30 PM',
-    title: 'Policy Committee Meeting',
-    location: '',
-    description: ''
+    fullDate: 'August 7, 2026',
+    time: '10:00 AM',
+    title: 'August Technical Advisory Committee (TAC) Meeting',
+    location: 'Crater Planning District Commission (Crater PDC), 1964 Wakefield Street, Petersburg, VA 23805',
+    description: 'The August Technical Advisory Committee (TAC) meeting is scheduled for August 7, 2026, at 10:00 a.m. at the Crater Planning District Commission (Crater PDC), located at 1964 Wakefield Street, Petersburg, VA 23805.',
+    pdfUrl: 'https://craterpdc.org/wp-content/uploads/2026/07/TCAMPO_Draft_TAC_Agenda_Aug07-26-v6.pdf'
   },
   {
     id: 'event-2',
-    dayMonth: 'APRIL 9',
+    dayMonth: 'AUG 13',
     year: '2026',
-    fullDate: 'April 9, 2026',
-    time: '10:00 AM',
-    title: 'Technical Advisory Committee Meeting',
-    location: '',
-    description: ''
-  },
-  {
-    id: 'event-3',
-    dayMonth: 'MARCH 12',
-    year: '2026',
-    fullDate: 'March 12, 2026',
-    time: '6:00 PM - 8:00 PM EST',
-    title: 'Citizens Advisory Committee (CAC) Community Forum',
-    location: 'Tri-Cities Regional Community Center',
-    description: 'Public interactive workshop providing resident input on transit route updates, safety improvements, and neighborhood connectivity.'
-  },
-  {
-    id: 'event-4',
-    dayMonth: 'FEBRUARY 12',
-    year: '2026',
-    fullDate: 'February 12, 2026',
-    time: '1:30 PM - 3:30 PM EST',
-    title: 'Freight & Economic Development Taskforce Meeting',
-    location: 'Regional Commerce Hub Center',
-    description: 'Specialized roundtable focused on supply chain resiliency, rail corridor safety, and commercial vehicle electrification.'
+    fullDate: 'August 13, 2026',
+    time: '4:30 PM',
+    title: 'August Policy Committee (PC) Meeting',
+    location: 'Crater Planning District Commission (Crater PDC), 1964 Wakefield Street, Petersburg, VA 23805',
+    description: 'The August Policy Committee (PC) meeting is scheduled for August 13, 2026, at 4:30 p.m. at the Crater Planning District Commission (Crater PDC), located at 1964 Wakefield Street, Petersburg, VA 23805.',
+    pdfUrl: 'https://craterpdc.org/wp-content/uploads/2026/07/TCAMPO_Draft_TAC_Agenda_Aug07-26-v6.pdf'
   }
 ];
 

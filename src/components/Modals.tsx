@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { PROGRAMS_LIST } from '../data/mockData';
 import type { NewsItem, EventItem } from '../data/mockData';
-import { X, Calendar, MapPin, Clock, CheckCircle2, Send } from 'lucide-react';
+import { X, Calendar, MapPin, Clock, CheckCircle2, Send, FileText } from 'lucide-react';
 
 interface ModalsProps {
   selectedNews: NewsItem | null;
@@ -68,6 +68,19 @@ export const Modals: React.FC<ModalsProps> = ({
             <div className="text-sm text-slate-600 space-y-4 leading-relaxed">
               <p>{selectedNews.content}</p>
               <p>For more information or to submit public comment regarding this item, please contact the TCAMPO Public Involvement Office at publicinvolvement@tcampo.org.</p>
+              {selectedNews.pdfUrl && (
+                <div className="pt-2">
+                  <a
+                    href={selectedNews.pdfUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm px-6 py-2.5 rounded-full shadow-md inline-flex items-center gap-2"
+                  >
+                    <FileText className="w-4 h-4" />
+                    <span>View Agenda PDF</span>
+                  </a>
+                </div>
+              )}
             </div>
           </div>
         )}
@@ -105,6 +118,17 @@ export const Modals: React.FC<ModalsProps> = ({
             )}
 
             <div className="flex flex-wrap items-center gap-3">
+              {selectedEvent.pdfUrl && (
+                <a
+                  href={selectedEvent.pdfUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm px-6 py-2.5 rounded-full shadow-md inline-flex items-center gap-2"
+                >
+                  <FileText className="w-4 h-4" />
+                  <span>View Agenda PDF</span>
+                </a>
+              )}
               <button
                 onClick={() => {
                   alert('Event added to calendar!');
