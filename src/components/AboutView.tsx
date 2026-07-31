@@ -18,6 +18,7 @@ export const AboutView: React.FC<AboutViewProps> = ({
   const [pcFilter, setPcFilter] = useState<'voting' | 'non-voting'>('voting');
   const [tacFilter, setTacFilter] = useState<'voting' | 'non-voting'>('voting');
   const [agendaFilter, setAgendaFilter] = useState<'PC' | 'TAC'>('PC');
+  const [archiveYear, setArchiveYear] = useState<'2025' | '2024' | '2023'>('2025');
 
   const currentSection = ABOUT_SECTIONS[activeSubTab as keyof typeof ABOUT_SECTIONS] || ABOUT_SECTIONS['MPO Overview'];
 
@@ -188,55 +189,79 @@ export const AboutView: React.FC<AboutViewProps> = ({
                     </div>
                   </div>
 
-                  {/* Archieve Section matching Screenshot */}
-                  <div className="pt-4">
-                    <h2 className="text-2xl font-extrabold text-navy-950 mb-4 tracking-tight">
-                      Archieve
-                    </h2>
+                  {/* Archive Section matching Screenshot */}
+                  <div className="pt-4 space-y-5">
+                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                      <h2 className="text-2xl font-extrabold text-navy-950 tracking-tight">
+                        Archive
+                      </h2>
+
+                      {/* 3 Neo-Brutalist Pill Tabs: 2025, 2024, 2023 matching screenshot */}
+                      <div className="flex items-center gap-3">
+                        {(['2025', '2024', '2023'] as const).map((year) => {
+                          const isActive = archiveYear === year;
+                          return (
+                            <button
+                              key={year}
+                              onClick={() => setArchiveYear(year)}
+                              className={`px-5 py-2 rounded-xl text-sm font-black transition-all duration-200 cursor-pointer shadow-[3px_3px_0px_0px_rgba(15,23,42,1)] active:translate-x-0.5 active:translate-y-0.5 active:shadow-none border-2 border-slate-900 ${
+                                isActive
+                                  ? 'bg-[#10b981] text-slate-950'
+                                  : 'bg-[#bfdbfe] text-slate-900 hover:bg-blue-300'
+                              }`}
+                            >
+                              {year}
+                            </button>
+                          );
+                        })}
+                      </div>
+                    </div>
 
                     <div className="overflow-x-auto max-h-[550px] overflow-y-auto pr-1">
                       <table className="w-full text-left border-separate border-spacing-y-2">
                         <thead className="sticky top-0 z-10">
-                          <tr className="bg-sky-200/80 backdrop-blur-md text-navy-950 text-xs font-black uppercase tracking-wider">
+                          <tr className="bg-[#dbeafe] text-navy-950 text-xs font-black uppercase tracking-wider">
                             <th className="py-3 px-4 rounded-l-xl w-1/2">Venue</th>
                             <th className="py-3 px-4 w-1/4">Date</th>
                             <th className="py-3 px-4 w-1/6">Time</th>
-                            <th className="py-3 px-4 rounded-r-xl text-center w-16">Agenda</th>
+                            <th className="py-3 px-4 rounded-r-xl text-center w-24">Agenda</th>
                           </tr>
                         </thead>
                         <tbody>
-                          {AGENDAS_DATA.archive.map((item) => (
-                            <tr key={item.id} className="bg-white hover:bg-blue-50/80 transition-colors shadow-sm text-xs sm:text-sm font-semibold text-slate-900 rounded-xl">
-                              <td className="py-3.5 px-4 rounded-l-xl font-medium text-slate-700 max-w-xs">{item.venue}</td>
-                              <td className="py-3.5 px-4 font-bold text-navy-950 whitespace-nowrap">{item.date}</td>
-                              <td className="py-3.5 px-4 whitespace-nowrap">{item.time}</td>
-                              <td className="py-3.5 px-4 rounded-r-xl text-center">
-                                {item.status === 'cancelled' ? (
-                                  <span className="inline-block bg-red-100 text-red-700 text-xs font-bold px-2.5 py-1 rounded-full whitespace-nowrap">
-                                    cancelled
-                                  </span>
-                                ) : item.status === 'No Meeting' ? (
-                                  <span className="inline-block bg-slate-100 text-slate-600 text-xs font-bold px-2.5 py-1 rounded-full whitespace-nowrap">
-                                    No Meeting
-                                  </span>
-                                ) : item.pdfUrl ? (
-                                  <a
-                                    href={item.pdfUrl}
-                                    target="_blank"
-                                    rel="noreferrer"
-                                    className="inline-flex items-center justify-center p-1.5 text-red-600 hover:text-red-700 transition-transform transform hover:scale-110"
-                                    title="Download Archive PDF"
-                                  >
-                                    <svg className="w-7 h-7" viewBox="0 0 24 24" fill="currentColor">
-                                      <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-9.5 8.5c0 .8-.7 1.5-1.5 1.5H7v2H5.5V7H8c.8 0 1.5.7 1.5 1.5v3zm5 2c0 .8-.7 1.5-1.5 1.5h-2.5V7H13c.8 0 1.5.7 1.5 1.5v5zm3.5-3.5h-2v1.5h2V13h-2v2.5H16.5V7H18v3.5z" />
-                                    </svg>
-                                  </a>
-                                ) : (
-                                  <span className="text-xs text-slate-400 font-bold">-</span>
-                                )}
-                              </td>
-                            </tr>
-                          ))}
+                          {AGENDAS_DATA.archive
+                            .filter((item) => item.date.includes(archiveYear))
+                            .map((item) => (
+                              <tr key={item.id} className="bg-white hover:bg-blue-50/80 transition-colors shadow-sm text-xs sm:text-sm font-semibold text-slate-900 rounded-xl">
+                                <td className="py-3.5 px-4 rounded-l-xl font-medium text-slate-700 max-w-xs">{item.venue}</td>
+                                <td className="py-3.5 px-4 font-bold text-navy-950 whitespace-nowrap">{item.date}</td>
+                                <td className="py-3.5 px-4 whitespace-nowrap">{agendaFilter === 'TAC' ? '10:00 AM' : item.time}</td>
+                                <td className="py-3.5 px-4 rounded-r-xl text-center">
+                                  {item.status === 'cancelled' ? (
+                                    <span className="inline-block bg-red-100 text-red-600 text-xs font-bold px-3 py-1 rounded-full whitespace-nowrap border border-red-200/80">
+                                      cancelled
+                                    </span>
+                                  ) : item.status === 'No Meeting' ? (
+                                    <span className="inline-block bg-slate-100 text-slate-600 text-xs font-bold px-3 py-1 rounded-full whitespace-nowrap border border-slate-200">
+                                      No Meeting
+                                    </span>
+                                  ) : item.pdfUrl ? (
+                                    <a
+                                      href={item.pdfUrl}
+                                      target="_blank"
+                                      rel="noreferrer"
+                                      className="inline-flex items-center justify-center p-1.5 text-red-600 hover:text-red-700 transition-transform transform hover:scale-110"
+                                      title="Download Archive PDF"
+                                    >
+                                      <svg className="w-7 h-7" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-9.5 8.5c0 .8-.7 1.5-1.5 1.5H7v2H5.5V7H8c.8 0 1.5.7 1.5 1.5v3zm5 2c0 .8-.7 1.5-1.5 1.5h-2.5V7H13c.8 0 1.5.7 1.5 1.5v5zm3.5-3.5h-2v1.5h2V13h-2v2.5H16.5V7H18v3.5z" />
+                                      </svg>
+                                    </a>
+                                  ) : (
+                                    <span className="text-xs text-slate-400 font-bold">-</span>
+                                  )}
+                                </td>
+                              </tr>
+                            ))}
                         </tbody>
                       </table>
                     </div>
