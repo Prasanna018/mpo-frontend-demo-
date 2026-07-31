@@ -161,7 +161,11 @@ export const AboutView: React.FC<AboutViewProps> = ({
                         <tbody>
                           {AGENDAS_DATA.current.map((item) => (
                             <tr key={item.id} className="bg-white hover:bg-blue-50/80 transition-colors shadow-sm text-xs sm:text-sm font-semibold text-slate-900 rounded-xl">
-                              <td className="py-3.5 px-4 rounded-l-xl font-medium text-slate-700 max-w-xs">{item.venue}</td>
+                              <td className="py-3.5 px-4 rounded-l-xl font-medium text-slate-700 max-w-xs">
+                                {agendaFilter === 'TAC'
+                                  ? 'Petersburg Multi-Modal Station, 100 West Washington Street, Petersburg, VA 23805'
+                                  : item.venue}
+                              </td>
                               <td className="py-3.5 px-4 font-bold text-navy-950 whitespace-nowrap">{item.date}</td>
                               <td className="py-3.5 px-4 whitespace-nowrap">{agendaFilter === 'TAC' ? '10:00 AM' : item.time}</td>
                               <td className="py-3.5 px-4 rounded-r-xl text-center">
@@ -232,7 +236,11 @@ export const AboutView: React.FC<AboutViewProps> = ({
                             .filter((item) => item.date.includes(archiveYear))
                             .map((item) => (
                               <tr key={item.id} className="bg-white hover:bg-blue-50/80 transition-colors shadow-sm text-xs sm:text-sm font-semibold text-slate-900 rounded-xl">
-                                <td className="py-3.5 px-4 rounded-l-xl font-medium text-slate-700 max-w-xs">{item.venue}</td>
+                                 <td className="py-3.5 px-4 rounded-l-xl font-medium text-slate-700 max-w-xs">
+                                  {agendaFilter === 'TAC'
+                                    ? 'Petersburg Multi-Modal Station, 100 West Washington Street, Petersburg, VA 23805'
+                                    : item.venue}
+                                </td>
                                 <td className="py-3.5 px-4 font-bold text-navy-950 whitespace-nowrap">{item.date}</td>
                                 <td className="py-3.5 px-4 whitespace-nowrap">{agendaFilter === 'TAC' ? '10:00 AM' : item.time}</td>
                                 <td className="py-3.5 px-4 rounded-r-xl text-center">
