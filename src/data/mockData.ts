@@ -298,28 +298,28 @@ export const AGENDAS_DATA: { current: AgendaItem[]; archive: AgendaItem[] } = {
   current: [
     {
       id: 'pc-1',
-      venue: '1964 Wakefield Stree , PO Box 1808 , Petersburg, VA 23805',
+      venue: '1964 Wakefield Street, PO Box 1808, Petersburg, VA 23805',
       date: 'May 7, 2026',
       time: '4:30 PM',
       pdfUrl: 'https://lightblue-dogfish-243005.hostingersite.com/wp-content/uploads/2026/05/Draft-5.07.2026-Policy-Committee-Agenda-V6-05.07.2026.pdf'
     },
     {
       id: 'pc-2',
-      venue: '1964 Wakefield Stree , PO Box 1808 , Petersburg, VA 23805',
+      venue: '1964 Wakefield Street, PO Box 1808, Petersburg, VA 23805',
       date: 'April 9, 2026',
       time: '4:30 PM',
       pdfUrl: 'https://lightblue-dogfish-243005.hostingersite.com/wp-content/uploads/2026/05/Draft-4.09.2026-Policy-Committee-Agenda-Updated-04.07.2026_compressed.pdf'
     },
     {
       id: 'pc-3',
-      venue: '1964 Wakefield Stree , PO Box 1808 , Petersburg, VA 23805',
+      venue: '1964 Wakefield Street, PO Box 1808, Petersburg, VA 23805',
       date: 'March 12, 2026',
       time: '4:30 PM',
       pdfUrl: 'https://lightblue-dogfish-243005.hostingersite.com/wp-content/uploads/2026/05/03.12.2026-Policy-Committee-Agenda-Final-Updated-04.23.2026_compressed.pdf'
     },
     {
       id: 'pc-4',
-      venue: '1964 Wakefield Stree , PO Box 1808 , Petersburg, VA 23805',
+      venue: '1964 Wakefield Street, PO Box 1808, Petersburg, VA 23805',
       date: 'February 12, 2026',
       time: '4:30 PM',
       pdfUrl: 'https://lightblue-dogfish-243005.hostingersite.com/wp-content/uploads/2026/05/02.12.2026-Policy-Committee-agenda-Final-V3_compressed.pdf'
@@ -328,336 +328,336 @@ export const AGENDAS_DATA: { current: AgendaItem[]; archive: AgendaItem[] } = {
   archive: [
     {
       id: 'arch-1',
-      venue: '1964 Wakefield Stree , PO Box 1808 , Petersburg, VA 23805',
+      venue: '1964 Wakefield Street, PO Box 1808, Petersburg, VA 23805',
       date: 'November 13, 2025',
       time: '4:30 PM',
       pdfUrl: 'https://lightblue-dogfish-243005.hostingersite.com/wp-content/uploads/2026/05/11.13.2025-Policy-Committee-agenda-Updated-11.13.2025-Final-V3_compressed.pdf'
     },
     {
       id: 'arch-2',
-      venue: '1964 Wakefield Stree , PO Box 1808 , Petersburg, VA 23805',
+      venue: '1964 Wakefield Street, PO Box 1808, Petersburg, VA 23805',
       date: 'October 9, 2025',
       time: '4:30 PM',
       status: 'cancelled'
     },
     {
       id: 'arch-3',
-      venue: '1964 Wakefield Stree , PO Box 1808 , Petersburg, VA 23805',
+      venue: '1964 Wakefield Street, PO Box 1808, Petersburg, VA 23805',
       date: 'August 19, 2025',
       time: '4:30 PM',
       pdfUrl: 'https://lightblue-dogfish-243005.hostingersite.com/wp-content/uploads/2026/05/08-19-25-Policy-Committee-Agenda-Packet_compressed.pdf'
     },
     {
       id: 'arch-4',
-      venue: '1964 Wakefield Stree , PO Box 1808 , Petersburg, VA 23805',
+      venue: '1964 Wakefield Street, PO Box 1808, Petersburg, VA 23805',
       date: 'June 12, 2025',
       time: '4:30 PM',
       pdfUrl: 'https://lightblue-dogfish-243005.hostingersite.com/wp-content/uploads/2026/05/06-12-25-Policy-Committee-Agenda-Packet_compressed.pdf'
     },
     {
       id: 'arch-5',
-      venue: '1964 Wakefield Stree , PO Box 1808 , Petersburg, VA 23805',
+      venue: '1964 Wakefield Street, PO Box 1808, Petersburg, VA 23805',
       date: 'May 8, 2025',
       time: '4:30 PM',
       pdfUrl: 'https://lightblue-dogfish-243005.hostingersite.com/wp-content/uploads/2026/05/05-8-25-Policy-Committee-Agenda-Packet_compressed.pdf'
     },
     {
       id: 'arch-6',
-      venue: '1964 Wakefield Stree , PO Box 1808 , Petersburg, VA 23805',
+      venue: '1964 Wakefield Street, PO Box 1808, Petersburg, VA 23805',
       date: 'April 10, 2025',
       time: '4:30 PM',
       pdfUrl: 'https://lightblue-dogfish-243005.hostingersite.com/wp-content/uploads/2026/05/Updated-04-10-25-TAC-Policy-Committee-agenda_compressed.pdf'
     },
     {
       id: 'arch-7',
-      venue: '1964 Wakefield Stree , PO Box 1808 , Petersburg, VA 23805',
+      venue: '1964 Wakefield Street, PO Box 1808, Petersburg, VA 23805',
       date: 'March 13, 2025',
       time: '4:30 PM',
       pdfUrl: 'https://lightblue-dogfish-243005.hostingersite.com/wp-content/uploads/2026/05/03-13-25-PC-agenda-packet-compressed.pdf'
     },
     {
       id: 'arch-8',
-      venue: '1964 Wakefield Stree , PO Box 1808 , Petersburg, VA 23805',
+      venue: '1964 Wakefield Street, PO Box 1808, Petersburg, VA 23805',
       date: 'February 13, 2025',
       time: '4:30 PM',
       pdfUrl: 'https://lightblue-dogfish-243005.hostingersite.com/wp-content/uploads/2026/05/02-13-25-PC-agenda-Draft-compressed.pdf'
     },
     {
       id: 'arch-9',
-      venue: '1964 Wakefield Stree , PO Box 1808 , Petersburg, VA 23805',
+      venue: '1964 Wakefield Street, PO Box 1808, Petersburg, VA 23805',
       date: 'November 14, 2024',
       time: '4:30 PM',
       pdfUrl: 'https://lightblue-dogfish-243005.hostingersite.com/wp-content/uploads/2026/05/11-14-24-Complete-PC-agenda_compressed.pdf'
     },
     {
       id: 'arch-10',
-      venue: '1964 Wakefield Stree , PO Box 1808 , Petersburg, VA 23805',
+      venue: '1964 Wakefield Street, PO Box 1808, Petersburg, VA 23805',
       date: 'October 10, 2024',
       time: '4:30 PM',
       status: 'cancelled'
     },
     {
       id: 'arch-11',
-      venue: '1964 Wakefield Stree , PO Box 1808 , Petersburg, VA 23805',
+      venue: '1964 Wakefield Street, PO Box 1808, Petersburg, VA 23805',
       date: 'September 12, 2024',
       time: '4:30 PM',
       pdfUrl: 'https://lightblue-dogfish-243005.hostingersite.com/wp-content/uploads/2026/05/09-12-24-Policy-Committee-agenda-package-compressed.pdf'
     },
     {
       id: 'arch-12',
-      venue: '1964 Wakefield Stree , PO Box 1808 , Petersburg, VA 23805',
+      venue: '1964 Wakefield Street, PO Box 1808, Petersburg, VA 23805',
       date: 'August 8, 2024',
       time: '4:30 PM',
       pdfUrl: 'https://lightblue-dogfish-243005.hostingersite.com/wp-content/uploads/2026/05/08-08-24-PC-agenda-package-compressed.pdf'
     },
     {
       id: 'arch-13',
-      venue: '1964 Wakefield Stree , PO Box 1808 , Petersburg, VA 23805',
+      venue: '1964 Wakefield Street, PO Box 1808, Petersburg, VA 23805',
       date: 'June 13, 2024',
       time: '4:30 PM',
       pdfUrl: 'https://lightblue-dogfish-243005.hostingersite.com/wp-content/uploads/2026/05/06-13-24-PC-agenda-package-compressed.pdf'
     },
     {
       id: 'arch-14',
-      venue: '1964 Wakefield Stree , PO Box 1808 , Petersburg, VA 23805',
+      venue: '1964 Wakefield Street, PO Box 1808, Petersburg, VA 23805',
       date: 'May 9, 2024',
       time: '4:30 PM',
       pdfUrl: 'https://lightblue-dogfish-243005.hostingersite.com/wp-content/uploads/2026/05/050924PCAgendaPackage-compressed.pdf'
     },
     {
       id: 'arch-15',
-      venue: '1964 Wakefield Stree , PO Box 1808 , Petersburg, VA 23805',
+      venue: '1964 Wakefield Street, PO Box 1808, Petersburg, VA 23805',
       date: 'April 11, 2024',
       time: '4:30 PM',
       pdfUrl: 'https://lightblue-dogfish-243005.hostingersite.com/wp-content/uploads/2026/05/041124PCAgendaPkge-compressed.pdf'
     },
     {
       id: 'arch-16',
-      venue: '1964 Wakefield Stree , PO Box 1808 , Petersburg, VA 23805',
+      venue: '1964 Wakefield Street, PO Box 1808, Petersburg, VA 23805',
       date: 'March 14, 2024',
       time: '4:30 PM',
       pdfUrl: 'https://lightblue-dogfish-243005.hostingersite.com/wp-content/uploads/2026/05/03142024FullPCAgenda-compressed.pdf'
     },
     {
       id: 'arch-17',
-      venue: '1964 Wakefield Stree , PO Box 1808 , Petersburg, VA 23805',
+      venue: '1964 Wakefield Street, PO Box 1808, Petersburg, VA 23805',
       date: 'February 22, 2024',
       time: '4:30 PM',
       pdfUrl: 'https://lightblue-dogfish-243005.hostingersite.com/wp-content/uploads/2026/05/20220222FullPCAgendaPackage-compressed1.pdf'
     },
     {
       id: 'arch-18',
-      venue: '1964 Wakefield Stree , PO Box 1808 , Petersburg, VA 23805',
+      venue: '1964 Wakefield Street, PO Box 1808, Petersburg, VA 23805',
       date: 'January 11, 2024',
       time: '4:30 PM',
       pdfUrl: 'https://lightblue-dogfish-243005.hostingersite.com/wp-content/uploads/2026/05/01112024PolicyCommitteeAgendaPackage-compressed.pdf'
     },
     {
       id: 'arch-19',
-      venue: '1964 Wakefield Stree , PO Box 1808 , Petersburg, VA 23805',
+      venue: '1964 Wakefield Street, PO Box 1808, Petersburg, VA 23805',
       date: 'October 12, 2023',
       time: '4:30 PM',
       pdfUrl: 'https://lightblue-dogfish-243005.hostingersite.com/wp-content/uploads/2026/05/10-12-23_FullPolicyCommitteeAgenda_compressed.pdf'
     },
     {
       id: 'arch-20',
-      venue: '1964 Wakefield Stree , PO Box 1808 , Petersburg, VA 23805',
+      venue: '1964 Wakefield Street, PO Box 1808, Petersburg, VA 23805',
       date: 'September 14, 2023',
       time: '4:30 PM',
       pdfUrl: 'https://lightblue-dogfish-243005.hostingersite.com/wp-content/uploads/2026/05/09142023_FullPCAgendaPackage-compressed.pdf'
     },
     {
       id: 'arch-21',
-      venue: '1964 Wakefield Stree , PO Box 1808 , Petersburg, VA 23805',
+      venue: '1964 Wakefield Street, PO Box 1808, Petersburg, VA 23805',
       date: 'August 10, 2023',
       time: '4:30 PM',
       pdfUrl: 'https://lightblue-dogfish-243005.hostingersite.com/wp-content/uploads/2026/05/081023_PCAgendaPackage-compressed.pdf'
     },
     {
       id: 'arch-22',
-      venue: '1964 Wakefield Stree , PO Box 1808 , Petersburg, VA 23805',
+      venue: '1964 Wakefield Street, PO Box 1808, Petersburg, VA 23805',
       date: 'June 22, 2023',
       time: '4:30 PM',
       pdfUrl: 'https://lightblue-dogfish-243005.hostingersite.com/wp-content/uploads/2026/05/062223_Policy_Committee_Agenda_Package-compressed.pdf'
     },
     {
       id: 'arch-23',
-      venue: '1964 Wakefield Stree , PO Box 1808 , Petersburg, VA 23805',
+      venue: '1964 Wakefield Street, PO Box 1808, Petersburg, VA 23805',
       date: 'May 11, 2023',
       time: '4:30 PM',
       pdfUrl: 'https://lightblue-dogfish-243005.hostingersite.com/wp-content/uploads/2026/05/05-11-23_FINAL_Policy_Committee_Agenda_Package-compressed.pdf'
     },
     {
       id: 'arch-24',
-      venue: '1964 Wakefield Stree , PO Box 1808 , Petersburg, VA 23805',
+      venue: '1964 Wakefield Street, PO Box 1808, Petersburg, VA 23805',
       date: 'April 13, 2023',
       time: '4:30 PM',
       pdfUrl: 'https://lightblue-dogfish-243005.hostingersite.com/wp-content/uploads/2026/05/04-13-23_PolicyCommitteeAgendaPackage-compressed.pdf'
     },
     {
       id: 'arch-25',
-      venue: '1964 Wakefield Stree , PO Box 1808 , Petersburg, VA 23805',
+      venue: '1964 Wakefield Street, PO Box 1808, Petersburg, VA 23805',
       date: 'March 9, 2023',
       time: '4:30 PM',
       pdfUrl: 'https://lightblue-dogfish-243005.hostingersite.com/wp-content/uploads/2026/05/030923_PolicyCommitteeAgendaPackage.pdf'
     },
     {
       id: 'arch-26',
-      venue: '1964 Wakefield Stree , PO Box 1808 , Petersburg, VA 23805',
+      venue: '1964 Wakefield Street, PO Box 1808, Petersburg, VA 23805',
       date: 'February 23, 2023',
       time: '4:30 PM',
       pdfUrl: 'https://lightblue-dogfish-243005.hostingersite.com/wp-content/uploads/2026/05/02232023_Policy_Committee_Agenda_Package-compressed.pdf'
     },
     {
       id: 'arch-27',
-      venue: '1964 Wakefield Stree , PO Box 1808 , Petersburg, VA 23805',
+      venue: '1964 Wakefield Street, PO Box 1808, Petersburg, VA 23805',
       date: 'January 12, 2023',
       time: '4:30 PM',
       pdfUrl: 'https://lightblue-dogfish-243005.hostingersite.com/wp-content/uploads/2026/05/01122023_FinalPolicyCommitteeagendapackage-compressed.pdf'
     },
     {
       id: 'arch-28',
-      venue: '1964 Wakefield Stree , PO Box 1808 , Petersburg, VA 23805',
+      venue: '1964 Wakefield Street, PO Box 1808, Petersburg, VA 23805',
       date: 'September 8, 2022',
       time: '4:30 PM',
       pdfUrl: 'https://lightblue-dogfish-243005.hostingersite.com/wp-content/uploads/2026/05/11.13.2025-Policy-Committee-agenda-Updated-11.13.2025-Final-V3_compressed.pdf'
     },
     {
       id: 'arch-29',
-      venue: '1964 Wakefield Stree , PO Box 1808 , Petersburg, VA 23805',
+      venue: '1964 Wakefield Street, PO Box 1808, Petersburg, VA 23805',
       date: 'August 11, 2022',
       time: '4:30 PM',
       pdfUrl: 'https://lightblue-dogfish-243005.hostingersite.com/wp-content/uploads/2026/05/11.13.2025-Policy-Committee-agenda-Updated-11.13.2025-Final-V3_compressed.pdf'
     },
     {
       id: 'arch-30',
-      venue: '1964 Wakefield Stree , PO Box 1808 , Petersburg, VA 23805',
+      venue: '1964 Wakefield Street, PO Box 1808, Petersburg, VA 23805',
       date: 'June 23, 2022',
       time: '4:30 PM',
       pdfUrl: 'https://lightblue-dogfish-243005.hostingersite.com/wp-content/uploads/2026/05/11.13.2025-Policy-Committee-agenda-Updated-11.13.2025-Final-V3_compressed.pdf'
     },
     {
       id: 'arch-31',
-      venue: '1964 Wakefield Stree , PO Box 1808 , Petersburg, VA 23805',
+      venue: '1964 Wakefield Street, PO Box 1808, Petersburg, VA 23805',
       date: 'May 12, 2022',
       time: '4:30 PM',
       pdfUrl: 'https://lightblue-dogfish-243005.hostingersite.com/wp-content/uploads/2026/05/11.13.2025-Policy-Committee-agenda-Updated-11.13.2025-Final-V3_compressed.pdf'
     },
     {
       id: 'arch-32',
-      venue: '1964 Wakefield Stree , PO Box 1808 , Petersburg, VA 23805',
+      venue: '1964 Wakefield Street, PO Box 1808, Petersburg, VA 23805',
       date: 'April 14, 2022',
       time: '4:30 PM',
       pdfUrl: 'https://lightblue-dogfish-243005.hostingersite.com/wp-content/uploads/2026/05/11.13.2025-Policy-Committee-agenda-Updated-11.13.2025-Final-V3_compressed.pdf'
     },
     {
       id: 'arch-33',
-      venue: '1964 Wakefield Stree , PO Box 1808 , Petersburg, VA 23805',
+      venue: '1964 Wakefield Street, PO Box 1808, Petersburg, VA 23805',
       date: 'March 10, 2022',
       time: '4:30 PM',
       pdfUrl: 'https://lightblue-dogfish-243005.hostingersite.com/wp-content/uploads/2026/05/11.13.2025-Policy-Committee-agenda-Updated-11.13.2025-Final-V3_compressed.pdf'
     },
     {
       id: 'arch-34',
-      venue: '1964 Wakefield Stree , PO Box 1808 , Petersburg, VA 23805',
+      venue: '1964 Wakefield Street, PO Box 1808, Petersburg, VA 23805',
       date: 'February 24, 2022',
       time: '4:30 PM',
       pdfUrl: 'https://lightblue-dogfish-243005.hostingersite.com/wp-content/uploads/2026/05/11.13.2025-Policy-Committee-agenda-Updated-11.13.2025-Final-V3_compressed.pdf'
     },
     {
       id: 'arch-35',
-      venue: '1964 Wakefield Stree , PO Box 1808 , Petersburg, VA 23805',
+      venue: '1964 Wakefield Street, PO Box 1808, Petersburg, VA 23805',
       date: 'January 13, 2022',
       time: '4:30 PM',
       pdfUrl: 'https://lightblue-dogfish-243005.hostingersite.com/wp-content/uploads/2026/05/11.13.2025-Policy-Committee-agenda-Updated-11.13.2025-Final-V3_compressed.pdf'
     },
     {
       id: 'arch-36',
-      venue: '1964 Wakefield Stree , PO Box 1808 , Petersburg, VA 23805',
+      venue: '1964 Wakefield Street, PO Box 1808, Petersburg, VA 23805',
       date: 'December 9, 2021',
       time: '4:30 PM',
       pdfUrl: 'https://lightblue-dogfish-243005.hostingersite.com/wp-content/uploads/2026/05/11.13.2025-Policy-Committee-agenda-Updated-11.13.2025-Final-V3_compressed.pdf'
     },
     {
       id: 'arch-37',
-      venue: '1964 Wakefield Stree , PO Box 1808 , Petersburg, VA 23805',
+      venue: '1964 Wakefield Street, PO Box 1808, Petersburg, VA 23805',
       date: 'November 18, 2021',
       time: '4:30 PM',
       pdfUrl: 'https://lightblue-dogfish-243005.hostingersite.com/wp-content/uploads/2026/05/11.13.2025-Policy-Committee-agenda-Updated-11.13.2025-Final-V3_compressed.pdf'
     },
     {
       id: 'arch-38',
-      venue: '1964 Wakefield Stree , PO Box 1808 , Petersburg, VA 23805',
+      venue: '1964 Wakefield Street, PO Box 1808, Petersburg, VA 23805',
       date: 'October 14, 2021',
       time: '4:30 PM',
       pdfUrl: 'https://lightblue-dogfish-243005.hostingersite.com/wp-content/uploads/2026/05/11.13.2025-Policy-Committee-agenda-Updated-11.13.2025-Final-V3_compressed.pdf'
     },
     {
       id: 'arch-39',
-      venue: '1964 Wakefield Stree , PO Box 1808 , Petersburg, VA 23805',
+      venue: '1964 Wakefield Street, PO Box 1808, Petersburg, VA 23805',
       date: 'September 9, 2021',
       time: '4:30 PM',
       pdfUrl: 'https://lightblue-dogfish-243005.hostingersite.com/wp-content/uploads/2026/05/11.13.2025-Policy-Committee-agenda-Updated-11.13.2025-Final-V3_compressed.pdf'
     },
     {
       id: 'arch-40',
-      venue: '1964 Wakefield Stree , PO Box 1808 , Petersburg, VA 23805',
+      venue: '1964 Wakefield Street, PO Box 1808, Petersburg, VA 23805',
       date: 'August 12, 2021',
       time: '4:30 PM',
       pdfUrl: 'https://lightblue-dogfish-243005.hostingersite.com/wp-content/uploads/2026/05/11.13.2025-Policy-Committee-agenda-Updated-11.13.2025-Final-V3_compressed.pdf'
     },
     {
       id: 'arch-41',
-      venue: '1964 Wakefield Stree , PO Box 1808 , Petersburg, VA 23805',
+      venue: '1964 Wakefield Street, PO Box 1808, Petersburg, VA 23805',
       date: 'June 24, 2021',
       time: '4:30 PM',
       pdfUrl: 'https://lightblue-dogfish-243005.hostingersite.com/wp-content/uploads/2026/05/11.13.2025-Policy-Committee-agenda-Updated-11.13.2025-Final-V3_compressed.pdf'
     },
     {
       id: 'arch-42',
-      venue: '1964 Wakefield Stree , PO Box 1808 , Petersburg, VA 23805',
+      venue: '1964 Wakefield Street, PO Box 1808, Petersburg, VA 23805',
       date: 'May 13, 2021',
       time: '4:30 PM',
       pdfUrl: 'https://lightblue-dogfish-243005.hostingersite.com/wp-content/uploads/2026/05/11.13.2025-Policy-Committee-agenda-Updated-11.13.2025-Final-V3_compressed.pdf'
     },
     {
       id: 'arch-43',
-      venue: '1964 Wakefield Stree , PO Box 1808 , Petersburg, VA 23805',
+      venue: '1964 Wakefield Street, PO Box 1808, Petersburg, VA 23805',
       date: 'April 8, 2021',
       time: '4:30 PM',
       pdfUrl: 'https://lightblue-dogfish-243005.hostingersite.com/wp-content/uploads/2026/05/11.13.2025-Policy-Committee-agenda-Updated-11.13.2025-Final-V3_compressed.pdf'
     },
     {
       id: 'arch-44',
-      venue: '1964 Wakefield Stree , PO Box 1808 , Petersburg, VA 23805',
+      venue: '1964 Wakefield Street, PO Box 1808, Petersburg, VA 23805',
       date: 'March 11, 2021',
       time: '4:30 PM',
       pdfUrl: 'https://lightblue-dogfish-243005.hostingersite.com/wp-content/uploads/2026/05/11.13.2025-Policy-Committee-agenda-Updated-11.13.2025-Final-V3_compressed.pdf'
     },
     {
       id: 'arch-45',
-      venue: '1964 Wakefield Stree , PO Box 1808 , Petersburg, VA 23805',
+      venue: '1964 Wakefield Street, PO Box 1808, Petersburg, VA 23805',
       date: 'February 25, 2021',
       time: '4:30 PM',
       pdfUrl: 'https://lightblue-dogfish-243005.hostingersite.com/wp-content/uploads/2026/05/11.13.2025-Policy-Committee-agenda-Updated-11.13.2025-Final-V3_compressed.pdf'
     },
     {
       id: 'arch-46',
-      venue: '1964 Wakefield Stree , PO Box 1808 , Petersburg, VA 23805',
+      venue: '1964 Wakefield Street, PO Box 1808, Petersburg, VA 23805',
       date: 'January 14, 2021',
       time: '4:30 PM',
       pdfUrl: 'https://lightblue-dogfish-243005.hostingersite.com/wp-content/uploads/2026/05/11.13.2025-Policy-Committee-agenda-Updated-11.13.2025-Final-V3_compressed.pdf'
     },
     {
       id: 'arch-47',
-      venue: '1964 Wakefield Stree , PO Box 1808 , Petersburg, VA 23805',
+      venue: '1964 Wakefield Street, PO Box 1808, Petersburg, VA 23805',
       date: 'December 10, 2020',
       time: '4:30 PM',
       status: 'No Meeting'
     },
     {
       id: 'arch-48',
-      venue: '1964 Wakefield Stree , PO Box 1808 , Petersburg, VA 23805',
+      venue: '1964 Wakefield Street, PO Box 1808, Petersburg, VA 23805',
       date: 'November 12, 2020',
       time: '4:30 PM',
       pdfUrl: 'https://lightblue-dogfish-243005.hostingersite.com/wp-content/uploads/2026/05/11.13.2025-Policy-Committee-agenda-Updated-11.13.2025-Final-V3_compressed.pdf'
