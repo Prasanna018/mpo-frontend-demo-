@@ -151,6 +151,25 @@ export const FundingView: React.FC<FundingViewProps> = ({
                 <p className="text-slate-700 text-base sm:text-lg font-normal leading-relaxed">
                   SMART SCALE is Virginia’s process for prioritizing transportation projects. It evaluates candidate projects based on key factors: Safety, Congestion Mitigation, Accessibility, Environmental Quality, Economic Development, and Land Use. TCAMPO submits regional project applications through SMART SCALE every two years to compete for statewide funding allocations.
                 </p>
+
+                <div className="pt-2">
+                  <p className="text-slate-800 text-base font-semibold">
+                    To learn more about SMART SCALE projects, visit here.{' '}
+                    <a
+                      href="https://smartscale.virginia.gov/"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="text-blue-600 hover:text-blue-800 underline font-bold transition-colors inline-flex items-center gap-1"
+                    >
+                      <span>Smart Scale Home | Smart Scale</span>
+                      <svg className="w-4 h-4 inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                        <polyline points="15 3 21 3 21 9" />
+                        <line x1="10" y1="14" x2="21" y2="3" />
+                      </svg>
+                    </a>
+                  </p>
+                </div>
               </div>
             )}
 
