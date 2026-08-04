@@ -224,8 +224,11 @@ export const NewsAndEvents: React.FC<NewsAndEventsProps> = ({
                 <div
                   key={event.id}
                   onClick={() => {
-                    if (event.pdfUrl) {
-                      window.open(event.pdfUrl, '_blank');
+                    const targetNewsId = event.id === 'event-1' ? 'news-1' : event.id === 'event-2' ? 'news-2' : null;
+                    const matchingNews = targetNewsId ? NEWS_ITEMS.find((n) => n.id === targetNewsId) : null;
+                    if (matchingNews) {
+                      setCurrentSlideIndex(0);
+                      onSelectNews(matchingNews);
                     } else {
                       onSelectEvent(event);
                     }
