@@ -36,6 +36,10 @@ export interface AgendaItem {
   date: string;
   time: string;
   pdfUrl?: string;
+  tacPdfUrl?: string;
+  pcPdfUrl?: string;
+  tacDate?: string;
+  pcDate?: string;
   status?: 'cancelled' | 'No Meeting';
 }
 
@@ -290,6 +294,28 @@ export const PROGRAMS_STUDIES_DATA = {
 
 export const AGENDAS_DATA: { current: AgendaItem[]; archive: AgendaItem[] } = {
   current: [
+    {
+      id: 'august-2026',
+      venue: '1964 Wakefield Street, PO Box 1808, Petersburg, VA 23805',
+      date: 'August 13, 2026',
+      tacDate: 'August 7, 2026',
+      pcDate: 'August 13, 2026',
+      time: '4:30 PM',
+      pdfUrl: 'https://craterpdc.org/wp-content/uploads/2026/08/1_TCAMPO_Draft_TAC_Agenda_Aug07-26.pdf',
+      tacPdfUrl: 'https://craterpdc.org/wp-content/uploads/2026/08/1_TCAMPO_Draft_TAC_Agenda_Aug07-26.pdf',
+      pcPdfUrl: 'https://craterpdc.org/wp-content/uploads/2026/08/1_TCAMPO_Draft_TAC_Agenda_Aug07-26.pdf'
+    },
+    {
+      id: 'june-2026',
+      venue: '1964 Wakefield Street, PO Box 1808, Petersburg, VA 23805',
+      date: 'June 11, 2026',
+      tacDate: 'June 5, 2026',
+      pcDate: 'June 11, 2026',
+      time: '4:30 PM',
+      tacPdfUrl: 'https://craterpdc.org/wp-content/uploads/2026/08/TCAMPO_Draft_TAC_Agenda_06-05-26.pdf',
+      pcPdfUrl: 'https://craterpdc.org/wp-content/uploads/2026/06/6.11.2026-Policy-Committee-Agenda-V3.pdf',
+      pdfUrl: 'https://craterpdc.org/wp-content/uploads/2026/06/6.11.2026-Policy-Committee-Agenda-V3.pdf'
+    },
     {
       id: 'pc-1',
       venue: '1964 Wakefield Street, PO Box 1808, Petersburg, VA 23805',
@@ -711,7 +737,7 @@ export const NEWS_ITEMS: NewsItem[] = [
     image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80',
     summary: 'The August Technical Advisory Committee (TAC) meeting is scheduled for August 7, 2026, at 10:00 a.m. at the Crater Planning District Commission (Crater PDC), located at 1964 Wakefield Street, Petersburg, VA 23805.',
     content: 'The August Technical Advisory Committee (TAC) meeting is scheduled for August 7, 2026, at 10:00 a.m. at the Crater Planning District Commission (Crater PDC), located at 1964 Wakefield Street, Petersburg, VA 23805.',
-    pdfUrl: 'https://craterpdc.org/wp-content/uploads/2026/07/TCAMPO_Draft_TAC_Agenda_Aug07-26-v6.pdf'
+    pdfUrl: 'https://craterpdc.org/wp-content/uploads/2026/08/1_TCAMPO_Draft_TAC_Agenda_Aug07-26.pdf'
   },
   {
     id: 'news-2',
@@ -721,7 +747,7 @@ export const NEWS_ITEMS: NewsItem[] = [
     image: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80',
     summary: 'The August Policy Committee (PC) meeting is scheduled for August 13, 2026, at 4:30 p.m. at the Crater Planning District Commission (Crater PDC), located at 1964 Wakefield Street, Petersburg, VA 23805.',
     content: 'The August Policy Committee (PC) meeting is scheduled for August 13, 2026, at 4:30 p.m. at the Crater Planning District Commission (Crater PDC), located at 1964 Wakefield Street, Petersburg, VA 23805.',
-    pdfUrl: 'https://craterpdc.org/wp-content/uploads/2026/07/TCAMPO_Draft_TAC_Agenda_Aug07-26-v6.pdf'
+    pdfUrl: 'https://craterpdc.org/wp-content/uploads/2026/08/1_TCAMPO_Draft_TAC_Agenda_Aug07-26.pdf'
   },
   {
     id: 'news-3',

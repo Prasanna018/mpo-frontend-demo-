@@ -159,35 +159,40 @@ export const AboutView: React.FC<AboutViewProps> = ({
                           </tr>
                         </thead>
                         <tbody>
-                          {AGENDAS_DATA.current.map((item) => (
-                            <tr key={item.id} className="bg-white hover:bg-blue-50/80 transition-colors shadow-sm text-xs sm:text-sm font-semibold text-slate-900 rounded-xl">
-                              <td className="py-3.5 px-4 rounded-l-xl font-medium text-slate-700 max-w-xs">
-                                {agendaFilter === 'TAC'
-                                  ? 'Petersburg Multi-Modal Station, 100 West Washington Street, Petersburg, VA 23805'
-                                  : item.venue}
-                              </td>
-                              <td className="py-3.5 px-4 font-bold text-navy-950 whitespace-nowrap">{item.date}</td>
-                              <td className="py-3.5 px-4 whitespace-nowrap">{agendaFilter === 'TAC' ? '10:00 AM' : item.time}</td>
-                              <td className="py-3.5 px-4 rounded-r-xl text-center">
-                                {item.pdfUrl ? (
-                                  <a
-                                    href={item.pdfUrl}
-                                    target="_blank"
-                                    rel="noreferrer"
-                                    className="inline-flex items-center justify-center p-1.5 text-red-600 hover:text-red-700 transition-transform transform hover:scale-110"
-                                    title="Download Agenda PDF"
-                                  >
-                                    <svg className="w-7 h-7" viewBox="0 0 24 24" fill="currentColor">
-                                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14h-2v-2h2v2zm0-4h-2V7h2v5z" fill="none"/>
-                                      <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-9.5 8.5c0 .8-.7 1.5-1.5 1.5H7v2H5.5V7H8c.8 0 1.5.7 1.5 1.5v3zm5 2c0 .8-.7 1.5-1.5 1.5h-2.5V7H13c.8 0 1.5.7 1.5 1.5v5zm3.5-3.5h-2v1.5h2V13h-2v2.5H16.5V7H18v3.5z" />
-                                    </svg>
-                                  </a>
-                                ) : (
-                                  <span className="text-xs text-slate-400 font-bold">-</span>
-                                )}
-                              </td>
-                            </tr>
-                          ))}
+                          {AGENDAS_DATA.current.map((item) => {
+                            const itemDate = agendaFilter === 'TAC' ? (item.tacDate || item.date) : (item.pcDate || item.date);
+                            const itemPdfUrl = agendaFilter === 'TAC' ? (item.tacPdfUrl || item.pdfUrl) : (item.pcPdfUrl || item.pdfUrl);
+
+                            return (
+                              <tr key={item.id} className="bg-white hover:bg-blue-50/80 transition-colors shadow-sm text-xs sm:text-sm font-semibold text-slate-900 rounded-xl">
+                                <td className="py-3.5 px-4 rounded-l-xl font-medium text-slate-700 max-w-xs">
+                                  {agendaFilter === 'TAC'
+                                    ? 'Petersburg Multi-Modal Station, 100 West Washington Street, Petersburg, VA 23805'
+                                    : item.venue}
+                                </td>
+                                <td className="py-3.5 px-4 font-bold text-navy-950 whitespace-nowrap">{itemDate}</td>
+                                <td className="py-3.5 px-4 whitespace-nowrap">{agendaFilter === 'TAC' ? '10:00 AM' : item.time}</td>
+                                <td className="py-3.5 px-4 rounded-r-xl text-center">
+                                  {itemPdfUrl ? (
+                                    <a
+                                      href={itemPdfUrl}
+                                      target="_blank"
+                                      rel="noreferrer"
+                                      className="inline-flex items-center justify-center p-1.5 text-red-600 hover:text-red-700 transition-transform transform hover:scale-110"
+                                      title="Download Agenda PDF"
+                                    >
+                                      <svg className="w-7 h-7" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14h-2v-2h2v2zm0-4h-2V7h2v5z" fill="none"/>
+                                        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-9.5 8.5c0 .8-.7 1.5-1.5 1.5H7v2H5.5V7H8c.8 0 1.5.7 1.5 1.5v3zm5 2c0 .8-.7 1.5-1.5 1.5h-2.5V7H13c.8 0 1.5.7 1.5 1.5v5zm3.5-3.5h-2v1.5h2V13h-2v2.5H16.5V7H18v3.5z" />
+                                      </svg>
+                                    </a>
+                                  ) : (
+                                    <span className="text-xs text-slate-400 font-bold">-</span>
+                                  )}
+                                </td>
+                              </tr>
+                            );
+                          })}
                         </tbody>
                       </table>
                     </div>
