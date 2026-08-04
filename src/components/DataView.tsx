@@ -246,7 +246,7 @@ export const DataView: React.FC<DataViewProps> = ({
                         Tri-Cities Annual Transportation Performance Metrics Report
                       </h4>
                       <a
-                        href={defaultPdfUrl}
+                        href="https://cpdcperftracker.netlify.app/"
                         target="_blank"
                         rel="noreferrer"
                         className="w-12 h-12 rounded-full bg-navy-950 hover:bg-blue-600 text-white flex items-center justify-center shrink-0 shadow-md transition-all duration-200 transform hover:scale-105"
