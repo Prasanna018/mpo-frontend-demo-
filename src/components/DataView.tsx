@@ -248,7 +248,7 @@ export const DataView: React.FC<DataViewProps> = ({
                         rel="noreferrer"
                         className="text-base sm:text-lg font-extrabold text-navy-950 hover:text-blue-600 transition-colors"
                       >
-                        Tri-Cities Annual Transportation Performance Metrics Report
+                        Transportation Dashboard
                       </a>
                       <a
                         href="https://cpdcperftracker.netlify.app/"
