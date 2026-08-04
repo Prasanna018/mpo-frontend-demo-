@@ -241,18 +241,26 @@ export const DataView: React.FC<DataViewProps> = ({
                   </h3>
 
                   <div className="space-y-4">
-                    <div className="bg-[#dbeafe]/80 hover:bg-[#dbeafe] border border-blue-100 rounded-2xl p-5 sm:p-6 flex items-center justify-between gap-4 transition-all duration-200 shadow-sm hover:shadow-md">
-                      <h4 className="text-base sm:text-lg font-extrabold text-navy-950">
-                        Tri-Cities Annual Transportation Performance Metrics Report
-                      </h4>
+                    <div className="bg-[#dbeafe]/80 hover:bg-[#dbeafe] border border-blue-100 rounded-2xl p-5 sm:p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4 transition-all duration-200 shadow-sm hover:shadow-md">
                       <a
                         href="https://cpdcperftracker.netlify.app/"
                         target="_blank"
                         rel="noreferrer"
-                        className="w-12 h-12 rounded-full bg-navy-950 hover:bg-blue-600 text-white flex items-center justify-center shrink-0 shadow-md transition-all duration-200 transform hover:scale-105"
+                        className="text-base sm:text-lg font-extrabold text-navy-950 hover:text-blue-600 transition-colors"
                       >
-                        <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
-                          <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-9.5 8.5c0 .8-.7 1.5-1.5 1.5H7v2H5.5V7H8c.8 0 1.5.7 1.5 1.5v3zm5 2c0 .8-.7 1.5-1.5 1.5h-2.5V7H13c.8 0 1.5.7 1.5 1.5v5zm3.5-3.5h-2v1.5h2V13h-2v2.5H16.5V7H18v3.5z" />
+                        Tri-Cities Annual Transportation Performance Metrics Report
+                      </a>
+                      <a
+                        href="https://cpdcperftracker.netlify.app/"
+                        target="_blank"
+                        rel="noreferrer"
+                        className="px-5 py-2.5 rounded-full bg-navy-950 hover:bg-blue-600 text-white font-bold text-sm inline-flex items-center gap-2 shrink-0 shadow-md transition-all duration-200 transform hover:scale-105"
+                      >
+                        <span>Visit Dashboard</span>
+                        <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                          <polyline points="15 3 21 3 21 9" />
+                          <line x1="10" y1="14" x2="21" y2="3" />
                         </svg>
                       </a>
                     </div>
