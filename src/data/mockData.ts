@@ -177,12 +177,6 @@ export const TAC_COMMITTEE_DATA = {
       avatarType: 'male' as const
     },
     {
-      name: 'Mr. Frank Haltom',
-      organization: 'Dinwiddie County',
-      image: '/tac-members/dinwiddie-seal.png',
-      avatarType: 'male' as const
-    },
-    {
       name: 'Mr. Mark Bassett',
       organization: 'Dinwiddie County',
       image: '/tac-members/mark-bassett.jpg',
