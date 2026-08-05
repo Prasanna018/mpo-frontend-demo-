@@ -226,7 +226,7 @@ export const PlansView: React.FC<PlansViewProps> = ({
             {activePlanTab === 'Unified Planning Work Program' && (
               <div className="space-y-8 text-slate-800 text-base sm:text-lg font-normal leading-relaxed">
                 <p>
-                  Unified Planning Work Program is a federally-required document that outlines the TCAMPO’s annual budget, planning priorities, and proposed work for each fiscal year. For all budgeted projects, the UPWP describes the following:
+                  Unified Planning Work Program (UPWP) is a federally-required document that outlines the TCAMPO’s annual budget, planning priorities, and proposed work for each fiscal year. For all budgeted projects, the UPWP describes the following:
                 </p>
 
                 <ul className="list-disc pl-6 space-y-2 font-semibold text-slate-900">
@@ -248,20 +248,28 @@ export const PlansView: React.FC<PlansViewProps> = ({
                   <h3 className="text-2xl font-extrabold text-navy-950">Revisions and Adopted UPWP</h3>
                   <div className="flex flex-col space-y-3">
                     <a
-                      href={defaultPdfUrl}
+                      href="https://craterpdc.org/wp-content/uploads/2026/08/FY27-UPWP-Approved-06.11.2026-1.pdf"
                       target="_blank"
                       rel="noreferrer"
                       className="text-blue-600 hover:text-blue-800 font-bold underline"
                     >
-                      TCAMPO’s UPWP for FY 2024
+                      TCAMPO’s Approved UPWP for FY 2027
                     </a>
                     <a
-                      href={defaultPdfUrl}
+                      href="https://craterpdc.org/wp-content/uploads/2026/08/02.12.2026-Amended-TCAMPO-FY26-UPWP-1-1-2.pdf"
                       target="_blank"
                       rel="noreferrer"
                       className="text-blue-600 hover:text-blue-800 font-bold underline"
                     >
-                      TCAMPO’s Draft UPWP for FY2024-2025 (Open for Public Comment from August 1, 2024 – August 3)
+                      Amended TCAMPO UPWP for FY 2026
+                    </a>
+                    <a
+                      href="https://craterpdc.org/wp-content/uploads/2026/08/FINAL_TCAMPOFY25UPWP.pdf"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="text-blue-600 hover:text-blue-800 font-bold underline"
+                    >
+                      Final TCAMPO UPWP for FY 2025
                     </a>
                   </div>
                 </div>
