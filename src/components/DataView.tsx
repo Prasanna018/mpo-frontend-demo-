@@ -188,11 +188,7 @@ export const DataView: React.FC<DataViewProps> = ({
                   The Regional Transportation Performance Dashboard offers key insights into traffic counts, safety metrics, transit ridership, and freight throughput across the Tri-Cities region. Data is updated annually to assist policymakers and the public in evaluating regional mobility trends.
                 </p>
 
-                <div className="space-y-4 pt-4 border-t border-slate-200">
-                  <h3 className="text-2xl font-extrabold text-navy-950 tracking-tight">
-                    Dashboard Reports & Datasets
-                  </h3>
-
+                <div className="pt-4 border-t border-slate-200">
                   <div className="space-y-4">
                     <div className="bg-[#dbeafe]/80 hover:bg-[#dbeafe] border border-blue-100 rounded-2xl p-5 sm:p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4 transition-all duration-200 shadow-sm hover:shadow-md">
                       <a
