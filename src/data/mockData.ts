@@ -243,51 +243,66 @@ export const PROGRAMS_STUDIES_DATA = {
     {
       id: 'cp-1',
       title: 'I-85/95 Interchange Feasibility Study (2015)',
-      pdfUrl: 'https://lightblue-dogfish-243005.hostingersite.com/wp-content/uploads/2026/05/Draft-5.07.2026-Policy-Committee-Agenda-V6-05.07.2026.pdf'
+      pdfUrl: 'https://craterpdc.org/wp-content/uploads/2026/05/13736.201_I-95_I-85_Interchange_Feasibility_Study_FINAL_29Apr15.pdf'
     },
     {
       id: 'cp-2',
       title: 'I-95/85 RSA',
-      pdfUrl: 'https://lightblue-dogfish-243005.hostingersite.com/wp-content/uploads/2026/05/Draft-4.09.2026-Policy-Committee-Agenda-Updated-04.07.2026_compressed.pdf'
+      pdfUrl: 'https://craterpdc.org/wp-content/uploads/2026/05/Final-Report_RSA_95_85_wAppendix.pdf'
     },
     {
       id: 'cp-3',
       title: 'Fort Lee (now Fort Gregg-Adams) Expansion Traffic Study (2007)',
-      pdfUrl: 'https://lightblue-dogfish-243005.hostingersite.com/wp-content/uploads/2026/05/03.12.2026-Policy-Committee-Agenda-Final-Updated-04.23.2026_compressed.pdf'
+      pdfUrl: 'https://craterpdc.org/wp-content/uploads/2026/05/Fort_Lee_TrafficStudy_Final_26Jan07.pdf'
     }
   ],
   'Regional Plans': [
     {
       id: 'rp-1',
-      title: 'Tri-Cities Regional Active Transportation Plan (2025)',
-      pdfUrl: 'https://lightblue-dogfish-243005.hostingersite.com/wp-content/uploads/2026/05/02.12.2026-Policy-Committee-agenda-Final-V3_compressed.pdf'
+      title: '2021 PAT Transit Strategic Plan (TSP)',
+      pdfUrl: 'https://craterpdc.org/wp-content/uploads/2026/05/PAT_TSP_Report_FINAL_Dec2021.pdf'
     },
     {
       id: 'rp-2',
-      title: '2045 Metropolitan Transportation Blueprint Plan',
-      pdfUrl: 'https://lightblue-dogfish-243005.hostingersite.com/wp-content/uploads/2026/05/11.13.2025-Policy-Committee-agenda-Updated-11.13.2025-Final-V3_compressed.pdf'
+      title: '2020 PAT Transit Development Plan (TDP)',
+      pdfUrl: 'https://craterpdc.org/wp-content/uploads/2026/05/PAT_TDP_approved_2182020_Petersburg.pdf'
     },
     {
       id: 'rp-3',
-      title: 'Tri-Cities Regional Congestion Management Process',
-      pdfUrl: 'https://lightblue-dogfish-243005.hostingersite.com/wp-content/uploads/2026/05/Draft-5.07.2026-Policy-Committee-Agenda-V6-05.07.2026.pdf'
+      title: '2022 Coordinated Human Services Mobility Plan',
+      pdfUrl: 'https://craterpdc.org/wp-content/uploads/2026/05/2022CoordinatedHumanServicesMobilityPlan.pdf'
+    },
+    {
+      id: 'rp-4',
+      title: 'TCAMPO Regional Transportation Safety Plan 05/12/2023',
+      pdfUrl: 'https://craterpdc.org/wp-content/uploads/2026/08/TCAMPO-Regional-Transportation-Safety-Plan_05122023-1.pdf'
+    },
+    {
+      id: 'rp-5',
+      title: '2010 Intermodal Transportation Strategies Study',
+      pdfUrl: 'https://craterpdc.org/wp-content/uploads/2026/08/Richmond_TriCities_Regional_Intermodal_Strategies_Study_05132010.pdf'
+    },
+    {
+      id: 'rp-6',
+      title: '2003 Bikeways Plan',
+      pdfUrl: 'https://craterpdc.org/wp-content/uploads/2026/05/BikewayPlan2003.pdf'
     }
   ],
   'Reports': [
     {
       id: 'rep-1',
-      title: 'Annual Unified Planning Work Program Report',
-      pdfUrl: 'https://lightblue-dogfish-243005.hostingersite.com/wp-content/uploads/2026/05/Draft-4.09.2026-Policy-Committee-Agenda-Updated-04.07.2026_compressed.pdf'
+      title: '2016 Congestion Management Process',
+      pdfUrl: 'https://craterpdc.org/wp-content/uploads/2026/08/01252017_Final_TCAMP_CMP.pdf'
     },
     {
       id: 'rep-2',
-      title: 'Tri-Cities Freight Corridor & Logistics Performance Report',
-      pdfUrl: 'https://lightblue-dogfish-243005.hostingersite.com/wp-content/uploads/2026/05/03.12.2026-Policy-Committee-Agenda-Final-Updated-04.23.2026_compressed.pdf'
+      title: '2017 Tri-Cities Multimodal Station Environmental Assessment',
+      pdfUrl: 'https://craterpdc.org/wp-content/uploads/2026/08/Tri-Cities_SignedDraft_EA_ExecSummary2017.pdf'
     },
     {
       id: 'rep-3',
-      title: 'Regional Air Quality & Emission Inventory Analysis Report',
-      pdfUrl: 'https://lightblue-dogfish-243005.hostingersite.com/wp-content/uploads/2026/05/02.12.2026-Policy-Committee-agenda-Final-V3_compressed.pdf'
+      title: 'Appomattox River Trail / Virginia Capital Trail Connection Study',
+      pdfUrl: 'https://craterpdc.org/wp-content/uploads/2026/08/Appomattox-River-Trail-to-Capital-Trail-Study-Technical-Document.pdf'
     }
   ]
 };
