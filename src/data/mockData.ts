@@ -171,7 +171,7 @@ export const TAC_COMMITTEE_DATA = {
     {
       name: 'Mr. Tim Graves',
       organization: 'Prince George County',
-      image: '/tac-members/prince-george-seal.png',
+      image: '/tac-members/tim-graves.jpg',
       avatarType: 'male' as const
     },
     {
