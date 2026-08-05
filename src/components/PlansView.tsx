@@ -25,7 +25,7 @@ export const PlansView: React.FC<PlansViewProps> = ({
     'Title VI'
   ];
 
-  const defaultPdfUrl = 'https://lightblue-dogfish-243005.hostingersite.com/wp-content/uploads/2026/05/Draft-5.07.2026-Policy-Committee-Agenda-V6-05.07.2026.pdf';
+
 
   return (
     <div className="w-full min-h-screen flex flex-col bg-white">
@@ -329,7 +329,7 @@ export const PlansView: React.FC<PlansViewProps> = ({
                 </p>
                 <div className="pt-4">
                   <a
-                    href={defaultPdfUrl}
+                    href="https://craterpdc.org/wp-content/uploads/2026/08/Final-Crater-PDC-Title-VI-Plan-September-2024-with-1050.2A-Assurances-1.pdf"
                     target="_blank"
                     rel="noreferrer"
                     className="text-blue-600 hover:text-blue-800 font-bold underline"
