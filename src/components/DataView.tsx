@@ -20,7 +20,7 @@ export const DataView: React.FC<DataViewProps> = ({
     'Transportation Dashboard'
   ];
 
-  const defaultPdfUrl = 'https://lightblue-dogfish-243005.hostingersite.com/wp-content/uploads/2026/05/Draft-5.07.2026-Policy-Committee-Agenda-V6-05.07.2026.pdf';
+
 
   return (
     <div className="w-full min-h-screen flex flex-col bg-white">
@@ -163,45 +163,17 @@ export const DataView: React.FC<DataViewProps> = ({
                   Functional classification is the process by which public streets and highways are grouped into classes according to the character of service they are intended to provide. TCAMPO works closely with the Virginia Department of Transportation (VDOT) to classify roadways into Interstates, Principal Arterials, Minor Arterials, Collectors, and Local Streets to determine federal funding eligibility and design standards.
                 </p>
 
-                <div className="space-y-4 pt-4 border-t border-slate-200">
-                  <h3 className="text-2xl font-extrabold text-navy-950 tracking-tight">
-                    Classification Maps & Reference Files
-                  </h3>
-
-                  <div className="space-y-4">
-                    <div className="bg-[#dbeafe]/80 hover:bg-[#dbeafe] border border-blue-100 rounded-2xl p-5 sm:p-6 flex items-center justify-between gap-4 transition-all duration-200 shadow-sm hover:shadow-md">
-                      <h4 className="text-base sm:text-lg font-extrabold text-navy-950">
-                        VDOT Functional Classification Map & Guide
-                      </h4>
-                      <a
-                        href={defaultPdfUrl}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="w-12 h-12 rounded-full bg-navy-950 hover:bg-blue-600 text-white flex items-center justify-center shrink-0 shadow-md transition-all duration-200 transform hover:scale-105"
-                      >
-                        <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
-                          <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-9.5 8.5c0 .8-.7 1.5-1.5 1.5H7v2H5.5V7H8c.8 0 1.5.7 1.5 1.5v3zm5 2c0 .8-.7 1.5-1.5 1.5h-2.5V7H13c.8 0 1.5.7 1.5 1.5v5zm3.5-3.5h-2v1.5h2V13h-2v2.5H16.5V7H18v3.5z" />
-                        </svg>
-                      </a>
-                    </div>
-
-                    <div className="bg-[#dbeafe]/80 hover:bg-[#dbeafe] border border-blue-100 rounded-2xl p-5 sm:p-6 flex items-center justify-between gap-4 transition-all duration-200 shadow-sm hover:shadow-md">
-                      <h4 className="text-base sm:text-lg font-extrabold text-navy-950">
-                        TCAMPO Regional Roadway Classification Report
-                      </h4>
-                      <a
-                        href={defaultPdfUrl}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="w-12 h-12 rounded-full bg-navy-950 hover:bg-blue-600 text-white flex items-center justify-center shrink-0 shadow-md transition-all duration-200 transform hover:scale-105"
-                      >
-                        <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
-                          <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-9.5 8.5c0 .8-.7 1.5-1.5 1.5H7v2H5.5V7H8c.8 0 1.5.7 1.5 1.5v3zm5 2c0 .8-.7 1.5-1.5 1.5h-2.5V7H13c.8 0 1.5.7 1.5 1.5v5zm3.5-3.5h-2v1.5h2V13h-2v2.5H16.5V7H18v3.5z" />
-                        </svg>
-                      </a>
-                    </div>
-                  </div>
-                </div>
+                <p className="text-slate-700 text-base sm:text-lg font-normal leading-relaxed pt-2">
+                  To see current functional classification maps for the MPO, please visit VDOT's{' '}
+                  <a
+                    href="https://www.arcgis.com/apps/mapviewer/index.html?webmap=3eca6c9adb6649c988d98734f85baddb"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-blue-600 hover:text-blue-800 font-bold underline transition-colors"
+                  >
+                    Functional Classification Maps webpage.
+                  </a>
+                </p>
               </div>
             )}
 
