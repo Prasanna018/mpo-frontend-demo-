@@ -130,35 +130,16 @@ export const DataView: React.FC<DataViewProps> = ({
                   </h3>
 
                   <div className="space-y-4">
-                    {/* PDF Card 1 matching Screenshot 2 */}
                     <div className="bg-[#dbeafe]/80 hover:bg-[#dbeafe] border border-blue-100 rounded-2xl p-5 sm:p-6 flex items-center justify-between gap-4 transition-all duration-200 shadow-sm hover:shadow-md">
                       <h4 className="text-base sm:text-lg font-extrabold text-navy-950">
-                        2017 and 2050 TCAMPO Model Forecasts
+                        Socio-Economic Forecast Report (2017-2050)
                       </h4>
                       <a
-                        href={defaultPdfUrl}
+                        href="https://craterpdc.org/wp-content/uploads/2026/08/TCAMPO_2050_SE_20230713.pdf"
                         target="_blank"
                         rel="noreferrer"
                         className="w-12 h-12 rounded-full bg-navy-950 hover:bg-blue-600 text-white flex items-center justify-center shrink-0 shadow-md transition-all duration-200 transform hover:scale-105"
-                        title="Download Forecasts PDF"
-                      >
-                        <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
-                          <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-9.5 8.5c0 .8-.7 1.5-1.5 1.5H7v2H5.5V7H8c.8 0 1.5.7 1.5 1.5v3zm5 2c0 .8-.7 1.5-1.5 1.5h-2.5V7H13c.8 0 1.5.7 1.5 1.5v5zm3.5-3.5h-2v1.5h2V13h-2v2.5H16.5V7H18v3.5z" />
-                        </svg>
-                      </a>
-                    </div>
-
-                    {/* PDF Card 2 matching Screenshot 2 */}
-                    <div className="bg-[#dbeafe]/80 hover:bg-[#dbeafe] border border-blue-100 rounded-2xl p-5 sm:p-6 flex items-center justify-between gap-4 transition-all duration-200 shadow-sm hover:shadow-md">
-                      <h4 className="text-base sm:text-lg font-extrabold text-navy-950">
-                        Model Documentation
-                      </h4>
-                      <a
-                        href={defaultPdfUrl}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="w-12 h-12 rounded-full bg-navy-950 hover:bg-blue-600 text-white flex items-center justify-center shrink-0 shadow-md transition-all duration-200 transform hover:scale-105"
-                        title="Download Documentation PDF"
+                        title="Download Socio-Economic Forecast Report PDF"
                       >
                         <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
                           <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-9.5 8.5c0 .8-.7 1.5-1.5 1.5H7v2H5.5V7H8c.8 0 1.5.7 1.5 1.5v3zm5 2c0 .8-.7 1.5-1.5 1.5h-2.5V7H13c.8 0 1.5.7 1.5 1.5v5zm3.5-3.5h-2v1.5h2V13h-2v2.5H16.5V7H18v3.5z" />
