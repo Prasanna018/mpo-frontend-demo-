@@ -181,7 +181,7 @@ export const PlansView: React.FC<PlansViewProps> = ({
                   <div className="space-y-2">
                     <h3 className="text-xl font-extrabold text-navy-950">Adopted MTIP</h3>
                     <a
-                      href={defaultPdfUrl}
+                      href="https://craterpdc.org/wp-content/uploads/2026/08/FINAL_FFY2024_2027_MTIP_051123.pdf"
                       target="_blank"
                       rel="noreferrer"
                       className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-bold underline"
@@ -193,7 +193,7 @@ export const PlansView: React.FC<PlansViewProps> = ({
                   <div className="space-y-2 pt-2">
                     <h3 className="text-xl font-extrabold text-navy-950">Adopted MTIP</h3>
                     <a
-                      href={defaultPdfUrl}
+                      href="https://craterpdc.org/wp-content/uploads/2026/08/Final-FFY27-30-TCAMPO-MTIP.pdf"
                       target="_blank"
                       rel="noreferrer"
                       className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-bold underline"
