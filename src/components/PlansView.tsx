@@ -310,7 +310,7 @@ export const PlansView: React.FC<PlansViewProps> = ({
                 </p>
                 <div className="pt-4">
                   <a
-                    href={defaultPdfUrl}
+                    href="https://craterpdc.org/wp-content/uploads/2026/08/FFY25-Federal-Obligation-Report-11.18.2025-1.pdf"
                     target="_blank"
                     rel="noreferrer"
                     className="text-blue-600 hover:text-blue-800 font-bold underline"
