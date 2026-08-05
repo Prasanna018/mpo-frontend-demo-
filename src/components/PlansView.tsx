@@ -139,20 +139,7 @@ export const PlansView: React.FC<PlansViewProps> = ({
                   </p>
                 </div>
 
-                <div className="space-y-3 pt-2">
-                  <h3 className="text-xl font-bold text-navy-950">
-                    Get Involved:
-                  </h3>
-                  <p>
-                    Feedback from local transportation network users is essential in shaping a comprehensive regional transportation plan. Your input will help the study team identify and address key priorities throughout the planning process.{' '}
-                    <button
-                      onClick={() => onOpenActionModal('survey')}
-                      className="text-blue-600 hover:text-blue-800 font-bold underline inline-flex items-center gap-1"
-                    >
-                      Participate in the Visioning Phase Outreach Survey
-                    </button>
-                  </p>
-                </div>
+               
 
                 {/* Horizontal Line with Diamond Icon matching Screenshot 2 */}
                 <div className="relative my-8 border-t border-slate-300">
@@ -170,7 +157,7 @@ export const PlansView: React.FC<PlansViewProps> = ({
                   <p>
                     The 2045 Metropolitan Transportation Plan was adopted by the TCAMPO’s Policy Committee on November 12, 2020. The Metropolitan Transportation Plan and accompanying documents can be{' '}
                     <a
-                      href={defaultPdfUrl}
+                      href="https://craterpdc.org/wp-content/uploads/2026/05/06272022_PLAN2045_ApprovedDocument-1.pdf"
                       target="_blank"
                       rel="noreferrer"
                       className="text-blue-600 hover:text-blue-800 font-bold underline"
