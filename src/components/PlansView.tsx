@@ -26,7 +26,6 @@ export const PlansView: React.FC<PlansViewProps> = ({
   ];
 
   const defaultPdfUrl = 'https://lightblue-dogfish-243005.hostingersite.com/wp-content/uploads/2026/05/Draft-5.07.2026-Policy-Committee-Agenda-V6-05.07.2026.pdf';
-  const cmpPdfUrl = 'https://lightblue-dogfish-243005.hostingersite.com/wp-content/uploads/2026/05/2025-CMP-1.pdf';
 
   return (
     <div className="w-full min-h-screen flex flex-col bg-white">
@@ -219,28 +218,6 @@ export const PlansView: React.FC<PlansViewProps> = ({
                   <p>
                     The 2025 CMP identifies an objectives-driven, performance-based process to manage regional transportation congestion. The CMP includes congestion-related goals, objectives, and performance measures. In 2018, congestion cost Americans $87 Billion and an average of 97 hours. Congestion also wastes billions of gallons of fuel, releasing billions of pounds of carbon dioxide into the atmosphere, annually. The CMP seeks to manage congestion through a variety of region- and corridor-specific strategies.
                   </p>
-                </div>
-
-                <div className="space-y-4 pt-4 border-t border-slate-200">
-                  <h3 className="text-xl font-extrabold text-navy-950">Reports</h3>
-                  <div className="flex flex-col space-y-3">
-                    <a
-                      href={cmpPdfUrl}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-bold underline"
-                    >
-                      2025 CMP Report (PDF)
-                    </a>
-                    <a
-                      href={cmpPdfUrl}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-bold underline"
-                    >
-                      2016 CMP Report (PDF)
-                    </a>
-                  </div>
                 </div>
               </div>
             )}
