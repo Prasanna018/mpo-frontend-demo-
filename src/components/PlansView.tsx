@@ -299,16 +299,6 @@ export const PlansView: React.FC<PlansViewProps> = ({
                 <p>
                   Transportation Performance Management (TPM) is a strategic approach that uses system information to make investment and policy decisions to achieve national performance goals. TCAMPO coordinates with state DOTs and regional transit operators to establish quantifiable targets for safety, pavement condition, bridge condition, system reliability, and transit asset management.
                 </p>
-                <div className="pt-4">
-                  <a
-                    href={defaultPdfUrl}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="text-blue-600 hover:text-blue-800 font-bold underline"
-                  >
-                    Download Latest System Performance Report (PDF)
-                  </a>
-                </div>
               </div>
             )}
 
