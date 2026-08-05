@@ -282,7 +282,7 @@ export const PlansView: React.FC<PlansViewProps> = ({
                 <p>
                   The TCAMPO Public Participation Plan describes the strategies that will be used to encourage public participation in the development of the MPO’s various transportation planning documents. The Public Participation Plan outlines the MPO’s commitment to an open and transparent involvement process with the public, local communities, and local, state, and federal agencies to support the regional transportation planning process. The Public Participation Plan ensures everyone is given ample opportunity to access, review, and comment on plans Procedures outlined in the Public Participation Plan are reviewed periodically and updated as necessary to ensure a full and open participation process. Public involvement opportunities are established early in the process and remain a continuous effort throughout the development of a planning document or project by the MPO. The latest participation plan can be{' '}
                   <a
-                    href={defaultPdfUrl}
+                    href="https://craterpdc.org/wp-content/uploads/2026/08/TCAMPO-Public-Participation-Plan-Update-09-12-24-1.pdf"
                     target="_blank"
                     rel="noreferrer"
                     className="text-blue-600 hover:text-blue-800 font-bold underline"
