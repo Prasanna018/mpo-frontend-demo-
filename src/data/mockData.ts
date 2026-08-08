@@ -318,7 +318,7 @@ export const AGENDAS_DATA: { current: AgendaItem[]; archive: AgendaItem[] } = {
       time: '4:30 PM',
       pdfUrl: 'https://craterpdc.org/wp-content/uploads/1_TCAMPO_Draft_TAC_Agenda_Aug07-26.pdf',
       tacPdfUrl: 'https://craterpdc.org/wp-content/uploads/1_TCAMPO_Draft_TAC_Agenda_Aug07-26.pdf',
-      pcPdfUrl: 'https://craterpdc.org/wp-content/uploads/1_TCAMPO_Draft_TAC_Agenda_Aug07-26.pdf'
+      pcPdfUrl: 'https://craterpdc.org/wp-content/uploads/1_TCAMPO_Draft_PC_Agenda_Aug13-2026.pdf'
     },
     {
       id: 'june-2026',
@@ -762,7 +762,7 @@ export const NEWS_ITEMS: NewsItem[] = [
     image: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80',
     summary: 'The August Policy Committee (PC) meeting is scheduled for August 13, 2026, at 4:30 p.m. at the Crater Planning District Commission (Crater PDC), located at 1964 Wakefield Street, Petersburg, VA 23805.',
     content: 'The August Policy Committee (PC) meeting is scheduled for August 13, 2026, at 4:30 p.m. at the Crater Planning District Commission (Crater PDC), located at 1964 Wakefield Street, Petersburg, VA 23805.',
-    pdfUrl: 'https://craterpdc.org/wp-content/uploads/2026/08/1_TCAMPO_Draft_TAC_Agenda_Aug07-26.pdf'
+    pdfUrl: 'https://craterpdc.org/wp-content/uploads/1_TCAMPO_Draft_PC_Agenda_Aug13-2026.pdf'
   },
   {
     id: 'news-3',
@@ -823,7 +823,7 @@ export const EVENTS_ITEMS: EventItem[] = [
     title: 'August Policy Committee (PC) Meeting',
     location: 'Crater Planning District Commission (Crater PDC), 1964 Wakefield Street, Petersburg, VA 23805',
     description: 'The August Policy Committee (PC) meeting is scheduled for August 13, 2026, at 4:30 p.m. at the Crater Planning District Commission (Crater PDC), located at 1964 Wakefield Street, Petersburg, VA 23805.',
-    pdfUrl: 'https://craterpdc.org/wp-content/uploads/2026/07/TCAMPO_Draft_TAC_Agenda_Aug07-26-v6.pdf'
+    pdfUrl: 'https://craterpdc.org/wp-content/uploads/1_TCAMPO_Draft_PC_Agenda_Aug13-2026.pdf'
   }
 ];
 
